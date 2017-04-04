@@ -1,0 +1,25 @@
+<header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-1">
+                <button class="fa fa-bars" id="menu_toggle" aria-hidden="true"></button>
+            </div>
+
+            <div class="col-xs-2" id="logo">
+                <span class="blue">Wolfgang</span>
+            </div>
+
+            <div class="col-xs-5 col-xs-offset-1">
+                <div class="input-group" id="search">
+                    <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
+                    <span class="input-group-addon" id="basic-addon2"><button type="submit" class="fa fa-search"
+                                                                              aria-hidden="true"></button></span>
+                </div>
+            </div>
+            <div class="col-xs-2 col-xs-offset-1" id="login">
+                <i class="fa fa-user orange" aria-hidden="true"></i> Welcome Guest ! <span class="orange">Login</span>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</header>

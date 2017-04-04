@@ -1,0 +1,536 @@
+section#yourplaylists, section#allplaylists, section#newestplaylist, section#topratedplaylist{
+    padding:5% 10% 10%;
+    width:100%;
+}
+
+section #playlist_admin_view p{
+     display: inline;
+     cursor: pointer;
+     color: #337ab7;
+ }
+
+section #playlist_admin_view p:hover{
+    text-decoration: underline;
+}
+
+/*Newest Play List*/
+
+section#newestplaylist {
+    background:url("../img/wolf_blue.png") no-repeat;
+    background-size:cover;
+    color: #fff;
+}
+
+.playlist_view li {
+    list-style: none;
+}
+
+.playlist_view ul {
+    margin:0;
+    padding:0;
+}
+
+.playlist_view ul.playlist_list {
+    list-style: none;
+    width:100%;
+    display: inline-block;
+    margin: 3% 0 0 0;
+    padding: 0;
+    border-radius: 0.3em;
+}
+
+.playlist_view ul.playlist_list li {
+    display: inline;
+}
+
+.playlist_view ul.playlist_list article {
+    cursor:pointer;
+    overflow: hidden;
+    width:15%;
+    float: left;
+    position:relative;
+    margin: 2% 0 0 1.5%;
+}
+
+
+.playlist_view ul.playlist_list li:first-child article {
+    width:20%;
+    margin:0;
+}
+
+.playlist_view ul.playlist_list article img {
+    width:100%;
+    transition:0.5s all;
+}
+
+.playlist_view ul.playlist_list li:first-child img.img_playlistvideo {
+    min-width:150px;
+    min-height:150px;
+}
+
+.playlist_view ul.playlist_list article img.img_playlistvideo {
+    min-width:110px;
+    min-height:110px;
+    transition:0.5s all;
+}
+
+.playlist_view ul.playlist_list article .image_text {
+    position: absolute;
+    top: 5%;
+    left:5%;
+    color: #FFF;
+    font-size: 1.3em;
+    width:80%;
+    text-shadow: 2px 2px #000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:400;
+    overflow: hidden;
+}
+
+.playlist_view ul.playlist_list li:first-child .image_text p {
+    -webkit-line-clamp: 2; /* number of lines to show */
+}
+
+
+.playlist_view ul.playlist_list article .image_text p {
+    max-height:3em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+}
+
+
+.playlist_view ul.playlist_list article .image_text span {
+    font-weight:100;
+    display:block;
+}
+
+.playlist_view .playlist_list span.play {
+    position:absolute;
+    width:30%;
+    opacity:0.8;
+    text-shadow: 1px 1px #444;
+    transition: 0.5s all;
+    z-index:10;
+    margin:0 auto;
+    top:45%;
+    right: 0;
+    left:0;
+}
+
+.playlist_view .playlist_list span.play img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.playlist_view .playlist_list span.play:hover img {
+    -webkit-filter:none;
+    filter:none;
+}
+
+.playlist_view .playlist_list li:first-child span.play {
+}
+
+.playlist_view h2 i {
+    margin-right:1%;
+    text-shadow: 1px 1px #444;
+}
+
+.playlist_view ul.playlist_list article:hover img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+.playlist_view ul.playlist_list article:hover span.play {
+    opacity:1;
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+#wrapper hr {
+    border:1px dotted #E54D34;
+    margin-top: 2%;
+}
+
+/*Top Rated Playlist*/
+
+section#topratedplaylist {
+    background: url("../img/video_of_the_week.png");
+    background-size:cover;
+    color:#FFFFFF;
+}
+
+section#topratedplaylist hr {
+    border:1px dotted #E54D34;
+    margin-top:2%
+}
+
+h2 {
+    font-family: 'Lobster', sans-serif;
+    text-shadow: 1px 1px #e54d43;
+}
+
+section#topratedplaylist h2 {
+    text-shadow: 1px 1px #22A7F0;
+}
+
+h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-bottom: 2%;
+}
+
+#wrapper label {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #E54D34;
+    color:#FFFFFF;
+    border-radius: 0.4em;
+    font-weight: normal;
+    text-shadow: none;
+    font-size:0.9em;
+}
+
+#wrapper .playlist_overview label {
+    font-size:0.5em;
+}
+
+section#topratedplaylist label {
+    background: #22A7F0;
+}
+
+ul label {
+    font-size:0.75em;
+}
+
+label {
+    padding: 0.5%;
+}
+
+li label {
+    padding: 2%;
+}
+
+.playlist_labels {
+    display:block;
+    margin-top: 1%;
+}
+
+.playlist_rating i {
+    margin: 1% 0.5% 0 0;
+}
+
+section#newestplaylist button,
+section#topratedplaylist button,
+section#yourplaylists button {
+    float:right;
+    background: #E54D34;
+    color: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.3em;
+    border:none;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+section#newestplaylist .abo-btn {
+    float: left;
+    padding: 0.42%;
+    margin-right: 1%;
+
+}
+
+section #topratedplaylist .abo-btn {
+    float: left;
+    padding: 0.42%;
+    margin-right: 1%;
+    margin-top: 1%;
+
+}
+
+section #allplaylists .abo-btn {
+    background: #E54D34;
+    color: #FFFFFF;
+    padding-top: 0.42%;
+    padding-bottom: 0.42%;
+    padding-left: 4%;
+    padding-right: 4%;
+    border-radius: 0.3em;
+    border: none;
+    transition: 0.5s;
+    display: inline-block;
+    font-size: 0.5em;
+
+}
+
+section#newestplaylist button:hover,
+section#topratedplaylist button:hover,
+section#yourplaylists button:hover {
+    background: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.4em;
+    color:#E54D34;
+    transition: 0.5s;
+}
+
+section#allplaylists .abo-btn:hover {
+    background: #FFFFFF;
+    border-radius: 0.4em;
+    color: #E54D34;
+    transition: 0.5s;
+
+}
+
+section#topratedplaylist button {
+    background: #22A7F0;
+}
+
+section#topratedplaylist button:hover {
+    color:#22A7F0;
+}
+
+.playlist_view button::before,
+.playlist_overview button::before{
+    margin-right: 5%;
+}
+
+.playlist_view button span, .playlist_overview button span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:1.4em;
+    margin-left: 1%;
+    width:100%;
+    padding:0;
+}
+
+
+/* your playlists / allplaylists */
+
+section#yourplaylists {
+    background:url("../img/wolf_red.png") no-repeat;
+    background-size:cover;
+    color: #fff;
+}
+
+.playlist_overview {
+    width:100%;
+    padding-top:3%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+    padding-bottom:3%;
+    z-index: -2;
+}
+section#topratedplaylist hr,
+section#yourplaylists hr {
+    border:1px dotted #22A7F0;
+    margin-top:2%;
+}
+
+.playlist_overview article {
+    width:70%;
+    margin:0;
+    overflow: hidden;
+    box-shadow: inset 0 0 12px #000;
+    float:left;
+    position:relative;
+    cursor:pointer;
+    min-height: 300px;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.playlist_overview article .image_text {
+    position: absolute;
+    color: #FFF;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #000;
+    top: 5%;
+    left:5%;
+    width:80%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:400;
+}
+
+.playlist_overview article span.play {
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+    margin-left:45%;
+    opacity:0.8;
+    transition: 0.5s all;
+    z-index: 10;
+}
+
+.playlist_overview article span.play img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.playlist_overview article span.play:hover img {
+    -webkit-filter:none;
+}
+
+.playlist_overview article img {
+    width:100%;
+    transition:0.5s all;
+    position:relative;
+    z-index: -1;
+}
+
+.playlist_overview article img.thumbnail_img {
+    min-height:300px;
+    z-index: 0;
+    max-height:  300px;
+    overflow: hidden;
+}
+
+.playlist_overview article:hover img {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+#yourplaylists button#remove-from-myPl,
+#allplaylists button#add-to-myPl {
+    position:absolute;
+    bottom:5%;
+    left:5%;
+    z-index: 500;
+    background: #e54d34;
+    padding:3%;
+    border-radius: 0.4em;
+    border:none;
+    color:#FFFFFF;
+}
+
+
+#yourplaylists button#remove-from-myPl:hover,
+#allplaylists button#add-to-myPl:hover {
+    background: #FFFFFF;
+    color: #e54d34;
+    transition: 0.5s;
+}
+
+.playlist {
+    display:inline-block;
+    width:45%;
+    margin: 3% 1%;
+    float:left;
+}
+
+ul.playlist_titles {
+    width:30%;
+    list-style: none;
+    background:#444444;
+    padding:0;
+    margin: 0;
+    display:inline-block;
+    height: 300px;
+    max-height: 300px;
+    overflow: auto;
+    color:#FFFFFF;
+    font-size: 0.8em;
+}
+
+ul.playlist_titles li {
+    padding: 5% 0 5% 5%;
+    border-bottom: 1px solid #FFFFFF;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+ul.playlist_titles li:hover {
+    background: #777777;
+    transition: 0.5s all;
+}
+
+ul.playlist_titles li:first-child:hover {
+    background: none;
+}
+
+ul.playlist_titles li:first-child {
+    padding: 5% 0 5% 5%;
+    border-bottom: none;
+}
+
+ul.playlist_titles li:first-child a {
+    font-family: Helvetica;
+    color: #FFFFFF;
+    line-height: 1.5em;
+}
+
+ul.playlist_titles li span, ul.playlist_titles li a {
+    font-family: 'Josefin Sans', sans-serif;
+    color:#E54D34;
+}
+
+ul.playlist_titles li i {
+    margin: 0 5%;
+}
+
+ul.playlist_titles li h3 {
+    font-size: 1.2em;
+}
+
+/* -----Scrollbar -----*/
+
+ul.playlist_titles::-webkit-scrollbar {
+    width: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #22A7F0;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: dodgerblue;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #3b5998;
+}
+
+.playlist article label {
+    font-size: 0.5em;
+    padding: 2%;
+}
+
+#playlist_buttons {
+    display: inline-block;
+    float:right;
+    width:100%;
+}
+
+#playlist_buttons button.playlistbutton:nth-child(2){
+    margin-right:2%;
+}
+
+section#yourplaylists button {
+    background: #22A7F0;
+    white-space: nowrap;
+}
+
+#addPlayForm,#deletePlayForm,#changePlayForm{
+    display: none;
+}
+
+section#abbonierteplaylists #aboplaylists a {
+    font-size: 2em;
+    margin: 3%;
+    color: #e54d34;
+
+}

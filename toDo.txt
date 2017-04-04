@@ -1,0 +1,16 @@
+Maxi: 
+- Login / Register
+- Tweets
+- Footer
+
+Dominik
+- Playlist
+- Neuste Videos / Favoriten
+
+Steffen
+- Rechtemanagment
+- Profil 
+
+Finn
+- Seite nach der Suche
+- Video Ansicht 

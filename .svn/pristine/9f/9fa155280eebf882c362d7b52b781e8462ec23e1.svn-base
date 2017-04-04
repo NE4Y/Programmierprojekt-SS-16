@@ -1,0 +1,66 @@
+#video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#video-info{
+padding-left: 10%;
+}
+
+#title{
+    font-size: 2em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+#user{
+padding-bottom: 1%;
+}
+#avatar{
+    height:1em;
+}
+
+section#rating, section#comments{
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+    font-size:1.2em;
+}
+section#comments article {
+    width:25%;
+    float:left;
+    margin-right:5%;
+}
+section#comments{
+    padding-top: 3%;
+}
+
+/* CSS Star rating from CSS Stars.com */
+
+.rating-wrapper {
+    overflow: hidden;
+    height: 16px;
+    display: inline-block;
+}
+.rating-input {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+    background-position: 0 0;
+}
+.rating-wrapper:hover .rating-star:hover,
+.rating-wrapper:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+}
+.rating-star,
+.rating-wrapper:hover .rating-star {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('http://css-stars.com/wp-content/uploads/2013/12/stars.png') 0 -16px;
+}

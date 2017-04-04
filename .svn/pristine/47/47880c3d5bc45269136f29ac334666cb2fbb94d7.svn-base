@@ -1,0 +1,66 @@
+<section id="playlist_admin_view" class="content">
+    <h3><i class="fa fa-map-signs orange" aria-hidden="true"></i> Playlistverwaltung von allen Usern </h3>
+    <hr class="orange"/>
+
+    {if isset($error)}
+        <div class="alert alert-danger" role="alert">
+            {$error}
+        </div>
+    {elseif isset($success)}
+        <div class="alert alert-success" role="alert">
+            {$success}
+        </div>
+    {/if}
+
+    {if isset($edit)}
+        <form action="./playlist?edit={$play_id}" method="POST">
+            <div class="input-group">
+                <input type="text" class="form-control" name="cat_name" placeholder="{$play_name}">
+                <span class="input-group-btn">
+                    <input class="btn btn-info" type="submit" name="save" value="Speichern" />
+                </span>
+            </div>
+        </form>
+    {else}
+        <br />
+        {if empty($playlists)}
+            Die User haben keine Playlists
+        {else}
+        <table class="table table-hover table-striped">
+            <tr>
+                <th>ID</th>
+                <th>Owner</th>
+                <th>public?</th>
+                <th>Letzte Änderung</th>
+                <th>Name</th>
+                <th>Videos</th>
+                <th></th>
+            </tr>
+            {foreach from=$playlists item=entry}
+                <tr>
+                    <td>{$entry->id}</td>
+                    <td>{$entry->ownername}</td>
+                    <td>{$entry->public}</td>
+                    <td>{$entry->timestamp}</td>
+                    <td><input type="text" onchange="$(this).css({ 'box-shadow':'red 0 0 5px 1.5px' })" id="{$entry->id}" value="{$entry->name}"></td>
+                    <td>{$entry->videos->total}</td>
+                        <td>
+                            <p onclick="var name = $('#{$entry->id}').val();
+                                     window.location.href='./playlist?edit={$entry->id}&user={$entry->ownerid}&name='+name+
+                                    '&offset={$offset}'">Edit</p>
+                            <a href="./playlist?delete={$entry->id}&user={$entry->ownerid}&offset={$offset}">Löschen</a>
+                        </td>
+                </tr>
+
+            {/foreach}
+        </table>
+            {/if}
+
+        {for $var=1 to {$anzahlPlay / $step}}
+            <a href="./playlist?offset={($var-1) * $step}">{$var}</a>
+        {/for}
+
+    {/if}
+
+
+</section>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap & Co. -->
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="img/wolf_v2.png">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/video.css"/>
+
+    <!-- Google Font Logo -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+{include file="topbar.tpl"}
+
+{include file="nav.tpl"}
+
+<!-- Content -->
+<section>
+    <div id="video">
+        <video width="80%" height="100%" controls>
+            <source src="https://s3-us-west-2.amazonaws.com/coverr/mp4/Fish-Tank.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+<section id="video-info">
+    <div id="title">Fische</div>
+    <div id="user"><img src="img/default_avatar_stub.png" id="avatar"> Fischfan93</div>
+    <div id="action-buttons">Share!
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </div>
+</section>
+<section id="rating">
+    Rate:
+    <div class="rating-wrapper">
+        <input type="radio" class="rating-input" id="rating-input-1-5" name="rating-input-1"/>
+        <label for="rating-input-1-5" class="rating-star"></label>
+        <input type="radio" class="rating-input" id="rating-input-1-4" name="rating-input-1"/>
+        <label for="rating-input-1-4" class="rating-star"></label>
+        <input type="radio" class="rating-input" id="rating-input-1-3" name="rating-input-1"/>
+        <label for="rating-input-1-3" class="rating-star"></label>
+        <input type="radio" class="rating-input" id="rating-input-1-2" name="rating-input-1"/>
+        <label for="rating-input-1-2" class="rating-star"></label>
+        <input type="radio" class="rating-input" id="rating-input-1-1" name="rating-input-1"/>
+        <label for="rating-input-1-1" class="rating-star"></label>
+    </div>
+</section>
+<section id="comments">
+    Comments:<br>
+    <article>
+        Great Video!
+    </article>
+</section>
+    <script>
+        $(document).ready(function () {
+            $('#menu_toggle').click(function () {
+                $('nav').slideToggle(function () {
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

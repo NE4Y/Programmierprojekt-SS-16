@@ -1,0 +1,866 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Finn Ickler, Steffen Lindner, Dominik Spoerle, Maximillian Pfister Betreuer: Wolfgang Braun" />
+  <title> Dokumentation Programmierprojekt SS 16 Arbeitsbereich: Kommunikationsnetze</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title"> Dokumentation Programmierprojekt SS 16<br />
+Arbeitsbereich: Kommunikationsnetze</h1>
+<h2 class="author">Finn Ickler, Steffen Lindner, Dominik Spoerle, Maximillian Pfister<br />
+Betreuer: Wolfgang Braun</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#beschreibung-der-software">Beschreibung der Software</a><ul>
+<li><a href="#grundstruktur">Grundstruktur</a><ul>
+<li><a href="#router">Router</a></li>
+<li><a href="#main-controller">Main Controller</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#model">Model</a></li>
+<li><a href="#index-datei">Index-Datei</a></li>
+</ul></li>
+<li><a href="#core-klassen">Core Klassen</a><ul>
+<li><a href="#notify-klasse">Notify Klasse</a></li>
+<li><a href="#config-klasse">Config Klasse</a></li>
+<li><a href="#restapi-klasse">RestApi Klasse</a></li>
+</ul></li>
+<li><a href="#models">Models</a><ul>
+<li><a href="#user">User</a></li>
+<li><a href="#kategorie">Kategorie</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#playlist">Playlist</a></li>
+</ul></li>
+<li><a href="#umgesetzte-funktionalitäten">Umgesetzte Funktionalitäten</a></li>
+<li><a href="#verwendete-drittsoftware">Verwendete Drittsoftware</a></li>
+</ul></li>
+<li><a href="#installationsanleitung">Installationsanleitung</a><ul>
+<li><a href="#systemanforderungen">Systemanforderungen</a></li>
+<li><a href="#konfiguration">Konfiguration</a></li>
+<li><a href="#installation">Installation</a><ul>
+<li><a href="#apache">Apache</a></li>
+<li><a href="#nginx">Nginx</a></li>
+</ul></li>
+<li><a href="#inbetriebnahme">Inbetriebnahme</a></li>
+</ul></li>
+<li><a href="#bedienungsanleitung">Bedienungsanleitung</a><ul>
+<li><a href="#kurzbeschreibung-der-software">Kurzbeschreibung der Software</a></li>
+<li><a href="#hinweise-zum-ersten-start">Hinweise zum ersten Start</a></li>
+<li><a href="#verfügbare-funktionen-in-abhängigkeit-der-benutzerrechte">Verfügbare Funktionen in Abhängigkeit der Benutzerrechte</a><ul>
+<li><a href="#grundstruktur-1">Grundstruktur</a><ul>
+<li><a href="#header">Header</a></li>
+<li><a href="#content">Content</a></li>
+<li><a href="#footer">Footer</a></li>
+<li><a href="#navigation-auf-der-seite">Navigation auf der Seite</a></li>
+</ul></li>
+<li><a href="#Functions">Funktionen</a><ul>
+<li><a href="#header-funktionen">Header Funktionen</a></li>
+<li><a href="#videos-verwalten">Videos verwalten</a></li>
+<li><a href="#playlists-verwalten">Playlists verwalten</a></li>
+<li><a href="#admin-funktionen">Admin Funktionen</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#probleme">Probleme und Lösungen</a></li>
+<li><a href="#besonderheiten-von-wolfgang">Besonderheiten von WolfGang</a><ul>
+<li><a href="#die-idee-wolfgang">Die Idee WolfGang</a></li>
+<li><a href="#navigation-und-overlay-techniken">Navigation und Overlay Techniken</a></li>
+<li><a href="#wolf-design">Wolf-Design</a></li>
+<li><a href="#tag-cloud-kategorien">Tag Cloud Kategorien</a></li>
+<li><a href="#robohash-automatische-benutzerbilder">RoboHash: automatische Benutzerbilder</a></li>
+<li><a href="#typeahead-suchfunktion">Typeahead Suchfunktion</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="beschreibung-der-software">Beschreibung der Software</h1>
+<h2 id="grundstruktur">Grundstruktur</h2>
+<p>Die folgende Grafik illustriert das Grundsystem der Software.</p>
+<div class="figure">
+<img src="./Includes/Software/architektur.png" alt="Software Grundstruktur" style="width:70.0%" />
+<p class="caption">Software Grundstruktur<span data-label="fig:somthing"></span></p>
+</div>
+<p>Das Grundsystem ist nach dem MVC-Prinzip<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> gestaltet.</p>
+<p>Dabei ist das System aufgespalten in verschiedene Templates (Views), die von ihrem zugehörigen Controller (View Controller) manipuliert werden. Der View Controller nutzt das Model um die nötigen Daten vom Server zu erhalten.</p>
+<p>Das Model ist (nach dem MVC-Prinzip) für die Datenhaltung zuständig.</p>
+<p><span><strong>Anmerkung:</strong></span> Das komplette Grundsystem (Struktur, Core-Klassen) wurde von Steffen Lindner implementiert / entwickelt.</p>
+<h3 id="router">Router</h3>
+<p>Der Router wird genutzt, um ein URL-Template matching durchzuführen.</p>
+<p>Es lassen sich dadurch sehr leicht ’Pfade’ entsprechenden Templates zuordnen.</p>
+<pre language="php"><code>Route::add(&quot;/home&quot;, function() {Controller::dispatch(&quot;home&quot;);});	
+	</code></pre>
+<p>Dadurch sehen die URL’s nicht nur schöner aus, es hat auch SEO<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Vorteile.</p>
+<p>Sobald die Route ’/home’ aufgerufen wird (beispielsweise: wolfgang.ne4y.de/home), wird die hinterlegte Funktion ausgeführt (in diesem Fall Controller::dispatch(’home’);)</p>
+<p>Dabei wird über ein Patternmatching die aktuelle <span><strong>Requested-URI</strong></span> <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> mit den ’angekündigten’ Pfaden verglichen. Stimmt ein Pfad überein, wird die hinterlegte Funktion ausgeführt.</p>
+<p>Der Router nutzt außerdem einen Eintrag der Config-Klasse (siehe dazu Abschnitt zur Config-Klasse). Dort wird festgelegt, wie der Basepath aussieht. Liegt das System beispielsweise unter wolfgang.ne4y.de/meinDir/, so ist der Basepath meinDir. Dazu wird folgender Eintrag in einer Datei im config Ordner gesetzt:</p>
+<div class="sourceCode" language="R"><pre class="sourceCode r"><code class="sourceCode r">	Config::<span class="kw">set</span>(<span class="st">&#39;basepath&#39;</span>,<span class="st">&#39;meinDir&#39;</span>);
+	</code></pre></div>
+<h3 id="main-controller">Main Controller</h3>
+<p>Der Main-Controller implementiert die grundlegenden Steuerfunktionen unserer Software. Dazu zählt das Rendern der Templates, das Aufrufen der entsprechenden Template-Controller sowie das Umleiten des Users.</p>
+<p>Er gibt außerdem die Möglichkeit HTTP-Statuscodes an den Nutzer zurückzugeben.</p>
+<p>Der Main Controller wird in den meisten Fällen direkt vom Router aufgerufen. Er implementiert folgende Methoden / Attribute:</p>
+<div class="figure">
+<img src="./Includes/Software/Controller.png" alt="Main-Controller" style="width:60.0%" />
+<p class="caption">Main-Controller</p>
+</div>
+<p>Dabei sind die wichtigsten Funktionen das Initialisieren eines Smarty Objects (initSmarty()), sowie das Dispatchen eines Templates (dispatch(String tpl), wird vom Router aufgerufen). Er hält auch das Smarty-Objekt gespeichert, über das die Variablen für die Templates gesetzt werden.</p>
+<pre language="php"><code>	Controller::$smarty-&gt;assign(&quot;myVar&quot;, &quot;Das ist meine Variable&quot;)	
+	</code></pre>
+<p>Während des Dispatchprozesses wird der zugehörige Templatecontroller geladen.</p>
+<h3 id="view">View</h3>
+<p>Der View wird durch ein Templatingsystem umgesetzt. Dafür verwendet unsere Software die Templateengine Smarty<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>.</p>
+<p>Smarty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.</p>
+<p>Dabei wird eine spezielle Templatesprache genutzt, die einem stark vereinfachtem PHP nahe kommt. Damit soll gewährleistet werden, dass im Template keine Businesslogik implementiert wird, um die klare Abtrennung der View vom Controller zu gewährleisten.</p>
+<p>Ein kleines Beispiel soll die Interaktion von Controller und View verdeutlichen:</p>
+<pre language="php"><code>	Controller::$smarty-&gt;assign(&quot;Author&quot;, &quot;Steffen Lindner&quot;);	
+	</code></pre>
+<pre language="html"><code>	&lt;p&gt;Name des Autors: {$Author}&lt;/p&gt;
+	</code></pre>
+<p>Dadurch wird die gesamte Logik in den Controller verlagert und im Template lediglich durch einen ’Platzhalter’ ersetzt.</p>
+<p>Smarty erlaubt auch einfache logische Konstrukte wie</p>
+<ul>
+<li><p>If / Else / Elseif</p></li>
+<li><p>For / While / Foreach</p></li>
+<li><p>Isset / Empty</p></li>
+</ul>
+<p>und viele Weitere.</p>
+<h3 id="model">Model</h3>
+<p>Die Models werden zur Datenhaltung genutzt. Da wir keinen direkten Datenbankzugriff haben, sondern lediglich über eine Rest-API mit dem Server kommunizieren führen die Model die meisten Rest-Calls aus. Das gewährleistet eine klarere Trennung des Codes nach dem MVC-Prinzip.</p>
+<p>Dazu wurde eine seperate Rest-Klasse geschrieben, die die Kommunikation mit dem Server verwaltet (dazu mehr im speziellen Abschnitt).</p>
+<p>Die Models implementieren nun lediglich die speziellen Rest-Aufrufe, sowie einfache Verwaltungsaufgaben.</p>
+<p>Eine genauere Beschreibung der Models folgt in den späteren Abschnitten.</p>
+<h3 id="index-datei">Index-Datei</h3>
+<p>Die Index-Datei (index.php) ist der zentrale Ausgangspunkt unserer Software.</p>
+<p>Alle Anfragen die der User stellt werden durch eine .htaccess-Datei unter Apache bzw. einer speziellen nginx-Konfiguration an die Index-Datei weitergeleitet. Dort lädt zunächst der Main-Controller alle Klassen (Core- und ’normale’ Klassen), sowie alle Models (dazu später mehr). In der Index-Datei werden außerdem alle Routen aus dem Routen-Ordner geladen (angegeben durch einen Eintrag in der Config-Datei, siehe dazu den Abschnitt zur Config-Klasse).</p>
+<p>Schließlich wird dort der User initialisiert (es wird erkannt, ob der Nutzer eingeloggt ist, was für Rechte er hat usw.) und der Routingprozess gestartet (und somit das angefragte Template samt zugehörigem Controller geladen).</p>
+<h2 id="core-klassen">Core Klassen</h2>
+<p>Unsere Software ist eingeteilt in ’normale’ Klassen und Core Klassen. Die Core Klassen implementieren allgemeinere Funktionen, die von der gesamten Software genutzt werden.</p>
+<p>Zu den Core Klassen gehören:</p>
+<ul>
+<li><p>Notify Klasse</p></li>
+<li><p>Controller Klasse (Main Controller, bereits beschrieben)</p></li>
+<li><p>Config Klasse</p></li>
+<li><p>RestApi Klasse</p></li>
+<li><p>Route Klasse (bereits beschrieben)</p></li>
+</ul>
+<p>So gut wie alle Core-Klassen sind statisch implementiert. Das heißt, es wird kein Objekt der einzelnen Klassen erzeugt. Das hat zum Einen den Grund, dass sie von der ’Logik’ her keinen richtigen Zustand haben. Zum Andern ist es aus programmiertechnischer Sicht einfacher, bzw. praktischer, direkt auf die Funktionen zugreifen zu können, ohne auf ein Objekt angewiesen zu sein.</p>
+<p>Die Models hingegen sind objektorientiert implementiert, d.h. um sie richtig nutzen zu können müssen zunächst Objekte erstellt werden.</p>
+<p>Einige der Core-Klassen sollen im Folgenden etwas näher beschrieben werden.</p>
+<h3 id="notify-klasse">Notify Klasse</h3>
+<p>Die Notify Klasse wird genutzt, um Meldungen an den Nutzer auszugeben.</p>
+<div class="figure">
+<img src="./Includes/Software/Notify.png" alt="Notify Klasse" style="width:30.0%" />
+<p class="caption">Notify Klasse</p>
+</div>
+<p>Der Main-Controller liest nach dem Abarbeiten der View-Controller die erstellten Nachrichten aus und speichert sie in einer Smarty-Variable, die anschließend vom Template ausgegeben wird. Dadurch können die View-Controller unabhängig voneinander Nachrichten an den Nutzer zurückgeben, ohne sich selbst um die Darstellung kümmern zu müssen.</p>
+<h3 id="config-klasse">Config Klasse</h3>
+<p>Die Config Klasse wird genutzt, um Konstanten anzulegen, wie beispielsweise der Basepath des Systems, wie viele Kategorieren pro Seite angezeigt werden sollen o.ä.</p>
+<div class="figure">
+<img src="./Includes/Software/Config.png" alt="Config Klasse" style="width:50.0%" />
+<p class="caption">Config Klasse</p>
+</div>
+<p>Es handelt sich dabei um einen einfachen Key-Value Store. Aufgrund der schwachen Typisierung von PHP kann jede Art von Value gespeichert werden.</p>
+<h3 id="restapi-klasse">RestApi Klasse</h3>
+<p>Da die gesamte Kommunikation mit dem Server über eine Rest-API<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> abläuft, wurde eine zentrale Klasse geschrieben, die die Kommunikation mit dem Server erleichtern soll.</p>
+<p>Die RestApi-Klasse implementiert dabei folgende Methoden:</p>
+<div class="figure">
+<img src="./Includes/Software/RestApi.png" alt="RestApi Klasse" style="width:80.0%" />
+<p class="caption">RestApi Klasse</p>
+</div>
+<p>Es können die grundlegenden HTTP-Requests get, post, patch, put, delete ausgeführt werden. Dafür wurde die PHP-Implementierung von cURL<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> verwendet.</p>
+<p>Beispielhafte Verwendung der RestApi-Klasse:</p>
+<pre><code>Last login: Fri Jul  8 22:34:48 on ttys002
+Steffen@Steffens-MBP:~/ownCloud/Projects/www/ProgrammierProjektSS16\:$ php -a
+Interactive shell
+
+php &gt; include(&quot;model/User.php&quot;);
+php &gt; User::initUser();
+php &gt; include(&quot;libs/Core/RestApi.php&quot;);
+php &gt; var_dump(json_decode(RestApi::get(&quot;/videos?limit=1&quot;)));
+object(stdClass)#2 (7) {
+  [&quot;total&quot;]=&gt;
+  string(3) &quot;132&quot;
+  [&quot;items&quot;]=&gt;
+  array(1) {
+    [0]=&gt;
+    object(stdClass)#3 (11) {
+      [&quot;id&quot;]=&gt;
+      string(1) &quot;4&quot;
+     ...}
+php &gt; 
+	</code></pre>
+<p>(die Ausgabe wurde aus Platzgründen abgeschnitten).</p>
+<p>Die RestApi-Klasse ist damit die Schnittstelle zwischen unserem System und dem zur Verfügung gestellten Backendsystem.</p>
+<h2 id="models">Models</h2>
+<h3 id="user">User</h3>
+<p>Das User-Model verwaltet alle Daten des Users. Dazu zählt beispielsweise die UserID, die Rechte des Users, Name, Email etc.</p>
+<p>Das User-Model implementiert folgende Funktionalitäten:</p>
+<div class="figure">
+<img src="./UML/User.png" alt="User Model" style="width:90.0%" />
+<p class="caption">User Model</p>
+</div>
+<p>Das User-Model ist aus programmiertechnischer Sicht eine Mischung aus statischer und objektorientierter Implementierung. Um das User Objekt nicht durch alle Seiten zu ’tragen’ wird zunächst in der Index-Datei der User initiiert. Dabei wird ein neues (statisches) User Objekt erstellt und ggf. mit vorhandenen Daten (aus Sessions) initialisiert (notwendig, damit ein Nutzer eingeloggt bleibt und nicht bei jedem Seitenaufruf die Userdaten erneut vom Server abgefragt werden müssen).</p>
+<p>Ab diesem Moment kann man in jedem Controller das aktuelle Userobjekt erhalten, um anschließend objektspezifische Operationen auszuführen.</p>
+<pre><code>		User::getUser()-&gt;getUserMail();	
+	</code></pre>
+<p>Innerhalb des User-Models sind die oben genannten Funktionalitäten implementiert, wobei die Kommunikation mit dem Backendsystem über die bereits beschriebene RestApi Klasse abläuft.</p>
+<p><span><strong>Anmerkun:</strong></span> Das User-Model wurde größtenteils von Steffen Lindner implementiert.</p>
+<h3 id="kategorie">Kategorie</h3>
+<p>Das Kategorien Model verwaltet die Daten für eine Kategorie bzw. allgemeine Funktionen die Kategorien betreffen. Dabei wurden alle Methoden, die nicht speziell einer Kategorie zugeordnet werden (wie beispielsweise das Suchen nach Kategorien bezüglich eines Namens) statisch implementiert.</p>
+<p>Aufgrund der unterschiedlichen Programmierer kommt es allerdings vor, dass Methoden, die eigentlich einer speziellen Kategorie zugeordnet werden können (wie beispielsweise das Hinzufügen eines Videos zu einer Kategorie) ebenfalls statisch implementiert wurden.</p>
+<p>Das Kategorie-Model implementiert folgende Methoden:</p>
+<div class="figure">
+<img src="./UML/Category.png" alt="Kategorie Model" style="width:70.0%" />
+<p class="caption">Kategorie Model</p>
+</div>
+<p><span><strong>Anmerkung:</strong></span> Das Kategorien-Model wurde (größtenteils) von Steffen Lindner (erster Teil) und Maximillian Pfister (zweiter Teil) implementiert.</p>
+<h3 id="video">Video</h3>
+<p>Das Video Model, enthält zum einen alle Metadaten eines Videos und zum anderen statische Methoden um auf eine bestimmte Anzahl Videos zuzugreifen, sowie Kommentare, Ratings und Videos hinzuzufügen.</p>
+<div class="figure">
+<img src="./UML/VideoMeta.png" alt="Metadaten eines Videos" style="width:70.0%" />
+<p class="caption">Metadaten eines Videos</p>
+</div>
+<p>Beim erstellen eines Video Objektes durch übergeben einer ID wird durch den Konstruktor der Klasse automatisch alle Metadaten durch ein REST-Call gesetzt.</p>
+<pre language="php"><code>public function __construct($id){
+            $ret = json_decode(RestAPI::get(&quot;/videos/&quot;.$id,array(&quot;id&quot; =&gt; $id)));
+
+            if (isset($ret-&gt;error)){
+                Controller::redirect(&quot;/404&quot;);
+            }
+            else{
+                $this-&gt;views = $ret-&gt;views;
+                $this-&gt;vid = $ret-&gt;id;
+                $this-&gt;title = (empty($ret-&gt;title) ? &#39;Kein Titel&#39; : $ret-&gt;title);
+                $this-&gt;description = $ret-&gt;description;
+                $this-&gt;uploaderid = $ret-&gt;uploaderid;
+                $this-&gt;uploadername = $ret-&gt;uploadername;
+                $this-&gt;uploaddate = $ret-&gt;uploaddate;
+                $this-&gt;rating = (empty($ret-&gt;rating) ? 0 : $ret-&gt;rating);
+                $this-&gt;uris = $ret-&gt;uri;
+                $this-&gt;previews = $ret-&gt;previews;
+                $this-&gt;comments = $ret-&gt;comments;
+                $this-&gt;raters = $ret-&gt;ratings-&gt;items;
+                $this-&gt;maxVideoQuality = $ret-&gt;maxVideoQuality;
+            }
+
+        }</code></pre>
+<p>Das sind alle Metadaten die der Backend Server liefert.</p>
+<div class="figure">
+<img src="./UML/VideoFunction.png" alt="Funktionen der Video Klasse" style="width:70.0%" />
+<p class="caption">Funktionen der Video Klasse</p>
+</div>
+<p>Neben den trivialen Getter Methoden wird in der Video Klasse noch Funktionalitäten rund um das Video als statische Methoden implementiert.<br />
+<code>getTopRatedVideos, getRandomVideo, getNewVideos, getVideoByUserID</code> und <code>getPopularVideos</code> geben durch gezielte Suche bestimmte Arten von Videos zurück.<br />
+<code>addComment,deleteComment,addRating, uploadVideo, deleteVideo, searchVideoByName</code> und <code>changeRating</code> stehen als Schnittstellen zwischen ihren jeweiligen AJAX Implementationen und dem Backend.<br />
+</p>
+<pre language="php" caption="Examplarische" Implementation="" einer="" Methode="" des="" Video="" Models=""><code>public static function getPopularVideos($limit){
+        $ret = RestAPI::get(&quot;/search?type=popularvideos&amp;limit=&quot; . $limit); //REST Call
+        return json_decode($ret);//Als PHP JSON (stdClass) Objekt zurückgeben
+	}</code></pre>
+<p><span><strong>Anmerkung:</strong></span> Die Klassenstruktur und die nicht statischen Methoden wurden von Finn Ickler implementiert. Die statischen Methoden vom Rest des Teams.</p>
+<h3 id="playlist">Playlist</h3>
+<p>Das Playlist Model verwaltet die Daten für eine Playlist bzw. allgemeine Funktionen die Playlisten betreffen. Da die Funktionen, die Playlisten betreffen, auch in der Suchfunktion oder z.Bsp. in der Video Wiedergabe genutzt werden, wurden diese alle statisch implementiert.</p>
+<p>Das Playlist-Model implementiert folgende Methoden:</p>
+<div class="figure">
+<img src="./UML/Playlist.png" alt="Kategorie Model" style="width:70.0%" />
+<p class="caption">Kategorie Model</p>
+</div>
+<p><span><strong>Anmerkung:</strong></span> Das Playlist-Model wurde von Dominik Spoerle, Finn Ickler und Maximillian Pfister (zweiter Teil) implementiert.</p>
+<h2 id="umgesetzte-funktionalitäten">Umgesetzte Funktionalitäten</h2>
+<p>Das System implementiert folgende Funktionalitäten:</p>
+<ul>
+<li><p>Login (Steffen Lindner)</p></li>
+<li><p>Registrierung (Maximillian Pfister)</p></li>
+<li><p>Profil (ansehen / bearbeiten) (Steffen Lindner)</p></li>
+<li><p>Kategorienverwaltung (anzeigen, anlegen, bearbeiten) (Steffen Lindner)</p></li>
+<li><p>Playlistverwaltung (Dominik Spoerle)</p></li>
+<li><p>Playlistumsortierung (Steffen Lindner)</p></li>
+<li><p>Videosuche &amp; Ergebnisanzeige (Finn Ickler)</p></li>
+<li><p>Videoansicht (Finn Ickler)</p></li>
+<li><p>Videos kommentieren / bewerten (Steffen Lindner)</p></li>
+<li><p>Video upload (Finn Ickler)</p></li>
+<li><p>Neuste Videos / Favoriten (Dominik Spoerle)</p></li>
+<li><p>Playlist abonieren / deabonieren, Videos zu Kategorien hinzufügen / entfernen (Maximillian Pfister)</p></li>
+<li><p>Rechtemanagment (Steffen Lindner &amp; Finn Ickler)</p></li>
+</ul>
+<h2 id="verwendete-drittsoftware">Verwendete Drittsoftware</h2>
+<ul>
+<li><p><a href="http://www.smarty.net/">Smarty PHP Template Engine</a></p></li>
+<li><p><a href="https://jquery.com/">JQuery</a></p></li>
+<li><p><a href="http://getbootstrap.com/">Bootstrap Framework</a></p></li>
+<li><p><a href="https://robohash.org/">RoboHash</a></p></li>
+<li><p><a href="http://videojs.com/">VideoJS</a></p></li>
+<li><p><a href="https://github.com/RubaXa/Sortable">sortable.js</a></p></li>
+<li><p><a href="http://plugins.krajee.com/file-input">fileinput.js</a></p></li>
+</ul>
+<h1 id="installationsanleitung">Installationsanleitung</h1>
+<h3 id="systemanforderungen">Systemanforderungen</h3>
+<p>Unsere Software benötigt folgende Komponenten:</p>
+<ul>
+<li><p>Apache Version 2.0 (mit aktiviertem mod_rewrite) oder höher bzw. nginx 0.8.42 oder höher oder einen anderen Webserver der Url rewriting unterstützt</p></li>
+<li><p>PHP 5.2 oder höher (für Smarty)</p></li>
+<li><p>PHP-Erweiterung cURL</p></li>
+</ul>
+<h3 id="konfiguration">Konfiguration</h3>
+<p>Jegliche (vom Nutzer vornehmbare) Konfiguration wird in der <em>mainConfig.php</em> innerhalb des <em>config</em> Verzeichnisses vorgenommen.</p>
+<p>Dabei ist besonders der bereits angesprochende <em>basepath</em> für den Nutzer interessant. Jenachdem, ob unsere Software in einem Unterverzeichnis aufgerufen wird (beispielsweise www.meineDomain.de/unterverzeichnis/) oder nicht, muss der <em>basepath</em> entsprechend angepasst werden.</p>
+<div class="sourceCode" language="R"><pre class="sourceCode r"><code class="sourceCode r">	Config::<span class="kw">set</span>(<span class="st">&#39;basepath&#39;</span>,<span class="st">&#39;unterverzeichnis&#39;</span>);
+	</code></pre></div>
+<p>Innerhalb der <em>mainConfig.php</em> lassen sich noch weitere Parameter einstellen, wie beispielsweise das Verzeichnis, in dem die Routen liegen (für das URL - Template-Matching), oder auch wie viele Kategorien / User pro Seite angezeigt werden sollen.</p>
+<h3 id="installation">Installation</h3>
+<p>Die Installation gestaltet sich sehr einfach. Nachdem die Dateien in das gewünschte Verzeichnis kopiert wurden muss lediglich noch die Konfiguration des <em>basepaths</em> durchgeführt werden (siehe Abschnitt Konfiguration).</p>
+<p>Damit alle Anfragen auch an die <em>index.php</em> weitergeleitet werden bedarf es allerdings noch einer Anpassung, die nun exemplarisch für Apache und nginx (unter unixoiden Systemen) beschrieben werden soll.</p>
+<h4 id="apache">Apache</h4>
+<p>Zunächst muss geprüft werden, ob <em>mod_rewrite</em> geladen wurde. Dazu kann das folgende bash Kommando genutzt werden:</p>
+<pre><code>		apachectl -M | grep &#39;rewrite_module&#39;
+	</code></pre>
+<p>Da es sich bei <em>mod_rewrite</em> um ein ASF<a href="#fn7" class="footnoteRef" id="fnref7"><sup>7</sup></a> Modul handelt, ist es in der Regel automatisch installiert. Wird es nicht gefunden, so muss es für gewöhnlich lediglich aktiviert werden:</p>
+<pre><code>		a2enmod rewrite
+	</code></pre>
+<p>Nun muss in der httpd.conf (bzw. einer geladenen Konfiguration von Apache) für das Verzeichnis, in dem unsere Software liegt, das Umschreiben der URL erlaubt werden. Dazu genügt ein Eintrag wie folgt:</p>
+<pre><code>&lt;Directory &quot;/var/www/unterverzeichnis/&quot;&gt;
+	AllowOverride All
+&lt;/Directory&gt;	
+	</code></pre>
+<p>Anschließend muss in der <em>.htaccess</em>-Datei im Wunschverzeichnis die <em>RewriteBase</em> angepasst werden. Für das gegebene Beispiel würde folgen:</p>
+<pre><code>	RewriteBase /unververzeichnis	
+	</code></pre>
+<h4 id="nginx">Nginx</h4>
+<p>Wird nginx verwendet, so muss das ’<em>ngx_http_rewrite_module</em><a href="#fn8" class="footnoteRef" id="fnref8"><sup>8</sup></a>’ installiert sein. Anschließend muss in der nginx.conf folgender Eintrag ergänzt werden:</p>
+<pre><code>location /unterverzeichnis {
+  alias /srv/ss16-web/htdocs;
+  index index.php;
+  try_files $uri $uri/ /ss16-web/trunk/index.php?$query_string;
+}	
+	</code></pre>
+<p>wobei die Pfade nach der tatsächlichen Struktur anzupassen sind.</p>
+<h3 id="inbetriebnahme">Inbetriebnahme</h3>
+<p>Ab diesem Moment ist unsere Software einsatzbereit.</p>
+<h1 id="bedienungsanleitung">Bedienungsanleitung</h1>
+<h2 id="kurzbeschreibung-der-software">Kurzbeschreibung der Software</h2>
+<p><strong>WolfGang</strong> ist eine Video-Streaming-Dienst, der im Rahmen des Software-Projekts 2016 an der Universität Tübingen entwickelt wurde. Das Videoportal soll den Benutzern das kostenloses Anschauen, Verwalten und Hochladen von Videos ermöglichen.</p>
+<h2 id="hinweise-zum-ersten-start">Hinweise zum ersten Start</h2>
+<p>Um alle Funktionen der Website nutzen zu können (Drop-Down-Menü für die Navigation bzw. für den Login), muss <strong>Javascript</strong> aktiviert sein.<br />
+Um alle Features unserer Seite zu erhalten, sollten sie sich bei ihrem ersten Besuch einen Account anlegen und sich mit diesem Anmelden. Dann können sie eigene Playlisten erstellen und Videos bewerten und kommentieren.<br />
+Falls sie sich gut verhalten, werden sie womöglich zu einem priviligierten Benutzer befördert und sie können Videos auf die Seite hochladen und dieses verwalten.<br />
+</p>
+<h2 id="verfügbare-funktionen-in-abhängigkeit-der-benutzerrechte">Verfügbare Funktionen in Abhängigkeit der Benutzerrechte</h2>
+<p>Die Benutzer der Website werden in Gruppen in Abhängigkeit ihrere Rechte eingeteilt.<br />
+Gäste, die keinen Account besitzen, sind User der Gruppe 1.<br />
+Ein eingeloggter Benutzer gehört zur Gruppe 2.<br />
+Von einem Admin priviligierte Benutzer gehören zur Gruppe 3,<br />
+die Admins bilden die Gruppe 4.<br />
+Daraus ergeben sich für die verschiedenen Funktionen der Website folgende Berechtigungen:<br />
+</p>
+<p>[Rechte]</p>
+<table>
+<caption>Verfügbare Funktionen in Abhängigkeit von den Benutzerrechten</caption>
+<thead>
+<tr class="header">
+<th align="left">Usergruppe</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Account erstellen</td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr class="even">
+<td align="left">Video,Playlist abspielen</td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Playlist erstellen</td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="even">
+<td align="left">Playlist bearbeiten</td>
+<td align="center"></td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Playlist löschen</td>
+<td align="center"></td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="even">
+<td align="left">Video bewerten und kommentieren</td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Profil bearbeiten</td>
+<td align="center"></td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center">(<span class="math inline">✓</span> )</td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+</tr>
+<tr class="even">
+<td align="left">Video hochladen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Video zu Kategorie hinzufügen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="even">
+<td align="left">Video von Kategorie löschen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+<td align="center">(<span class="math inline">✓</span>)</td>
+</tr>
+<tr class="odd">
+<td align="left">Benutzer löschen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="even">
+<td align="left">Benuter-Rechte verwalten</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+<tr class="odd">
+<td align="left">Kategorie erstellen,bearbeiten,löschen</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"><span class="math inline">✓</span></td>
+</tr>
+</tbody>
+</table>
+<p><br />
+</p>
+<p>Eine eingeschränkte Berechtigung (<span class="math inline">✓</span>) bedeutet,dass die Aktion nur für eigene “Objekte” verfügbar ist.<br />
+Dies sind das eigene Profil, eigene Playlists oder eigene Videos.</p>
+<h3 id="grundstruktur-1">Grundstruktur</h3>
+<p>Die Website ist in 3 Bereiche unterteilt:<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/Struktur.png" alt="Grundstruktur" style="width:33.0%" />
+<p class="caption">Grundstruktur</p>
+</div>
+<p>Der Header und der Footer sind dabei fest, der Content unterscheidet sich in Abhängigkeit der besuchten Unterseite.<br />
+Im weiteren werden die einzelnen Bereiche erklärt - möchten sie etwas genaueres über eine gewisse Funktion wissen, drücken sie</p>
+<h4 id="header">Header</h4>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/header.png" alt="Header-Unterteilung" style="width:100.0%" />
+<p class="caption">Header-Unterteilung</p>
+</div>
+<ol>
+<li><p><strong>Navigation</strong><br />
+Die Navigation ist ein Drop-Down-Menü und enthält eine Verlinkung auf alle wichtigen Seiten<br />
+(Dabei werden nur die Seiten angezeigt, die der Benutzer auch besuchen kann).<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/navigationen.png" alt="Ansicht der Navigationen mit verschiedenen Rechten (v.l. 1,2,3,4)" style="width:100.0%" />
+<p class="caption">Ansicht der Navigationen mit verschiedenen Rechten (v.l. 1,2,3,4)</p>
+</div>
+<p>Versucht man, eine Seite über eine Manipulation der URL zu besuchen, für die man keine Berechtigung besitzt, so findet eine Weiterleitung zur Fehlerseite statt.</p></li>
+<li><p><strong>Schriftzug und Logo</strong><br />
+Das Logo, dass natürlich auf keiner Website fehlen darf, ist gleichzeitig noch ein Link zur Startseite.</p></li>
+<li><p><strong>Suche</strong><br />
+Im Suchfeld kann nach einem Video, einer Playlist oder einer Kategorie gesucht werden. Näheres wird im Unterpunkt erläutert.</p></li>
+<li><p><strong>Login</strong> Der Log-In Bereich enthält Informationen darüber, ob mal angemeldet ist und einen Button, mit dem man sich ggf. anmelden kann. Näheres zur Log-In Funktion finden sie unter</p></li>
+</ol>
+<h4 id="content">Content</h4>
+<p>Der Content ist abhängig von der besuchten Unterseite und stellt zum Beispiel die Videoansicht, die Profilverwaltung oder die Playlistverwaltung dar.</p>
+<h4 id="footer">Footer</h4>
+<p>Der Footer bietet neben dem farblichen Kontrast zur Seite einen Link zum Impressum (hierfür wurde das offizielle Impressum der Uni-Tübingen verwendet), einen Link zur Dokumentation der Software sowie einen Link zu den Social-Medias von <strong>Wolfgang</strong>.</p>
+<p>Desweiteren gibt es auf Unterseiten, welche durch die Darstellung vieler Videos eine große Höhe besitzen, einen Top-Button, der zum Anfang(nach oben) ”zurückspringt”.<br />
+Statusinformationen (wie Fehlermeldungen oder ähnlichem) des Servers werden rechts unten als Inhalt einer Notify-Box angezeigt, die nach einigen Sekunden wieder verschwindet.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/topnotify.png" alt="Top-Button und Notify-Box am Beispiel des fehlgeschalagenen Log-Ins" style="width:50.0%" />
+<p class="caption">Top-Button und Notify-Box am Beispiel des fehlgeschalagenen Log-Ins</p>
+</div>
+<h4 id="navigation-auf-der-seite">Navigation auf der Seite</h4>
+<p>Verfügbare Seiten und deren Inhalte:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>Startseite: Meist gesehene Videos (im Headerbereich), Zufälliges Video, Video of the Week, Kategorien Tag Cloud</p></li>
+<li><p>Playlists: Neuste Playlist, Top Rated Playlist, eigene Playlisten, abonnierte Playlisten, alle Playlisten</p></li>
+<li><p>Neuste Videos: neuste Videos, meist gesehenes Video, alle Videos</p></li>
+<li><p>Favoriten: Populäre Videos, meist gesehenes Video, Videos mit bestem Rating, alle Videos</p></li>
+<li><p>Usermanagement: Übersicht aller User, Rechteänderungen von Usern, Löschen von Usern</p></li>
+<li><p>Upload: Video Upload</p></li>
+<li><p>Kategorien: Übersicht Kategorien, Kategorie und enthaltene Videos</p></li>
+<li><p>Profil: Nutzerprofil - Änderungen von Nutzerdaten, Übersicht eigene Videos, eigene Playlists</p></li>
+</ol>
+<h5 id="navigationsmittel">Navigationsmittel</h5>
+<ol style="list-style-type: lower-alpha">
+<li><p>Hauptmenü links: kann per Klick auf das Menü-Icon links oben geöffnet werden</p></li>
+<li><p>Suchfunktion (suchen nach Videos, Playlisten, Kategorien)</p></li>
+<li><p>Logo: Link zur Startseite</p></li>
+<li><p>Video- und Playlisten-Play-Buttons: führen zu entsprechenden Detailseite</p></li>
+<li><p>auf einer Seite: Top-Button/ Pfeil rechts unten, scrollt zum Seitenanfang</p></li>
+</ol>
+<h3 id="Functions">Funktionen</h3>
+<h4 id="header-funktionen">Header Funktionen</h4>
+<h5 id="profil-erstellen">Profil erstellen</h5>
+<p> <br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/registrierung.png" alt="LogIn-Button LogIn-Form mit Link zur Registrierung Registrierung-Form" style="width:100.0%" />
+<p class="caption">LogIn-Button LogIn-Form mit Link zur Registrierung Registrierung-Form</p>
+</div>
+<p>1. Drücken sie rechts im Header auf den <em>Log-In Button</em>. Es öffnet sich das Log-In-Menü.<br />
+2. Drücken sie den Link <em>Registierung</em>, der sich am unteren rechten Rand des Log-In-Menüs befindet. Es öffnet sich ein weiteres Fenster.<br />
+3. Tragen sie in die einzelnen Felder die geforderten Daten ein und klicken sie den Bestätigungsbutton. Bekommen sie als Antwort des Servers “Ihre Registierung war erfolgreich” so wurde ihr Account erfolgreich registriert. Falls es eine andere bzw. keine Benachrichtigung gibt, versuchen sie die Lösungen</p>
+<h5 id="login">Anmeldung</h5>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/login.png" alt=" Login-Button Login-Felder Angemeldeter Benutzer mit Logout-Button" style="width:100.0%" />
+<p class="caption"> Login-Button Login-Felder Angemeldeter Benutzer mit Logout-Button</p>
+</div>
+<p>Besitzen sie einen Account, so können sie sich wie folgt anmelden:<br />
+(Wie sie einen neuen Account erstellen finden sie unter: )<br />
+1. Drücken sie rechts im Header auf den <em>Log-In Button</em>. Es öffnet sich das Log-In-Menü.<br />
+2. Zum Einloggen geben sie bitte ihren Benutzernamen und das zugehörige Passwort ein.<br />
+3.War die Aktion erfolgreich, so wird die Seite neu geladen und sie werden im Header mit ihrem Namen begrüßt. Bekommen sie als Rückmeldung “Login nicht erfolgreich” so war entweder das Passwort falsch oder es existiert der Benuter nicht.</p>
+<h5 id="video:suchen">Suchfunktion</h5>
+<p>Die Suche eines Videos ist von überall über die Suchfunktion im Header möglich.<br />
+1. Klicken sie dazu auf das Eingabefeld.<br />
+2. Geben sie ihre Suche ein<br />
+3. Bestätigen sie per Mouseclick auf den Suche-Button (oder per Enter).<br />
+Auf der Ergebnisseite können sie oben zwischen den gefundenen Videos,Kategorien und Playlists wechseln:<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/suchergebniss.png" alt="Suchergebnisse für den String ”A”" style="width:100.0%" />
+<p class="caption">Suchergebnisse für den String ”A”</p>
+</div>
+<p>Während dem Eingeben werden ihnen bereits zutreffende Resultate mit dem zugehörigen Bereich(also ob es sich bei den Ergebnissen um Videos, Kategorien oder Playlisten handelt) angezeigt - diese können sie per Mouseclick auswählen.<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/ajaxsuche.png" alt="Suchergebnisse des Suchstrings ”G”" style="width:100.0%" />
+<p class="caption">Suchergebnisse des Suchstrings ”G”</p>
+</div>
+<p>Rechts von dem Suchfeld könne sie vorab bereits ihre suche spezifizieren, wenn sie nach etwas Bestimmten suchen wollen.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/searchreiter.png" alt="Eingrenzung der Suche " style="width:20.0%" />
+<p class="caption">Eingrenzung der Suche </p>
+</div>
+<p><em>Tipp</em>: Beginnt ihr Suchstring mit v: (bzw. c: oder p:), so wird automatisch nach dem zugehörigen Bereich (v - Video, c - Category, p - Playlist) gesucht, ohne dass sie dies im Reiter explizit auswählen müssen.<br />
+</p>
+<h4 id="videos-verwalten">Videos verwalten</h4>
+<p>Die Verwaltung von Videos ist registrierten Benutzern vorenthalten. Als Besucher ohne Login Zugang kann man alle existierenden Videos ansehen, dabei hat man mehrere Möglichkeiten Videos zu finden oder auf der Seite zu stöbern.</p>
+<h5 id="videos-ansehen">Videos ansehen</h5>
+<p> <br />
+<br />
+Wenn Sie ein Video anschauen möchten, klicken Sie auf das Vorschaubild und sie werden zur Video-Detailansicht des Videos weitergeleitet. Dort stehen die normalen Funktionen eines Videoplayers, analog zum gängigen HTML5-Player, zur Verfügung:</p>
+<ul>
+<li><p>Der Play/Pause-Button spielt das Video ab oder hält es an.</p></li>
+<li><p>Mithilfe der Lautstärkeregelung können sie die Lautstärke einstellen.</p></li>
+<li><p>Daneben befindet sich ein Button, um das Video zu maximieren (Full Screen Modus).</p></li>
+<li><p>Unter dem Video befinden sich verschieden Qualitätsstufen, in der sie das Video anschauen können (diese sind abhängig von der Qualität des Videos).</p></li>
+</ul>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/videoansicht.png" alt="Videoansicht des Videos ”Twist of the Wrist”" style="width:100.0%" />
+<p class="caption">Videoansicht des Videos ”Twist of the Wrist”</p>
+</div>
+<h5 id="video-hochladen">Video hochladen</h5>
+<p> <br />
+Unter ”Upload” können von einem eingeloggten Benutzern (ab Usergruppe 4) Videos hochgeladen werden.<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/upload.png" alt="Ansicht Upload" style="width:100.0%" />
+<p class="caption">Ansicht Upload<span data-label="fig:somthing"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.11</strong></span></p>
+<ol>
+<li><p>Feld für Drag’n Drop Eingabe von Video-Dateien, dabei kann immer nur 1 Datei hochgeladen werden. Zulässig sind dabei die Dateitypen: <span><em>mp4, mov, mpeg, wmv, avi, swf, flv, mpg</em></span></p></li>
+<li><p>”Browse-Button” zum suchen von Video Dateien auf dem Computer.</p></li>
+<li><p>Name und Beschreibung des neuen Videos. Geben WolfGang-Besuchern nähere Infos zum Video.<br />
+<span><em>keine Pflichtfelder</em></span></p></li>
+</ol>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/upload_data.png" alt="Ansicht Upload: nach dem Hinzufügen einer Videodatei" style="width:100.0%" />
+<p class="caption">Ansicht Upload: nach dem Hinzufügen einer Videodatei<span data-label="fig:somthing"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.12</strong></span></p>
+<ol>
+<li><p>Datei-Vorschau: hier ist das Abspielen des eingefügten Videos möglich, außerdem wird die Dateigröße angezeigt und das Element kann wieder aus dem Upload-Bereich gelöscht werden.</p></li>
+<li><p>Mit dem ”Remove”-Button kann die Datei aus dem Upload-Bereich gelöscht werden.<br />
+Mit ”Upload” wird das Video hochgeladen.<br />
+Mit ”Browse” wird erneut nach einer Datei auf dem Computer gesucht. Das ist nur dann möglich, falls die aktuelle Datei wieder aus dem Upload-Bereich gelöscht wurde.</p></li>
+<li><p>Name und Beschreibung können auch in diesem Zustand noch ergänzt werden.</p></li>
+</ol>
+<p>Wurde das Video hochgeladen, wird auf die Profilseite des Nutzers geführt. Hier können alle bereits hochgeladenen Videos eingesehen und auch wieder gelöscht werden. Mit einem Klick auf das entsprechende Video, kann es in der angesehen werden.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/profil_new-video.png" alt="Ansicht Profil: nach dem Upload wird das neue Video hier mit allen bereits hochgeladenen Videos gelistet." style="width:100.0%" />
+<p class="caption">Ansicht Profil: nach dem Upload wird das neue Video hier mit allen bereits hochgeladenen Videos gelistet.<span data-label="fig:somthing"></span></p>
+</div>
+<h5 id="video-bearbeiten">Video bearbeiten</h5>
+<p><span class="math inline"> </span><br />
+<br />
+Nur als eingeloggter Nutzer (ab Usergruppe 2) möglich. Ohne Login kann das Video lediglich abgespielt werden. Dabei sind Rating und Views des Videos sichtbar.<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/video_overview.png" alt="Ansicht Video: Video-Detailansicht" style="width:100.0%" />
+<p class="caption">Ansicht Video: Video-Detailansicht<span data-label="fig:video-detail"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.14</strong></span></p>
+<ol>
+<li><p>Video abspielen</p></li>
+<li><p>Video Informationen: Uploader-Name, Rating des eingeloggten Nutzers, Gesamtrating, Views</p></li>
+<li><p>Playlist verwalten: das Video kann zu einer Playlist hinzugefügt oder von einer Playlist entfernt werden. <span><strong>Hinweis:</strong></span> das ist nur für Playlists des eingeloggten Nutzers möglich.</p></li>
+<li><p>Kategorie verwalten: das Video kann zu einer Kategorie hinzugefügt oder von einer Kategorie entfernt werden.</p></li>
+<li><p>Kommentar-Feld: hier können Kommentare zum Video hinzugefügt werden. Ein Kommentar zum Video wird zusammen mit dem Benutzernamen darunter angezeigt.<br />
+Falls ein Kommentar überarbeitet oder gelöscht werden soll, muss dieser mit dem (es ist auch möglich meherer Kommentare zu einem Video zu verfassen).</p></li>
+<li><p>Qualitätsstufen: Es wird angezeigt, in wie vielen Qualitätsstufen das Video zur Verfügung steht. Standardmäßig ist die höchste Qualitätsstufe des Videos vorab ausgewählt.</p></li>
+</ol>
+<h4 id="playlists-verwalten">Playlists verwalten</h4>
+<p>Die Verwaltung sowie das Abonnieren von Playlisten ist registrierten Benutzern vorenthalten. Als Besucher ohne Login Zugang kann man existierenden Playlists ansehen und abspielen.</p>
+<h5 id="playlist-übersicht">Playlist Übersicht</h5>
+<p><span class="math inline"> </span><br />
+<br />
+Auf der Seite ”Playlist” findet man eine Übersicht zu existierenden Playlisten. Besuchern ohne Login Zugang stehen dabei die Rubriken ”Neuste Playlist”, ”Top Rated Playlist” und ”Alle Playlisten” zur Verfügung. Eingeloggte Nutzer können zusätzlich die selbst erstellten und die abonnierten Playlisten einsehen. Außerdem können Playlisten von Ihnen abonniert und ggf. ein bestehendes Abonnement für eine Playlist beendet werden. Diese Funktion wird über einen Like- / Dislike-Button dargestellt.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/playlist_nologin.png" alt="Ansicht Playlists: ohne Login" style="width:95.0%" />
+<p class="caption">Ansicht Playlists: ohne Login<span data-label="fig:playlist"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.15</strong></span></p>
+<ol>
+<li><p>Neuste Playlist: Darstellung der zuletzt angelegten Playlist.</p></li>
+<li><p>Informationen zur Playlist: Name, Ersteller, Änderungsdatum, Videoanzahl, Abonnenten</p></li>
+<li><p>Auflistung der maximal ersten 5 Videos der Playlist. Über den Play-Button sind diese Videos einzeln abspielbar.</p></li>
+<li><p>Playlist abspielen: Link zur Playlist-Detailansicht der Playlist.</p></li>
+<li><p>Top Rated Playlist: Darstellung der Playlist mit dem höchsten Rating durch WolfGang-Nutzer. Der Aufbau dieser Ansicht verhält sich analog zu ”Neuste Playlist”, wie in den Punkten 2. - 4. beschrieben.</p></li>
+<li><p>Alle Playlisten: eine Übersicht zu den Playlisten ohne weitere Filter. Über den Play-Button oder den Link ”zur Playlist” wird man auf die entsprechende Playlist-Detailseite weitergeführt. Die Videos einer Playlist werden rechts neben dem Vorschaubild (1. Video der Playlist) mit Scrollfunktion gelistet.</p></li>
+</ol>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/playlist_login.png" alt="Ansicht Playlists: nach Login" style="width:100.0%" />
+<p class="caption">Ansicht Playlists: nach Login<span data-label="fig:playlist-login"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.16</strong></span></p>
+<ol>
+<li><p>Deine Playlists: Auflistung der vom angemeldeten Nutzer erstellten Playlisten.</p></li>
+<li><p>Playlist hinzufügen: öffnet ein Overlay zum Erstellen einer neuen Playlist.</p></li>
+<li><p>Playlist Ansicht: über den Play-Button oder den Link ”zur Playlist” wird man auf die entsprechende Playlist-Detailseite weitergeführt.<br />
+Die Videos der Playlist werden rechts neben dem Vorschaubild (1. Video der Playlist) mit Scrollfunktion gelistet.<br />
+Über den Link ”Video hinzufügen” können Videos per Suchfunktion hinzugefügt werden (siehe dazu: Videos zu Playlist hinzufügen).</p></li>
+<li><p>Abonnierte Playlists: Übersicht aller Playlisten, die vom angemeldeten Benutzer abonniert markiert wurden (per Like-Button).</p></li>
+<li><p>Playlist Ansicht: über den Play-Button oder den Link ”zur Playlist” wird man auf die entsprechende Playlist-Detailseite weitergeführt.<br />
+Die Videos der Playlist werden rechts neben dem Vorschaubild (1. Video der Playlist) mit Scrollfunktion gelistet.<br />
+Mit dem ”Dislike”-Button kann das Abonnement für die Playliste beendet werden.</p></li>
+</ol>
+<h5 id="videos-zu-playlist-hinzufügen">Videos zu Playlist hinzufügen</h5>
+<p><span class="math inline"> </span><br />
+<br />
+Videos können zu einer Playlist auf zwei Wegen hinzugefügt werden. Entweder in der Video Detailansicht (siehe ) oder unter Playlists, im Inhaltsbereich mithilfe des Link ”Video hinzufügen”.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/playlist_addvideo.png" alt="Ansicht Suchfunktion: Video zu Playlist hinzufügen" style="width:100.0%" />
+<p class="caption">Ansicht Suchfunktion: Video zu Playlist hinzufügen<span data-label="fig:somthing"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.17</strong></span></p>
+<ol>
+<li><p>Suchfunktion: um ein spezielles Video der gewählten Playlist hinzuzufügen kann es über die Suchfeld gesucht werden. Dabei muss bei der Auswahl entweder ”Alle” oder ”Video” hinterlegt sein (<em><span>diese Funktion ist aktuell leider fehlerhaft, da sie bis zum Abgabetermin nicht vollständig fertiggestellt werden konnte</span>).</em></p></li>
+<li><p>Button ”zu Playlist hinzufügen”: fügt das Video der gewählten Playlist hinzu. Man wird auf die Seite Playlists weitergeleitet.</p></li>
+<li><p>Video Wiedergabe</p></li>
+</ol>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/playlist_addvideo2.png" alt="Ansicht Suchfunktion: Video zu Playlist hinzufügen, nach Suche nach Video Sidney" style="width:100.0%" />
+<p class="caption">Ansicht Suchfunktion: Video zu Playlist hinzufügen, nach Suche nach Video Sidney<span data-label="fig:somthing"></span></p>
+</div>
+<h5 id="playlist-detailseite">Playlist Detailseite</h5>
+<p><span class="math inline"> </span><br />
+<br />
+Auf der Detailseite einer Playlist kann diese abgespielt und bearbeitet werden.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/playlistdetail.png" alt="Ansicht Playlist Detailansicht" style="width:100.0%" />
+<p class="caption">Ansicht Playlist Detailansicht<span data-label="fig:somthing"></span></p>
+</div>
+<p><span><strong>Übersicht zu Abbildung 3.19</strong></span></p>
+<ol>
+<li><p>Playlistname und Buttons zur Bearbeitung. Die Buttons können nur vom Ersteller Playlist oder einem User mit Adminrechten genutzt werden:</p>
+<ol>
+<li><p>”Playlist ändern”: Name der Playlist ändern</p></li>
+<li><p>”Playlist löschen”: Playlist löschen</p></li>
+<li><p>”Playlist umsortieren”: führt zur Ansicht zum Sortieren der Videos der Playlist</p></li>
+</ol></li>
+<li><p>Wiedergabe der Playlist</p></li>
+<li><p>Anzeige der Videos der Playlist, beim Abspielen eines Videos wird die Playlist an dieser Stelle weiter abgespielt.</p></li>
+<li><p>Informationen zum aktuellen Video: Videoname, Uploader-Name, Rating</p></li>
+<li><p>Kommentarfunktion und Darstellung der Kommentare des aktuellen Videos.</p></li>
+</ol>
+<h4 id="admin-funktionen">Admin Funktionen</h4>
+<p>Admins haben Zugriff auch besondere Funktionen um die Verwaltung im Frontend zu ermöglichen.</p>
+<h5 id="nutzerverwaltung">Nutzerverwaltung</h5>
+<p> <br />
+Der nur als Admin einsehbare Menüpunkt ”Usermanagement” führt auf die entsprechende Unterseite.<br />
+Hier kann ein Admin die registrierten User mit seiner UserId, sein Namen, seiner Email Adresse und der Anzahl der Playlisten/Videos einsehen (2) und folgende Funktionen nutzen:</p>
+<ul>
+<li><p>Nach Usern suchen, dadurch kommt man auf eine Einzelansicht (5). Durch ein Suchen nach <code>:all</code> kommt man zurück zu allen Benutzern.</p></li>
+<li><p>Alle User außer Admins löschen</p></li>
+<li><p>Die User Gruppe von allen Usern außer Admins löschen</p></li>
+</ul>
+<p><img src="./Includes/Bedienungsanleitung/userma.png" alt="image" /> <img src="./Includes/Bedienungsanleitung/userma_search.png" alt="image" /></p>
+<h5 id="playlistverwaltung">Playlistverwaltung</h5>
+<p> <br />
+Wenn ein Admin auf den Menüpunkt “Playlist” klickt, dann gelangt er statt zur normalen Useransicht, bei der Playlisten erstellt und angesehen werden können, zur Adminansicht, die zur Verwaltung der Playlisten verwendet wird (1). Neben einer Auflistung aller Playlisten werden folgende Funktionen zu Verfügung gestellt:</p>
+<ul>
+<li><p>Der Name der Playlist geändert werden. Vergisst der Admin danach den Edit Knopf(3) zu drücken warnt ihn eine rote Umrandung vor nicht gespeicherten Änderungen (4)</p></li>
+<li><p>Jede Playlist kann gelöscht werden, egal wer sie erstellt hat (3)</p></li>
+</ul>
+<p><img src="./Includes/Bedienungsanleitung/playlist_admin.png" alt="image" /> <img src="./Includes/Bedienungsanleitung/playlist_admin_edited.png" alt="image" /></p>
+<h5 id="kategorienverwaltung">Kategorienverwaltung</h5>
+<p> <br />
+Wenn ein Admin auf den Menüpunkt ”Kategorien” klickt, erhält er ein leicht anderes Layout (1) als Nutzer der anderen Gruppen.<br />
+Hier wird die UserIds des Erstellers, der Name der Kategorie und die Anzahl der Videos angezeigt.<br />
+Außerdem kann ein Admin Kategorien umbenennen, löschen (3) und erstellen (2).</p>
+<p><img src="./Includes/Bedienungsanleitung/kategorien.png" alt="image" /></p>
+<h2 id="probleme">Probleme und Lösungen</h2>
+<p>Grundsätzlich werden alle (Fehler-) Meldungen über eine Notify-Box rechts unten unmittelbar nach dem Ereignis eingeblendet um so über Erfolg oder Misserfolg der Aktion zu informieren.</p>
+<ol>
+<li><p><em>Buttons funktionieren nicht(Drop-Down-Menü erscheint nicht)</em> :<br />
+Überprüfen sie, ob Javascript aktiviert ist.</p></li>
+<li><p><em>Videos können nicht abgespielt werden</em>:<br />
+Überprüfen sie ob sie die aktuellen Treiber zur Wiedergabe eines .mp4 Videos über den HTMl5 Player installiert haben.<br />
+</p></li>
+<li><p><em>Elemente werden nicht dargestellt(Seite ist fast leer)</em> :<br />
+Vermutlich ist der Backendserver, der die meisten Daten liefert, gerade nicht erreichbar. Diesen Fehler können sie selbst nicht beheben, versuchen sie es später nochmal.<br />
+</p></li>
+<li><p><em>Ich kann ein Video/eine Playlist/eine Kategorie nicht finden:</em><br />
+Die Suche erkennt leider keine ähnlichen Begriffe(oder ähnliche Schreibweisen):<br />
+Wollen sie eine Kategorie “Fisch” aufrufen, suchen aber nach “Fische”, so werden sie die Kategorie nicht finden. Versuchen sie in diesem Fall die Suche mit einem Teilbegriff (und wählen das richtige Ziel über die Suchvorschläge aus). Finden sie trotzdem kein Ergebnis, so gibt es kein Ziel, wo den Suchbegriff als Teil ihres Namens besitzt.<br />
+</p></li>
+<li><p><em>Registrierung geht nicht</em> :<br />
+1. Bekommen sie die Fehlermeldung “Passwörter stimmen nicht überein”, so geben sie ihr Passwort und die Bestätigung erneut ein (achten sie auf Groß/Kleinschreibung).<br />
+2. Bekommen sie eine Fehlermeldung über die Notify-Box, so ist entweder die angegebene E-Mail Adresse ungültig oder ihr Username wird bereits verwendet (genaue Informationen stehen in der Benachrichtigung). In diesem Fall müssen sie sich einen anderen Usernamen /eine gültige E-Mail Adresse eingeben.<br />
+</p></li>
+<li><p><em>Ich kann meinen Kommentar nicht bearbeiten</em>:<br />
+Eine Bearbeitung des Kommentars ist derzeit leider nicht möglich. Sie können allerdings ihren alten Kommentar löschen und einen neuen schreiben.<br />
+</p></li>
+<li><p><em>Ich sehe die in der Anleitung beschriebenen Knöpfe nicht</em> :<br />
+Sind die Knöpfe nicht sichtbar, so haben sie nicht die benötigten Rechte, um die Aktionen, die mit den Knöpfen assoziiert sind, auszuführen. Schauen sie sich dafür die an.<br />
+</p></li>
+<li><p><em>Video Upload funktioniert nicht</em>:<br />
+Bekommen sie keine Fehlermeldung und das Video wird trotzdem nicht hochgeladen, so ist vermutlich die Größe des Videos größer als die vom Server erlaubte maximale Größe. Komprimieren sie ihr Video oder versuchen sie es mit einem kleineren Video.<br />
+</p></li>
+</ol>
+<h2 id="besonderheiten-von-wolfgang">Besonderheiten von WolfGang</h2>
+<h3 id="die-idee-wolfgang">Die Idee WolfGang</h3>
+<p>Um dem Projekt einen Namen und ein Thema für das Design der Website zu geben, war beim Projektstart wichtig, eine passende Idee zu finden. Dabei stand die Namensfindung im Mittelpunkt.<br />
+Der Name ”WolfGang” entstand mit der Anlehnung an den Trend, Software nach einem deutschen Namen zu benennen, wie z.B. beim Messenger ”Franz”. Als Name wurde der, des Projekt Betreuers Wolfgang Braun gewählt - auch da sich damit ein Themenfeld für Design und Konzeption anboten. Das Thema ”Wolf” ist das Design-Thema und grafisch überall auf der Website zu finden, wobei ”Gang” für einen Rundgang durch die Videos der Plattform stehen soll.<br />
+</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/logo.png" alt="Logo WolfGang" style="width:33.0%" />
+<p class="caption">Logo WolfGang<span data-label="fig:somthing"></span></p>
+</div>
+<h3 id="navigation-und-overlay-techniken">Navigation und Overlay Techniken</h3>
+<p>Durch die Overlay Technik konnten viele Funktionen der Website grafisch sinnvoll und einfach eingebunden werden, ohne dass der Übersicht für den Nutzer der Website gestört wird. Beispiele hierfür sind die Hauptnavigation, sowie Buttons für Video- und Playlist-Verwaltung.</p>
+<p><span>0.49</span> <img src="./Includes/Bedienungsanleitung/specials_navi_overlay.png" title="fig:" alt="Overlay Ansicht Hauptnavigation / Button-Funktion" style="width:95.0%" /></p>
+<p><span>0.49</span> <img src="./Includes/Bedienungsanleitung/specials_overlay.png" title="fig:" alt="Overlay Ansicht Hauptnavigation / Button-Funktion" style="width:95.0%" /></p>
+<h3 id="wolf-design">Wolf-Design</h3>
+<p>Angelehnt an den Projektnamen ist der Wolf, als Logo und Symbol für das Projekt an zahlreichen stellen der Website zu finden und kennzeichnet das Design der Website. Genutzt wurden dafür ausschließlich freie Grafiken (Bilder, Gifs, Vektorgrafiken), die ggf. noch nachträglich abgewandelt, bearbeitet und für die Seite aufbereitet wurden. Beispiele finden sich dafür unter anderem im Logo, der Navigation, in den Hintergrundgrafiken des Content-Bereichs und der 404-Seite.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/wolf_v2.png" alt="Logo Image" style="width:33.0%" />
+<p class="caption">Logo Image<span data-label="fig:somthing"></span></p>
+</div>
+<p><span>0.33</span> <img src="./Includes/Bedienungsanleitung/wolf_red.png" title="fig:" alt="Hintergründe (rot, blau, schwarz)" style="width:95.0%" /></p>
+<p><span>0.33</span> <img src="./Includes/Bedienungsanleitung/wolf_blue.png" title="fig:" alt="Hintergründe (rot, blau, schwarz)" style="width:95.0%" /></p>
+<p><span>0.33</span> <img src="./Includes/Bedienungsanleitung/wolf_black.png" title="fig:" alt="Hintergründe (rot, blau, schwarz)" style="width:95.0%" /></p>
+<h3 id="tag-cloud-kategorien">Tag Cloud Kategorien</h3>
+<p>Eine Begriffs-Wolke mit zufälligen Kategorien-Namen. Kategorien mit vielen Videos werden groß dargestellt, Kategorien mit wenigen Videos kleiner.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/catcloud.png" alt="Category Cloud" style="width:100.0%" />
+<p class="caption">Category Cloud<span data-label="fig:somthing"></span></p>
+</div>
+<h3 id="robohash-automatische-benutzerbilder">RoboHash: automatische Benutzerbilder</h3>
+<p>Da das Backend keine Avatar Funktionen anbietet, wurde RoboHash.org für die Generation zufälliger Benutzerbilder für jeden User verwendet.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/robot.png" alt="RoboHash Profilbild" style="width:33.0%" />
+<p class="caption">RoboHash Profilbild<span data-label="fig:somthing"></span></p>
+</div>
+<h3 id="typeahead-suchfunktion">Typeahead Suchfunktion</h3>
+<p>Durch ein Bootstrap Addon ist die Suche mit dem ”Typeahead” Feature ausgestattet. Beim tippen wird direkt die Suche im Hintergrund ausgeführt.</p>
+<div class="figure">
+<img src="./Includes/Bedienungsanleitung/autocomplete.png" alt="Autocomplete Beispiel der Suchfunktion" style="width:100.0%" />
+<p class="caption">Autocomplete Beispiel der Suchfunktion<span data-label="fig:somthing"></span></p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>MVC-Prinzip: Model View-Controller Abspaltung zur Strukturierung von Software<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>SEO: Suchmaschinennoptimierung<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Requested-URI: Angefragte URL Zeile, die vom Webserver an den PHP-Interpreter weitergegeben wird<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Smarty: Templatingengine, mehr Informationen auf: http://smarty.net<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Rest: Representational State Transfer, Programmparadigma für verteile Systeme<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>cURL: CURL Url Request Library, Bibliothek zum Ausführen von HTTP-Requests<a href="#fnref6">↩</a></p></li>
+<li id="fn7"><p>ASF: Apache software foundation: Standardmodul<a href="#fnref7">↩</a></p></li>
+<li id="fn8"><p>NGINX Rewrite: http://nginx.org/en/docs/http/ngx_http_rewrite_module.html<a href="#fnref8">↩</a></p></li>
+</ol>
+</div>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

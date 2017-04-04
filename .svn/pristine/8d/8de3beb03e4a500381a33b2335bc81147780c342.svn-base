@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Finn Ickler, Steffen Lindner, Dominik Spoerle, Maximillian Pfister Betreuer: Wolfgang Braun" />
+  <title> Dokumentation Programmierprojekt SS 16 Arbeitsbereich: Kommunikationsnetze</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="pandoc.css" type="text/css" />
+</head>
+<body>
+<div id="header">
+<h1 class="title"> Dokumentation Programmierprojekt SS 16<br />
+Arbeitsbereich: Kommunikationsnetze</h1>
+<h2 class="author">Finn Ickler, Steffen Lindner, Dominik Spoerle, Maximillian Pfister<br />
+Betreuer: Wolfgang Braun</h2>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#beschreibung-der-software">Beschreibung der Software</a><ul>
+<li><a href="#grundstruktur">Grundstruktur</a><ul>
+<li><a href="#router">Router</a></li>
+<li><a href="#main-controller">Main Controller</a></li>
+<li><a href="#view">View</a></li>
+<li><a href="#model">Model</a></li>
+<li><a href="#index-datei">Index-Datei</a></li>
+</ul></li>
+<li><a href="#core-klassen">Core Klassen</a><ul>
+<li><a href="#notify-klasse">Notify Klasse</a></li>
+<li><a href="#config-klasse">Config Klasse</a></li>
+<li><a href="#restapi-klasse">RestApi Klasse</a></li>
+</ul></li>
+<li><a href="#models">Models</a><ul>
+<li><a href="#user">User</a></li>
+<li><a href="#kategorie">Kategorie</a></li>
+</ul></li>
+<li><a href="#umgesetzte-funktionalitäten">Umgesetzte Funktionalitäten</a></li>
+</ul></li>
+</ul>
+</div>
+<h1 id="beschreibung-der-software">Beschreibung der Software</h1>
+<h2 id="grundstruktur">Grundstruktur</h2>
+<p>Die folgende Grafik illustriert das Grundsystem der Software.</p>
+<div class="figure">
+<img src="./Includes/Software/architektur.png" alt="Software Grundstruktur" style="width:70.0%" />
+<p class="caption">Software Grundstruktur<span data-label="fig:somthing"></span></p>
+</div>
+<p>Das Grundsystem ist nach dem MVC-Prinzip<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a> gestaltet.</p>
+<p>Dabei ist das System aufgespalten in verschiedene Templates (Views), die von ihrem zugehörigen Controller (View Controller) manipuliert werden. Der View Controller nutzt das Model um die nötigen Daten vom Server zu erhalten.</p>
+<p>Das Model ist (nach dem MVC-Prinzip) für die Datenhaltung zuständig.</p>
+<p><span><strong>Anmerkung:</strong></span> Das komplette Grundsystem (Struktur, Core-Klassen) wurde von Steffen Lindner implementiert / entwickelt.</p>
+<h3 id="router">Router</h3>
+<p>Der Router wird genutzt, um ein URL-Template matching durchzuführen.</p>
+<p>Es lassen sich dadurch sehr leicht ’Pfade’ entsprechenden Templates zuordnen.</p>
+<pre language="php"><code>Route::add(&quot;/home&quot;, function() {Controller::dispatch(&quot;home&quot;);});	
+	</code></pre>
+<p>Dadurch sehen die URL’s nicht nur schöner aus, es hat auch SEO<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> Vorteile.</p>
+<p>Sobald die Route ’/home’ aufgerufen wird (beispielsweise: wolfgang.ne4y.de/home), wird die hinterlegte Funktion ausgeführt (in diesem Fall Controller::dispatch(’home’);)</p>
+<p>Dabei wird über ein Patternmatching die aktuelle <span><strong>Requested-URI</strong></span> <a href="#fn3" class="footnoteRef" id="fnref3"><sup>3</sup></a> mit den ’angekündigten’ Pfaden verglichen. Stimmt ein Pfad überein, wird die hinterlegte Funktion ausgeführt.</p>
+<p>Der Router nutzt außerdem einen Eintrag der Config-Klasse (siehe dazu Abschnitt zur Config-Klasse). Dort wird festgelegt, wie der Basepath aussieht. Liegt das System beispielsweise unter wolfgang.ne4y.de/meinDir/, so ist der Basepath meinDir. Dazu wird folgender Eintrag in einer Datei im config Ordner gesetzt:</p>
+<div class="sourceCode" language="R"><pre class="sourceCode r"><code class="sourceCode r">	Config::<span class="kw">set</span>(<span class="st">&#39;basepath&#39;</span>,<span class="st">&#39;meinDir&#39;</span>);
+	</code></pre></div>
+<h3 id="main-controller">Main Controller</h3>
+<p>Der Main-Controller implementiert die grundlegenden Steuerfunktionen unserer Software. Dazu zählt das Rendern der Templates, das Aufrufen der entsprechenden Template-Controller sowie das Umleiten des Users.</p>
+<p>Er gibt außerdem die Möglichkeit HTTP-Statuscodes an den Nutzer zurückzugeben.</p>
+<p>Der Main Controller wird in den meisten Fällen direkt vom Router aufgerufen. Er implementiert folgende Methoden / Attribute:</p>
+<div class="figure">
+<img src="./Includes/Software/Controller.png" alt="Main-Controller" style="width:60.0%" />
+<p class="caption">Main-Controller</p>
+</div>
+<p>Dabei sind die wichtigsten Funktionen das Initialisieren eines Smarty Objects (initSmarty()), sowie das Dispatchen eines Templates (dispatch(String tpl), wird vom Router aufgerufen). Er hält auch das Smarty-Objekt gespeichert, über das die Variablen für die Templates gesetzt werden.</p>
+<pre language="php"><code>	Controller::$smarty-&gt;assign(&quot;myVar&quot;, &quot;Das ist meine Variable&quot;)	
+	</code></pre>
+<p>Während des Dispatchprozesses wird der zugehörige Templatecontroller geladen.</p>
+<h3 id="view">View</h3>
+<p>Der View wird durch ein Templatingsystem umgesetzt. Dafür verwendet unsere Software die Templateengine Smarty<a href="#fn4" class="footnoteRef" id="fnref4"><sup>4</sup></a>.</p>
+<p>Smarty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.</p>
+<p>Dabei wird eine spezielle Templatesprache genutzt, die einem stark vereinfachtem PHP nahe kommt. Damit soll gewährleistet werden, dass im Template keine Businesslogik implementiert wird, um die klare Abtrennung der View vom Controller zu gewährleisten.</p>
+<p>Ein kleines Beispiel soll die Interaktion von Controller und View verdeutlichen:</p>
+<pre language="php"><code>	Controller::$smarty-&gt;assign(&quot;Author&quot;, &quot;Steffen Lindner&quot;);	
+	</code></pre>
+<pre language="html"><code>	&lt;p&gt;Name des Autors: {$Author}&lt;/p&gt;
+	</code></pre>
+<p>Dadurch wird die gesamte Logik in den Controller verlagert und im Template lediglich durch einen ’Platzhalter’ ersetzt.</p>
+<p>Smarty erlaubt auch einfache logische Konstrukte wie</p>
+<ul>
+<li><p>If / Else / Elseif</p></li>
+<li><p>For / While / Foreach</p></li>
+<li><p>Isset / Empty</p></li>
+</ul>
+<p>und viele Weitere.</p>
+<h3 id="model">Model</h3>
+<p>Die Models werden zur Datenhaltung genutzt. Da wir keinen direkten Datenbankzugriff haben, sondern lediglich über eine Rest-API mit dem Server kommunizieren führen die Model die meisten Rest-Calls aus. Das gewährleistet eine klarere Trennung des Codes nach dem MVC-Prinzip.</p>
+<p>Dazu wurde eine seperate Rest-Klasse geschrieben, die die Kommunikation mit dem Server verwaltet (dazu mehr im speziellen Abschnitt).</p>
+<p>Die Models implementieren nun lediglich die speziellen Rest-Aufrufe, sowie einfache Verwaltungsaufgaben.</p>
+<p>Eine genauere Beschreibung der Models folgt in den späteren Abschnitten.</p>
+<h3 id="index-datei">Index-Datei</h3>
+<p>Die Index-Datei (index.php) ist der zentrale Ausgangspunkt unserer Software.</p>
+<p>Alle Anfragen die der User stellt werden durch eine .htaccess-Datei unter Apache bzw. einer speziellen nginx-Konfiguration an die Index-Datei weitergeleitet. Dort lädt zunächst der Main-Controller alle Klassen (Core- und ’normale’ Klassen), sowie alle Models (dazu später mehr). In der Index-Datei werden außerdem alle Routen aus dem Routen-Ordner geladen (angegeben durch einen Eintrag in der Config-Datei, siehe dazu den Abschnitt zur Config-Klasse).</p>
+<p>Schließlich wird dort der User initialisiert (es wird erkannt, ob der Nutzer eingeloggt ist, was für Rechte er hat usw.) und der Routingprozess gestartet (und somit das angefragte Template samt zugehörigem Controller geladen).</p>
+<h2 id="core-klassen">Core Klassen</h2>
+<p>Unsere Software ist eingeteilt in ’normale’ Klassen und Core Klassen. Die Core Klassen implementieren allgemeinere Funktionen, die von der gesamten Software genutzt werden.</p>
+<p>Zu den Core Klassen gehören:</p>
+<ul>
+<li><p>Notify Klasse</p></li>
+<li><p>Controller Klasse (Main Controller, bereits beschrieben)</p></li>
+<li><p>Config Klasse</p></li>
+<li><p>RestApi Klasse</p></li>
+<li><p>Route Klasse (bereits beschrieben)</p></li>
+</ul>
+<p>So gut wie alle Core-Klassen sind statisch implementiert. Das heißt, es wird kein Objekt der einzelnen Klassen erzeugt. Das hat zum Einen den Grund, dass sie von der ’Logik’ her keinen richtigen Zustand haben. Zum Andern ist es aus programmiertechnischer Sicht einfacher, bzw. praktischer, direkt auf die Funktionen zugreifen zu können, ohne auf ein Objekt angewiesen zu sein.</p>
+<p>Die Models hingegen sind objektorientiert implementiert, d.h. um sie richtig nutzen zu können müssen zunächst Objekte erstellt werden.</p>
+<p>Einige der Core-Klassen sollen im Folgenden etwas näher beschrieben werden.</p>
+<h3 id="notify-klasse">Notify Klasse</h3>
+<p>Die Notify Klasse wird genutzt, um Meldungen an den Nutzer auszugeben.</p>
+<div class="figure">
+<img src="./Includes/Software/Notify.png" alt="Notify Klasse" style="width:30.0%" />
+<p class="caption">Notify Klasse</p>
+</div>
+<p>Der Main-Controller liest nach dem Abarbeiten der View-Controller die erstellten Nachrichten aus und speichert sie in einer Smarty-Variable, die anschließend vom Template ausgegeben wird. Dadurch können die View-Controller unabhängig voneinander Nachrichten an den Nutzer zurückgeben, ohne sich selbst um die Darstellung kümmern zu müssen.</p>
+<h3 id="config-klasse">Config Klasse</h3>
+<p>Die Config Klasse wird genutzt, um Konstanten anzulegen, wie beispielsweise der Basepath des Systems, wie viele Kategorieren pro Seite angezeigt werden sollen o.ä.</p>
+<div class="figure">
+<img src="./Includes/Software/Config.png" alt="Config Klasse" style="width:50.0%" />
+<p class="caption">Config Klasse</p>
+</div>
+<p>Es handelt sich dabei um einen einfachen Key-Value Store. Aufgrund der schwachen Typisierung von PHP kann jede Art von Value gespeichert werden.</p>
+<h3 id="restapi-klasse">RestApi Klasse</h3>
+<p>Da die gesamte Kommunikation mit dem Server über eine Rest-API<a href="#fn5" class="footnoteRef" id="fnref5"><sup>5</sup></a> abläuft, wurde eine zentrale Klasse geschrieben, die die Kommunikation mit dem Server erleichtern soll.</p>
+<p>Die RestApi-Klasse implementiert dabei folgende Methoden:</p>
+<div class="figure">
+<img src="./Includes/Software/RestApi.png" alt="RestApi Klasse" style="width:80.0%" />
+<p class="caption">RestApi Klasse</p>
+</div>
+<p>Es können die grundlegenden HTTP-Requests get, post, patch, put, delete ausgeführt werden. Dafür wurde die PHP-Implementierung von cURL<a href="#fn6" class="footnoteRef" id="fnref6"><sup>6</sup></a> verwendet.</p>
+<p>Beispielhafte Verwendung der RestApi-Klasse:</p>
+<pre><code>Last login: Fri Jul  8 22:34:48 on ttys002
+Steffen@Steffens-MBP:~/ownCloud/Projects/www/ProgrammierProjektSS16\:$ php -a
+Interactive shell
+
+php &gt; include(&quot;model/User.php&quot;);
+php &gt; User::initUser();
+php &gt; include(&quot;libs/Core/RestApi.php&quot;);
+php &gt; var_dump(json_decode(RestApi::get(&quot;/videos?limit=1&quot;)));
+object(stdClass)#2 (7) {
+  [&quot;total&quot;]=&gt;
+  string(3) &quot;132&quot;
+  [&quot;items&quot;]=&gt;
+  array(1) {
+    [0]=&gt;
+    object(stdClass)#3 (11) {
+      [&quot;id&quot;]=&gt;
+      string(1) &quot;4&quot;
+     ...}
+php &gt; 
+	</code></pre>
+<p>(die Ausgabe wurde aus Platzgründen abgeschnitten).</p>
+<p>Die RestApi-Klasse ist damit die Schnittstelle zwischen unserem System und dem zur Verfügung gestellten Backendsystem.</p>
+<h2 id="models">Models</h2>
+<h3 id="user">User</h3>
+<p>Das User-Model verwaltet alle Daten des Users. Dazu zählt beispielsweise die UserID, die Rechte des Users, Name, Email etc.</p>
+<p>Das User-Model implementiert folgende Funktionalitäten:</p>
+<div class="figure">
+<img src="./UML/User.png" alt="User Model" style="width:90.0%" />
+<p class="caption">User Model</p>
+</div>
+<p>Das User-Model ist aus programmiertechnischer Sicht eine Mischung aus statischer und objektorientierter Implementierung. Um das User Objekt nicht durch alle Seiten zu ’tragen’ wird zunächst in der Index-Datei der User initiiert. Dabei wird ein neues (statisches) User Objekt erstellt und ggf. mit vorhandenen Daten (aus Sessions) initialisiert (notwendig, damit ein Nutzer eingeloggt bleibt und nicht bei jedem Seitenaufruf die Userdaten erneut vom Server abgefragt werden müssen).</p>
+<p>Ab diesem Moment kann man in jedem Controller das aktuelle Userobjekt erhalten, um anschließend objektspezifische Operationen auszuführen.</p>
+<pre><code>		User::getUser()-&gt;getUserMail();	
+	</code></pre>
+<p>Innerhalb des User-Models sind die oben genannten Funktionalitäten implementiert, wobei die Kommunikation mit dem Backendsystem über die bereits beschriebene RestApi Klasse abläuft.</p>
+<p><span><strong>Anmerkun:</strong></span> Das User-Model wurde größtenteils von Steffen Lindner implementiert.</p>
+<h3 id="kategorie">Kategorie</h3>
+<p>Das Kategorien Model verwaltet die Daten für eine Kategorie bzw. allgemeine Funktionen die Kategorien betreffen. Dabei wurden alle Methoden, die nicht speziell einer Kategorie zugeordnet werden (wie beispielsweise das Suchen nach Kategorien bezüglich eines Namens) statisch implementiert.</p>
+<p>Aufgrund der unterschiedlichen Programmierer kommt es allerdings vor, dass Methoden, die eigentlich einer speziellen Kategorie zugeordnet werden können (wie beispielsweise das Hinzufügen eines Videos zu einer Kategorie) ebenfalls statisch implementiert wurden.</p>
+<p>Das Kategorie-Model implementiert folgende Methoden:</p>
+<div class="figure">
+<img src="./UML/Category.png" alt="Kategorie Model" style="width:70.0%" />
+<p class="caption">Kategorie Model</p>
+</div>
+<p><span><strong>Anmerkung:</strong></span> Das Kategorien-Model wurde (größtenteils) von Steffen Lindner (erster Teil) und Maximillian Pfister (zweiter Teil) implementiert.</p>
+<h2 id="umgesetzte-funktionalitäten">Umgesetzte Funktionalitäten</h2>
+<p>Das System implementiert folgende Funktionalitäten:</p>
+<ul>
+<li><p>Login (Steffen Lindner)</p></li>
+<li><p>Registrierung (Maximillian Pfister)</p></li>
+<li><p>Profil (ansehen / bearbeiten) (Steffen Lindner)</p></li>
+<li><p>Kategorienverwaltung (anzeigen, anlegen, bearbeiten) (Steffen Lindner)</p></li>
+<li><p>Playlistverwaltung (Dominik Spoerle)</p></li>
+<li><p>Playlistumsortierung (Steffen Lindner)</p></li>
+<li><p>Videosuche &amp; Ergebnisanzeige (Finn Ickler)</p></li>
+<li><p>Videoansicht (Finn Ickler)</p></li>
+<li><p>Videos kommentieren / bewerten (Steffen Lindner)</p></li>
+<li><p>Video upload (Finn Ickler)</p></li>
+<li><p>Neuste Videos / Favoriten (Dominik Spoerle)</p></li>
+<li><p>Playlist abonieren / deabonieren, Videos zu Kategorien hinzufügen / entfernen (Maximillian Pfister)</p></li>
+<li><p>Rechtemanagment (Steffen Lindner &amp; Finn Ickler)</p></li>
+</ul>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>MVC-Prinzip: Model View-Controller Abspaltung zur Strukturierung von Software<a href="#fnref1">↩</a></p></li>
+<li id="fn2"><p>SEO: Suchmaschinennoptimierung<a href="#fnref2">↩</a></p></li>
+<li id="fn3"><p>Requested-URI: Angefragte URL Zeile, die vom Webserver an den PHP-Interpreter weitergegeben wird<a href="#fnref3">↩</a></p></li>
+<li id="fn4"><p>Smarty: Templatingengine, mehr Informationen auf: http://smarty.net<a href="#fnref4">↩</a></p></li>
+<li id="fn5"><p>Rest: Representational State Transfer, Programmparadigma für verteile Systeme<a href="#fnref5">↩</a></p></li>
+<li id="fn6"><p>cURL: CURL Url Request Library, Bibliothek zum Ausführen von HTTP-Requests<a href="#fnref6">↩</a></p></li>
+</ol>
+</div>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/styles/default.min.css">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

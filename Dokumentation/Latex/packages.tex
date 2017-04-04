@@ -1,0 +1,57 @@
+\usepackage{ucs}
+\usepackage{ifluatex}
+\ifluatex
+\usepackage[utf8x]{luainputenc}
+\else
+\usepackage[utf8x]{inputenc}
+\fi
+\usepackage{enumerate}
+\usepackage{a4wide}
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb, amstext, amsfonts, mathrsfs}
+\usepackage[procnames]{listings}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{qtree}
+\usepackage{pgfplots}
+\usepackage{polynom}
+%Package für euro Zeichen
+\usepackage{eurosym}
+\titleformat*{\section}{\large\bfseries}
+\clearscrheadfoot
+\usepackage{wasysym} %Fuer den Blitz
+\lstdefinestyle{javaStyle}{%
+	basicstyle={\small},
+	language=Java,
+	numbers=left,
+	showstringspaces=false,
+	%keywordstyle={\color{kwcolor}\bfseries},
+	%stringstyle={\color{stringcolor}},
+	commentstyle={\color{commentcolor}},
+	tabsize=4,
+	breaklines=true,
+	%cmathescape=true,
+	escapeinside=||
+}
+\lstnewenvironment{code}
+	{\lstset{style=javaStyle}}
+	{}
+\newcommand{\codeFile}[1]{\lstinputlisting[style=javaStyle]{#1}}
+
+\usepackage{todonotes}
+\usepackage{hyperref}
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  linkbordercolor=blue,% hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
+\usepackage{listings,xcolor}
+\usepackage{inconsolata}

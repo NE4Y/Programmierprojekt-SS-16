@@ -1,0 +1,13 @@
+section#tweets {
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+    font-size:0.8em;
+}
+
+section#tweets article {
+    width:25%;
+    float:left;
+    margin-right:5%;
+}

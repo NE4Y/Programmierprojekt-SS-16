@@ -1,0 +1,39 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Steffen
+ * Date: 20.05.16
+ * Time: 14:50
+ */
+Route::add("/", function() {Controller::dispatch("home");});
+Route::add("/home", function() {Controller::dispatch("home");});
+Route::add("/upload", function() {Controller::dispatch("upload");});
+Route::add("/video", function() {Controller::dispatch("video");});
+Route::add("/rightsmanagment", function() {Controller::dispatch("rightsmanagment");});
+Route::add("/profile", function() {Controller::dispatch("profile");});
+Route::add("/search", function() {Controller::dispatch("searchresult");});
+Route::add("/register", function() {Controller::dispatch("register");});
+Route::add("/playlist", function() {Controller::dispatch("playlist");});
+Route::add("/videolist", function() {Controller::dispatch("videolist");});
+Route::add("/favorites", function() {Controller::dispatch("favoritevideos");});
+Route::add("/kategories", function() {Controller::dispatch("kategorien");});
+Route::add("/doku",function (){
+    Controller::redirect("/Dokumentation/doku.html");
+});
+
+
+Route::add404(function() {Controller::dispatch("404");});
+Route::add("/needLogin", function() {Controller::dispatch("needLogin");});
+Route::add("/noRights", function() {Controller::dispatch("needRights");});
+
+/* Ajax calls */
+Route::add("/addComment", function() {Controller::loadAjaxController("comments/addComment");});
+Route::add("/deleteComment", function() {Controller::loadAjaxController("comments/deleteComment");});
+Route::add("/addRating", function() {Controller::loadAjaxController("comments/addRating");});
+Route::add("/searchajax", function() {Controller::loadAjaxController("search/search");});
+Route::add("/usersearch", function() {Controller::loadAjaxController("search/usersearch");});
+Route::add("/updateUser", function() {Controller::loadAjaxController("admin/updateUser");});
+Route::add("/doUpload", function() {Controller::loadAjaxController("upload/doUpload");});
+Route::add("/update", function() {Controller::loadAjaxController("playlist/updatevideo");});
+
+?>

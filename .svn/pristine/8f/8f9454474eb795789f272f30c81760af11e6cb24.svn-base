@@ -1,0 +1,183 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Finn
+ * Date: 26.05.16
+ * Time: 23:17
+ */
+
+class Playlist {
+
+    /**
+     * Crates a Playlist
+     * @param $user
+     * @param $name
+     * @param $visibility
+     * @return json
+     */
+
+    public static function createplaylist($user,$name,$visibility){
+        return RestAPI::post("/users/".$user."/playlists",array("name" => $name,
+            "public" => $visibility));
+    }
+
+    /**
+     * @return json
+     */
+    public static function getPlaylist($offset) {
+        return RestApi::get("/playlists?limit=".Config::get('kategoriesPerPage')
+            ."&offset=".$offset);
+    }
+
+    /**
+     * Deletes a Playlist
+     * @param $pid
+     * @param $user
+     * @return mixed
+     */
+    public static function deletePlaylist($user,$pid) {
+        return RestApi::emptyDelete("/users/".$user."/playlists/".$pid);
+    }
+
+    /**
+     * Get playlist by $pid
+     * @param $id
+     * @return json
+     */
+    public static function getPlaylistById($pid) {
+        return RestAPI::get("/playlists/" . $pid);
+       
+    }
+
+    /**
+     * Renames a Playlist
+     * @param $id
+     * @param $name
+     * @param $user
+     * @return json
+     */
+    public static function renamePlay($id, $name, $user) {
+        $patchbody = array(array('op' => 'replace', 'path' => '/name', "value" => $name));
+        return RestAPI::patch("/users/".$user."/playlists/".$id, $patchbody);
+    }
+    /**
+     * Get videos by playlist $pid
+     * @param $id
+     * @return json
+     */
+    public static function getVideosByPlaylist($pid) {
+        return RestAPI::get("/playlists/".$pid."/videos");
+    }
+
+    /**
+     * Returns all the Playlist of a User
+     * @param $uid
+     * @return mixed
+     */
+    
+    public static function getPlaylistsByUser($uid) {
+        return RestAPI::get("/users/".$uid."/playlists");
+    }
+
+    /**
+     * Returns searchresult with @param for playlists
+     * @param $name
+     * @return mixed
+     */
+    public static function searchPlaylistByName($name)
+    {
+        $ret = RestAPI::get("/search?type=playlist&name=" . $name);
+        return json_decode($ret);
+    }
+
+    public static function getFollowersIDofPlaylist($pid)
+    {
+        $followers = array();
+        $var = RestAPI::get('/playlists/' . $pid);
+        $var = json_decode($var);
+        foreach ($var->followers->items as $value) {
+            array_push($followers, ($value->id));
+
+        }
+        return $followers;
+    }
+
+    /**
+     * Get the Playlist with most followers
+     */
+    public static function  getMostPopularPlaylist(){
+        $var = json_decode(RestAPI::get('/playlists'));
+        $max = 0;
+        $pid = 0;
+        if (isset($var)) {
+            foreach ($var->items as $value) {
+                $follower = $value->followers->total;
+                if ((int)$follower > $max) {
+                    $pid = $value->id;
+                    $max = (int)$follower;
+                }
+            }
+        }
+        return $pid;
+    }
+
+
+
+    /**
+     * Adds video to Playlist
+     * @param $pid
+     * @param $vid
+     * @return json
+     */
+    public static function addVideoToPlaylist($pid, $vid)
+    {
+        return RestAPI::post("/users/".User::getUser()->getUserId()."/playlists/".$pid."/videos", array("id"=>$vid));
+    }
+
+    public static function sortPlaylist($pid, $range_start, $range_length, $insert_before) {
+        return json_decode(RestAPI::put("/users/".User::getUser()->getUserId()."/playlists/".$pid."/videos", array("range_start" => $range_start, "range_length" => $range_length, "insert_before" => $insert_before)));
+    }
+
+    /**
+     * delete video to Playlist
+     * @param $pid
+     * @param $vid
+     * @return json
+     */
+    public static function deleteVideoFromPlaylist($pid, $vid)
+    {
+        return RestAPI::delete("/users/".User::getUser()->getUserId()."/playlists/".$pid."/videos", array("id"=>$vid));
+    }
+
+    //Check if user is follower of the playlist
+
+    public static function isfollower($pid)
+    {
+
+        if (in_array(User::getUser()->getUserId(), Playlist::getFollowersIDofPlaylist($pid))) {
+
+            return True;
+
+        }
+        return False;
+    }
+
+    public static function getAbbonniertePlaylists($userid)
+    {
+        $ret = json_decode(RestAPI::get("/playlists"));
+        $idarray = array();
+        $result = array();
+        foreach ($ret->items as $items) {
+            $id = $items->id;
+            if (Playlist::isfollower($id)) {
+                array_push($idarray, $id);
+            }
+        }
+        foreach ($idarray as $playlistid) {
+            array_push($result, Playlist::getPlaylistById($playlistid));
+
+        }
+        return $result;
+    }
+    
+}

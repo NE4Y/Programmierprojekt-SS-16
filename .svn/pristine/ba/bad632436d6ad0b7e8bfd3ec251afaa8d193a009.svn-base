@@ -1,0 +1,11 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Steffen
+ * Date: 20.05.16
+ * Time: 14:50
+ */
+Route::add("/video", function() {Controller::dispatch("video");});
+Route::add("/rightsmanagment", function() {Controller::dispatch("rightsmanagment");});
+Route::add("/profile", function() {Controller::dispatch("profile");});
+?>

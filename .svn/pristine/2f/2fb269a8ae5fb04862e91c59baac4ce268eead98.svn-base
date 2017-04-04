@@ -1,0 +1,207 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Finn
+ * Date: 26.05.16
+ * Time: 15:07
+ */
+
+
+/**
+ * Follow/Unfollow the playlist with id: $_POST['playlistid']
+ */
+if (isset($_POST['playlistid'])) {
+    if (isset($_POST['follow'])) {
+        $call = User::getUser()->followPlaylist($_POST['playlistid']);
+        if (isset($call->error)) {
+            Notify::addNotify($call->error->message);
+        } else {
+            Notify::addNotify('Die Playlist wurde erfolgreich abonniert');
+        }
+    }
+    if (isset($_POST['unfollow'])) {
+        $call = User::getUser()->unfollowPlaylist($_POST['playlistid']);
+        if (isset($call->error)) {
+            Notify::addNotify($call->error->message);
+        } else {
+            Notify::addNotify('Das Abbonement der Playlist wurde beendet');
+        }
+    }
+}
+
+if (User::getUser()->isLoggedIn()) {
+    $typeid = User::getUser()->getTypeId();
+    Controller::$smarty->assign('typeid', $typeid);
+
+} else {
+    $typeid = 1;
+    Controller::$smarty->assign('typeid', 1);
+}
+
+//Show all Playlists
+$all = json_decode(Playlist::getPlaylist(0));
+$allMinusOwn = [];
+if (isset($all)) {
+
+    foreach ($all->{'items'} as $playlist) {
+        if (User::getUser()->getUserId() !== $playlist->ownerid) {
+            array_push($allMinusOwn, $playlist);
+        }
+    }
+}
+
+foreach ($allMinusOwn as $playlist) {
+    if ($playlist->{'videos'}->total > 0) {
+        $video = json_decode(Playlist::getVideosByPlaylist($playlist->id));
+        $playlist->{'videolist'} = $video;
+
+    }
+    $playlist->{'abonniert'} = Playlist::isfollower($playlist->id);
+}
+Controller::$smarty->assign("allplaylists", $allMinusOwn);
+
+
+//Newest Playlist
+
+$newestpl = json_decode(Playlist::getPlaylist(0, 1));#
+if (isset($newestpl)) {
+    if ($newestpl->items[0]->videos->total > 0) {
+        $video = json_decode(Playlist::getVideosByPlaylist($newestpl->items[0]->id));
+        $newestpl->items[0]->{'videolist'} = $video;
+        $newestpl->items[0]->videolist->items = array_slice($newestpl->items[0]->videolist->items, 0, 5);
+    }
+}
+if (isset($newestpl)) {
+    $newestpl->items[0]->{'abonniert'} = Playlist::isfollower($newestpl->items[0]->id);
+    Controller::$smarty->assign("newplaylist", $newestpl->items[0]);
+} else {
+    Controller::$smarty->assign("newplaylist", null);
+}
+
+//Show most Popular Playlist
+$pid = Playlist::getMostPopularPlaylist();
+$popularpl = json_decode(Playlist::getPlaylistById($pid));
+if (isset($popularpl)) {
+    if ($popularpl->{'videos'}->total > 0) {
+        $video = json_decode(Playlist::getVideosByPlaylist($popularpl->id));
+        $popularpl->{'videolist'} = $video;
+    }
+    $popularpl->videos->items = array_slice($popularpl->videos->items, 0, 5);
+    $popularpl->{'abonniert'} = Playlist::isfollower($popularpl->id);
+    Controller::$smarty->assign("popplaylist", $popularpl);
+}
+
+if ($typeid == 2 || $typeid == 3) {
+    if (isset($_GET['change'])) {
+        $ret = Playlist::renamePlay($_GET['id'], $_GET['name'], User::getUser()->getUserId());
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Playlist wurde geändert");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+    }
+    if (isset($_GET['delete'])) {
+        $ret = Playlist::deletePlaylist(User::getUser()->getUserId(), $_GET['id']);
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Playlist wurde gelöscht");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+
+    }
+    if (isset($_GET['create'])) {
+        $ret = Playlist::createplaylist(User::getUser()->getUserId(), $_GET['name'], $_GET['visibility']);
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Playlist wurde erstellt");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+    }
+
+    //Show Playlist from User with their Videos
+
+    $data = json_decode(Playlist::getPlaylistsByUser(User::getUser()->getUserId()));
+
+    if (!isset($data->{'items'})) {
+        Controller::$smarty->assign("playlists", array());
+    } else {
+        foreach ($data->{'items'} as $playlist) {
+            if ($playlist->{'videos'}->total > 0) {
+                $video = json_decode(Playlist::getVideosByPlaylist($playlist->id));
+                $playlist->{'videolist'} = $video;
+            }
+        }
+        Controller::$smarty->assign("playlists", $data->{'items'});
+    }
+
+    // Add Video to Playlist
+    if (isset($_GET['add'])) {
+        $ret = json_decode(Playlist::addVideoToPlaylist($_GET["pid"], $_GET["vid"]));
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Video wurde zu Playlist hinzugefügt.");
+            Controller::redirect("/playlist");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+        //Controller::redirect("/playlist");
+    };
+
+    // Delete Video from Playlist
+    if (isset($_GET['delete_vid'])) {
+        $ret = json_decode(Playlist::deleteVideoFromPlaylist($_GET["pid"], $_GET["vid"]));
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Video wurde aus der Playlist gelöscht.");
+            Controller::redirect("/playlist");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+
+    };
+}
+
+if ($typeid == 4) {
+    $play = new Playlist();
+    if (isset($_GET['edit'])) {
+        $ret = json_decode($play->renamePlay($_GET['edit'], $_GET['name'], $_GET['user']));
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Playlist wurde erfolgreich umbenannt");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+    }
+
+// Delete Playlist
+    if (isset($_GET['delete'])) {
+        $ret = json_decode($play->deletePlaylist($_GET['user'], $_GET['delete']));
+        if (!isset($ret->{'error'})) {
+            Notify::addNotify("Playlist wurde erfolgreich gelöscht");
+        } else {
+            Notify::addNotify($ret->error->message);
+        }
+        Controller::redirect("/playlist");
+    }
+    Controller::$smarty->assign("admin", true);
+
+// Show Playlists
+    if (!isset($_GET['offset'])) {
+        $_GET['offset'] = 0;
+    }
+        Controller::$smarty->assign('offset',$_GET['offset']);
+
+    $data = json_decode($play->getPlaylist($_GET['offset']));
+    if (!isset($data->{'total'})) {
+        Controller::$smarty->assign("anzahlPlay", 0);
+    } else {
+        Controller::$smarty->assign("anzahlPlay", $data->{'total'});
+    }
+
+    if (!isset($data->{'items'})) {
+        Controller::$smarty->assign("playlists", array());
+    } else {
+        Controller::$smarty->assign("playlists", $data->{'items'});
+    }
+    Controller::$smarty->assign("step", Config::get('kategoriesPerPage'));
+}
+
+
+

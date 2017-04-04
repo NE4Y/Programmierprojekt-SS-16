@@ -1,0 +1,45 @@
+\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
+\usepackage{enumitem}
+\usepackage{a4wide}
+\usepackage{geometry}
+\usepackage[automark]{scrpage2}
+\pagestyle{scrheadings}
+\usepackage{amssymb}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{ngerman}
+\usepackage{amsmath, amssymb, amstext, amsfonts, mathrsfs}
+\usepackage[procnames]{listings}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{qtree}
+\usepackage{pgfplots}
+\usepackage{polynom}
+%Package für euro Zeichen
+\usepackage{eurosym}
+\titleformat*{\section}{\large\bfseries}
+\clearscrheadfoot
+\usepackage{wasysym} %Fuer den Blitz
+\lstdefinestyle{javaStyle}{%
+	basicstyle={\small},
+	language=Java,
+	numbers=left,
+	showstringspaces=false,
+	%keywordstyle={\color{kwcolor}\bfseries},
+	%stringstyle={\color{stringcolor}},
+	commentstyle={\color{commentcolor}},
+	tabsize=4,
+	breaklines=true,
+	%cmathescape=true,
+	escapeinside=||
+}
+\lstnewenvironment{code}
+	{\lstset{style=javaStyle}}
+	{}
+\newcommand{\codeFile}[1]{\lstinputlisting[style=javaStyle]{#1}}
+
+\usepackage{todonotes}

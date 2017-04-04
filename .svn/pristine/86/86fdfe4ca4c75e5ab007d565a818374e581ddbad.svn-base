@@ -1,0 +1,95 @@
+<!--
+Author: Steffen Lindner
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap & Co. -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="img/wolf_v2.png">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/hot_videos.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/video_of_the_week.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/tweets.css"/>
+
+    <!-- Google Font Logo -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+{include file="topbar.tpl"}
+
+{include file="nav.tpl"}
+
+<section id="rightsmanagment" class="content">
+    <h3><i class="fa fa-user-secret orange" aria-hidden="true"></i> Rechtemanagment</h3>
+    <hr class="orange"/>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search for user...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+      </span>
+    </div><!-- /input-group -->
+
+    <br />
+
+    <table class="table table-hover table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Upload</th>
+            <th>Löschen</th>
+            <th>XYZ</th>
+            <th>Optionen</th>
+        </tr>
+        {for $var=0 to 20}
+            <tr>
+                <td>{$var}</td>
+                <td>Name{$var}</td>
+                <td><input type="checkbox" checked />
+                <td><input type="checkbox" /></td>
+                <td><input type="checkbox" /></td>
+                <td><i class="fa fa-trash" aria-hidden="true" style="cursor:pointer;"></i></td>
+            </tr>
+        {/for}
+
+    </table>
+</section>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"
+        integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#menu_toggle').click(function () {
+            $('nav').slideToggle(function () {
+            });
+        });
+    });
+</script>
+</body>
+</html>
+

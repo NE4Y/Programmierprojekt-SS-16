@@ -1,0 +1,152 @@
+#wrapper section {
+    width:100%;
+    padding-top:3%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+    padding-bottom:3%;
+}
+
+section hr {
+    border:1px dotted #E54D34;
+    margin-top:0px;
+}
+
+section article {
+    /*width:30%;*/
+    margin: 3% 1% 3% 0;
+    overflow: hidden;
+    box-shadow: inset 0 0 12px #000;
+    float:left;
+    position:relative;
+    cursor:pointer;
+}
+
+section article .image_text {
+    position: absolute;
+    color: #FFF;
+    font-size: 2.2em;
+    text-shadow: 2px 2px #000;
+    top: 5%;
+    left:5%;
+    min-width: 80%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:400;
+}
+
+section article .image_text p {
+    max-height:3em;
+    max-width: 12em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+}
+
+section article span.play {
+    opacity:0.8;
+    transition: 0.5s all;
+    z-index: 1000;
+}
+
+section article span.play img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+section article span.play:hover img {
+    -webkit-filter:none;
+}
+
+section article img {
+    width:100%;
+    transition:0.5s all;
+    position:relative;
+    z-index: -1;
+}
+
+section article .play img {
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+    width:33%;
+}
+
+section article:hover img {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+.videos article label {
+    font-size: 0.5em;
+    padding: 2%;
+    background: #E54D34;
+    border-radius: 0.4em;
+    font-weight: normal;
+    text-shadow: none;
+}
+
+section#recent_videos {
+    background: url("../img/wolf_blue.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+section#all_videos {
+    background: url("../img/wolf_red.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+
+section#mostviewed {
+    width:100%;
+    background:url("../img/video_of_the_week.png") no-repeat;
+    background-size:cover;
+    padding-top:3%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+    padding-bottom:3%;
+}
+
+section h2 {
+    color:#FFF;
+}
+
+section#all_videos h2 {
+    color:#000;
+}
+
+section h2 i {
+    margin-right: 1%;
+    text-shadow: 1px 1px #444;
+}
+
+section#mostviewed hr {
+    border:1px dotted #E54D34;
+    margin-top:0px;
+}
+
+#all_videos .videos {
+    display: inline-block;
+}
+
+#all_videos #video_steps {
+    font-size: 1.7em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 1px 1px #444;
+    text-align: center;
+    margin-top: 2%;
+}
+
+#all_videos #video_steps a {
+    color:#fff;
+    margin-right: 2%;
+}

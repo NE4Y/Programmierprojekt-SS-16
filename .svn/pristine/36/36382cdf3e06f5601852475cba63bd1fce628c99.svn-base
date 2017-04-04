@@ -1,0 +1,35 @@
+\documentclass[a4paper, openany]{book}
+\input{./Latex/packages.tex}
+
+\title{%
+  Dokumentation Programmierprojekt SS 16 \\ 
+  \large Arbeitsbereich: Kommunikationsnetze 
+  }
+
+
+\author{Finn Ickler, Steffen Lindner, Dominik Spoerle, Maximilian Pfisterer}
+
+\input{./Latex/commands.tex}
+
+\renewcommand{\chaptername}{}
+\renewcommand{\contentsname}{Inhaltsverzeichnis}
+\titleformat{\chapter}
+  {\Large\bfseries} % format
+  {}                % label
+  {0pt}             % sep
+  {\huge}           % before-code
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\input{./Includes/software.tex}
+
+
+
+
+
+
+
+\end{document}

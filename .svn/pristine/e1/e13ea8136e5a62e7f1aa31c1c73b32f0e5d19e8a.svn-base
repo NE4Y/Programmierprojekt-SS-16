@@ -1,0 +1,88 @@
+<!--
+Author: Steffen Lindner
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap & Co. -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="img/wolf_v2.png">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+    <!-- Google Font Logo -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+{include file="topbar.tpl"}
+
+{include file="nav.tpl"}
+
+<section id="profile" class="content">
+    <h3><i class="fa fa-user orange" aria-hidden="true"></i> Profil</h3>
+    <hr class="orange"/>
+
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-xs-4"><img src="img/default_icon.png" alt="user icon" /></div>
+            <div class="col-xs-7 col-xs-offset-1">
+                <table class="table table-striped">
+                    <tr>
+                        <th>Username: </th>
+                        <td>Steffen123</td>
+                    </tr>
+                    <tr>
+                        <th>Alter:</th>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <th>Email:</th>
+                        <td>steffen.lindner@student.uni-tuebingen.de</td>
+                    </tr>
+                    <tr>
+                        <th>Passwort:</th>
+                        <td>*********</td>
+                    </tr>
+                </table>
+
+                <a href="#"><i class="fa fa-pencil-square" aria-hidden="true"></i> Bearbeiten</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"
+        integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#menu_toggle').click(function () {
+            $('nav').slideToggle(function () {
+            });
+        });
+    });
+</script>
+</body>
+</html>
+

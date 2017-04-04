@@ -1,0 +1,112 @@
+body {
+    background: #FFF;
+    height:100%;
+    width:100%;
+}
+
+.clear {
+    clear:both;
+}
+
+hr {
+    border:1px dotted #E54D34;
+    margin-top:0px;
+}
+
+
+header {
+    width:100%;
+    background:#FFF;
+    padding-top:1%;
+    padding-bottom:1%;
+    border-bottom:1px solid #ccc;
+}
+
+.content {
+    width:100%;
+    padding-left:10%;
+    padding-right:10%;
+    box-sizing: border-box;
+}
+
+header button {
+    border:none;
+    outline:none;
+    background:none;
+}
+
+header #menu_toggle {
+    font-size:1.9em;
+    opacity: 0.8;
+}
+
+header #menu_toggle:hover {
+    color:#22A7F0;
+}
+
+nav {
+    position:absolute;
+    z-index:1000;
+    width:30%;
+    max-width:300px;
+    height:100%;
+    background:#FFF;
+    margin-top:-1px;
+    border-top:1px solid #22A7F0;
+    display:none;
+}
+
+nav ul {
+    list-style-type:none;
+    margin-top:5%;
+}
+
+nav ul li {
+    color:#FFF;
+    padding-top:2%;
+    padding-bottom:2%;
+}
+
+nav ul li a {
+    color:#777777;
+    font-size:1.1em;
+}
+
+nav ul li a:hover {
+    color:#22A7F0;
+    text-decoration: none;
+}
+
+nav ul li i {
+    margin-right:8%;
+}
+
+#logo img {
+    width:20%;
+}
+
+#logo span {
+    font-family: 'Lobster', cursive;
+    font-size:1.8em;
+    margin-left:5%;
+    background:url("../img/wolf_v2.png") left center no-repeat;
+    background-size:contain;
+    padding-left:25%;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+
+
+#login {
+    padding-top:0.5%;
+}
+
+/* ---- Akzentfarben --- */
+.blue {
+    color:#22A7F0;
+}
+
+.orange {
+    color:#E54D34;
+}

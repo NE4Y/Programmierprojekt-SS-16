@@ -1,0 +1,51 @@
+<nav id="c-menu-slide-left" class="c-menu c-menu-slide-left">
+    <div id="button_close">
+        <button class="c-menu_close fa fa-close"></button>
+    </div>
+    <ul class="c-menu_items">
+        <li class="c-menu_items">
+            <a href="./"><i class="fa fa-home" aria-hidden="true"></i> Startseite</a>
+        </li>
+        <li class="c-menu_items">
+            <a href="./playlist"><i class="fa fa-th-list" aria-hidden="true"></i> Playlists</a>
+        </li>
+        <li class="c-menu_items">
+            <a href="./videolist"><i class="fa fa-fire" aria-hidden="true"></i> Neuste Videos</a>
+        </li>
+        <li class="c-menu_items">
+            <a href="./favorites"><i class="fa fa-star" aria-hidden="true"></i> Favoriten</a>
+        </li>
+
+
+        {if isset($rights) && $rights >= 4}
+            <li class="c-menu_items">
+                <a href="./rightsmanagment"> <i class="fa fa-user-secret" aria-hidden="true"></i> Usermanagment</a>
+            </li>
+        {/if}
+
+        {if isset($rights) && $rights >= 3}
+            <li class="c-menu_items">
+                <a href="./upload"> <i class="fa fa-upload black" aria-hidden="true"></i> Upload</a>
+            </li>
+        {/if}
+
+        {if isset($loggedIn)}
+            <li class="c-menu_items">
+                <a href="./kategories"><i class="fa fa-map-signs" aria-hidden="true"></i> Kategorien</a>
+            </li>
+
+
+            <li class="c-menu_items">
+                <a href="./profile"> <i class="fa fa-user black" aria-hidden="true"></i> Profil</a>
+            </li>
+
+
+
+        {/if}
+    </ul>
+    <div id="nav_img">
+        <span> </span>
+    </div>
+</nav>
+<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+<script src="js/script.js"></script>

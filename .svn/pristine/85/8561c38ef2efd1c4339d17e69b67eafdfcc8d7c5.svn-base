@@ -1,0 +1,95 @@
+/**
+ * Created by Steffen on 25.06.16.
+ */
+
+var adjustment;
+
+$(document).ready(function() {
+    $("ol#playlistVideosSort").sortable({
+        group: 'simple_with_animation',
+        pullPlaceholder: false,
+        // animation on drop
+        onDrop: function ($item, container, _super) {
+
+            var notify = new Notify("Wird bearbeitet...");
+            notify.showNotification();
+
+            // get moved item
+            var movedItem = $item.context.dataset.id;
+
+            console.log($item);
+
+
+                var nextItem;
+
+                if($item.context.nextElementSibling == undefined) {
+                    nextItem = $('ol li').size();
+                    console.log(($('ol li').size()));
+                }
+                else {
+                    nextItem = $item.context.nextElementSibling.dataset.id;
+                }
+
+                var playList = $('#playListID').val();
+
+
+
+                $.ajax({
+                    url: "./doPlaylistSort",
+                    type: "POST",
+                    data: {playList: playList, movedItem: movedItem, insertBefore: nextItem},
+                    success: function (result) {
+                        if (result == "1") {
+                            var notify = new Notify("Playlist erfolgreich aktualisiert.");
+                            notify.showNotification();
+
+                            // renumber elements
+                            var i = 0;
+
+                            $('ol li').each(function(index) {
+                                $(this).attr("data-id", i);
+                                i++;
+                            })
+
+
+
+                            var $clonedItem = $('<li/>').css({height: 0});
+                            $item.before($clonedItem);
+                            $clonedItem.animate({'height': $item.height()});
+
+                            $item.animate($clonedItem.position(), function () {
+                                $clonedItem.detach();
+                                _super($item, container);
+                            });
+                        }
+                        else {
+                            var notify = new Notify("Es ist ein Fehler aufgetreten.");
+                            notify.showNotification();
+
+                        }
+                    }
+                })
+
+
+        },
+
+        // set $item relative to cursor position
+        onDragStart: function ($item, container, _super) {
+            var offset = $item.offset(),
+                pointer = container.rootGroup.pointer;
+
+            adjustment = {
+                left: pointer.left - offset.left,
+                top: pointer.top - offset.top
+            };
+
+            _super($item, container);
+        },
+        onDrag: function ($item, position) {
+            $item.css({
+                left: position.left - adjustment.left,
+                top: position.top - adjustment.top
+            });
+        }
+    });
+});

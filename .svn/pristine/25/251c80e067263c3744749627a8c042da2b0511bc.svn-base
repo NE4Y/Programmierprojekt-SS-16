@@ -1,0 +1,32 @@
+<?php
+Controller::neededRights(4);
+
+if(isset($_GET['delete'])){
+    $ret = User::deleteUser($_GET['delete']);
+    if(isset($ret->error)){
+        Notify::addNotify($ret->error->message);
+    }else{
+        Notify::addNotify("User erfolgreich gelöscht");
+    }
+}
+if(!isset($_GET['offset'])) {
+    $_GET['offset'] = 0;
+}
+Controller::$smarty->assign('offset',$_GET['offset']);
+if(!isset($_GET['id'])){
+    $Users =  User::getAllUsers($_GET['offset'],Config::get("usersPerPage"));
+}else{
+    $Users = new stdClass();
+    $Users->total = 1;
+    $Users->items = array(User::getUserById($_GET['id']));
+
+    if (isset($Users->error)){
+        Notify::addNotify($Users->error-message);
+    }
+}
+
+Controller::$smarty->assign('users',$Users->{'items'});
+Controller::$smarty->assign("usersTotal", $Users->{'total'});
+Controller::$smarty->assign("usersSteps", Config::get("usersPerPage"));
+
+?>

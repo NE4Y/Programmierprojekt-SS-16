@@ -1,0 +1,245 @@
+section#video_screen {
+    margin-top: 2%;
+}
+
+section#video_screen video {
+    height: 100%;
+    display: inline-block;
+}
+
+section#video-info {
+    padding:0 10%;
+}
+#my-video{
+    width: 100%;
+    height: 450px;
+}
+
+#title {
+    font-size: 2em;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-right: -1.3%;
+    display: inline;
+}
+
+#user {
+    padding-bottom: 1%;
+}
+
+#avatar {
+    height: 1em;
+}
+
+section#rating, section#comments {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+section#comments article {
+    margin-right: 5%;
+    margin-bottom:3%;
+}
+
+section#comments {
+    padding-top: 3%;
+}
+
+/* CSS Star rating from CSS Stars.com */
+
+.rating-wrapper {
+    overflow: hidden;
+    height: 16px;
+    display: inline-block;
+}
+
+.rating-input {
+    position: absolute;
+    left: 0;
+    top: -50px;
+}
+
+.rating-star {
+    cursor:pointer;
+}
+
+.rating-star:hover,
+.rating-star:hover ~ .rating-star {
+    background-position: 0 0;
+}
+
+.rating-wrapper:hover .rating-star:hover,
+.rating-wrapper:hover .rating-star:hover ~ .rating-star,
+.rating-input:checked ~ .rating-star {
+    background-position: 0 0;
+}
+
+.rating-star,
+.rating-wrapper:hover .rating-star {
+    float: right;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('http://css-stars.com/wp-content/uploads/2013/12/stars.png') 0 -16px;
+}
+
+/* Additional */
+#sidebar {
+    background: #FFF;
+    overflow: scroll;
+    height: 100%;
+}
+
+#sidebar article.small_video h6 {
+    margin-top:0px;
+}
+
+#sidebar article.small_video span {
+    font-size:0.8em;
+}
+
+#sidebar article.small_video {
+    margin-bottom: 3%;
+}
+
+#sidebar .small_video img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+section#comments article img {
+    width:8%;
+    float:left;
+    margin-right:5px;
+}
+
+section#comments article h6 {
+    color:#22A7F0;
+    margin-top:0px;
+    font-size:0.9em;
+}
+
+section#comments article p {
+    font-size:0.8em;
+    text-align:justify;
+}
+
+section#comments {
+    margin-bottom:5%;
+}
+
+section#comments article span {
+    font-size:0.5em;
+    color: #cccccc;
+}
+
+section#comments textarea {
+    resize: none;
+    width:50%;
+    border-radius:2px;
+    padding:5px;
+    border:1px solid #cccccc;
+    font-size:0.8em;
+    outline:none !important;
+}
+
+
+section#comments i.deleteComment {
+    cursor:pointer;
+}
+
+/* --- Video Playlist Funktionen - Overlays --- */
+
+section#pl_add button,section#video-info button.playlistbutton {
+    background: #E54D34;
+    color: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.3em;
+    border:none;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+
+section#pl_add button:hover,section#video-info button:not(.disabled):hover {
+    background: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.4em;
+    color:#E54D34;
+    transition: 0.5s;
+}
+
+
+section#pl_add span,section#video-info span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#video-info div {
+    margin:1% 0;
+}
+
+section#pl_add{
+    padding-left:10%;
+    margin-top: 1%;
+}
+
+/* -- Video zu Kategorie hinzufügen -- */
+
+section#cat_add button, section#video-info button.categoriebutton {
+    background: #E54D34;
+    color: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.3em;
+    border: none;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+section#cat_add button:hover, section#video-info button:not(.disabled):hover {
+    background: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.4em;
+    color: #E54D34;
+    transition: 0.5s;
+}
+
+section#cat_add span, section#video-info span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+section#cat_add {
+    padding-left: 10%;
+    margin-top: 1%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#user img{
+    width: 5%;
+    margin-top: -2%;
+
+}
+
+#quality {
+    padding-top: 1%;
+    display: inline;
+    float: right;
+    white-space:nowrap;
+}
+#quality form{
+    display: inline;
+}

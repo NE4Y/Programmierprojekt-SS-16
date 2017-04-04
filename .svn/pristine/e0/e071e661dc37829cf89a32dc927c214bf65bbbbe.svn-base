@@ -1,0 +1,1 @@
+pandoc --toc -f latex -t html wrapper.tex -s --css=pandoc.css -A footer.html > doku.html

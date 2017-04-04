@@ -1,0 +1,21 @@
+<footer>
+    <ul>
+        <li><a href="http://www.uni-tuebingen.de/impressum.html">Impressum</a></li>
+        <li><a href="./doku"><i class="fa fa-book white" aria-hidden="true"></i> Dokumentation</a></li>
+        <li><a href="https://twitter.com/WolfGang_PPSS16"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <div class="clear"></div>
+
+    <a href="#top" id="top-link"><img src="img/top2.png" alt="top" /></a>
+
+</footer>
+{if isset($notify)}
+    <section id="notifyBox">
+        <ul>
+           {foreach from=$notify item=$n}
+                <li>{$n}</li>
+            {/foreach}
+        </ul>
+    </section>
+{/if}

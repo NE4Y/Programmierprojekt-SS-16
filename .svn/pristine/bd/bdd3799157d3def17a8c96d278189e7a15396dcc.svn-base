@@ -1,0 +1,78 @@
+\chapter{Beschreibung der Software}
+
+\section{Grundstruktur}
+
+Die folgende Grafik illustriert das Grundsystem der Software.
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.7\textwidth]{./Includes/Software/architektur.png}
+    \caption{Software Grundstruktur}
+    \label{fig:somthing}
+\end{figure}
+
+Das Grundsystem ist nach dem MVC-Prinzip\footnote{MVC-Prinzip: Model View-Controller Abspaltung zur Strukturierung von Software} gestaltet.
+
+\pm
+
+Dabei ist das System aufgespalten in verschiedene Templates (Views),
+die von ihrem zugehörigen Controller (View Controller) manipuliert 
+werden. Der View Controller nutzt das Model um die nötigen Daten vom
+Server zu erhalten.
+
+\pm
+
+Das Model ist (nach dem MVC-Prinzip) für die Datenhaltung zuständig.
+
+\subsection{Router} 
+
+Der Router wird genutzt, um ein URL-Template matching durchzuführen. 
+
+Es lassen sich dadurch sehr leicht 'Pfade' entsprechenden Templates 
+zuordnen. 
+
+\begin{lstlisting}[language=php]
+Route::add("/home", function() {Controller::dispatch("home");});	
+\end{lstlisting}
+
+Dadurch sehen die URL's nicht nur schöner aus, es hat auch SEO\footnote{SEO: Suchmaschinennoptimierung} Vorteile.
+
+\pm
+
+Sobald die Route '/home' aufgerufen wird (beispielsweise: wolfgang.ne4y.de/home), wird die hinterlegte Funktion ausgeführt (in diesem Fall Controller::dispatch('home');)
+
+\pm
+
+Dabei wird über ein Patternmatching die aktuelle \tb{Requested-URI}
+\footnote{Requested-URI: Angefragte URL Zeile, die vom Webserver an 
+den PHP-Interpreter weitergegeben wird} mit den 'angekündigten' Pfaden verglichen. Stimmt ein Pfad überein, wird die hinterlegte Funktion ausgeführt.
+
+\subsection{Main Controller}
+
+Der Main-Controller implementiert die grundlegenden Steuerfunktionen unserer Software. Dazu zählt das Rendern der Templates, das Aufrufen der entsprechenden Template-Controller sowie das Umleiten des Users.
+
+\pm
+
+Der Main Controller wird in den meisten Fällen direkt vom Router aufgerufen. Er implementiert folgende Methoden / Attribute:
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.6\textwidth]{./Includes/Software/Controller.png}
+    \caption{Main-Controller}
+    \label{fig:somthing}
+\end{figure}
+
+Dabei ist die wichtigste Funktion das Initialisieren eines Smarty objects (initSmarty()), sowie das Dispatchen eines Templates (dispatch(String tpl), wird vom Router aufgerufen). 
+
+\pm
+
+Während des Dispatchprozesses wird der zugehörige Templatecontroller geladen.
+
+\subsection{View} 
+
+Der View wird durch ein Templatingsystem umgesetzt. Dafür verwendet 
+unsere Software die Templateengine Smarty\footnote{Smarty: Templatingengine, mehr 
+Informationen auf: http://smarty.net}.
+
+Smarty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.
+

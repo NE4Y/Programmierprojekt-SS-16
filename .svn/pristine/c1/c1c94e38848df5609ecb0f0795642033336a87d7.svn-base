@@ -1,0 +1,35 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Steffen
+ * Date: 25.06.16
+ * Time: 19:51
+ */
+
+Controller::needLogin();
+
+// checks to prevent not authorized manipulation of playlists
+if(!isset($_GET['id']) || empty($_GET['id']) || !ctype_digit($_GET['id'])) {
+    Controller::redirect("/playlist");
+}
+else {
+    $pl = json_decode(Playlist::getPlaylistById($_GET['id']));
+
+    if(isset($pl->error)) {
+        Notify::addNotify($pl->error->message);
+
+        if(isset($pl->status)) {
+            Controller::setResponse($pl->status);
+        }
+    }
+    else {
+        if (User::getUser()->getUserId() != $pl->ownerid) {
+            Controller::redirect("/noRights");
+        }
+    }
+
+    Controller::$smarty->assign("videosTotal", (isset($pl->videos->total) ? $pl->videos->total : 0));
+    Controller::$smarty->assign("videos", (isset($pl->videos->items) ? $pl->videos->items : null));
+    Controller::$smarty->assign("playlistID", $_GET['id']);
+}
+?>

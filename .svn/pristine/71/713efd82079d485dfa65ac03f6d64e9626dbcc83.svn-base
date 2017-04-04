@@ -1,0 +1,3 @@
+<?php
+Controller::$smarty->assign("time", date('d.m.Y H:i:s', time()));
+?>

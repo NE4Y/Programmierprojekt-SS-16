@@ -1,0 +1,12 @@
+<?php
+// Example routes
+// Author: Steffen Lindner
+// Default route
+Route::add("/", function() {Controller::dispatch("home");});
+
+Route::add("/home", function() {Controller::dispatch("home");});
+
+Route::add("/test", function() {Controller::dispatch("test");});
+
+Route::add("/playlists", function() {Controller::dispatch("playlist");});
+?>

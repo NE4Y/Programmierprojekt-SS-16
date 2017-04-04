@@ -1,0 +1,62 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Beschreibung der Software}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Grundstruktur}{4}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Router}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Main Controller}{5}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}View}{6}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Model}{6}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Index-Datei}{6}{subsection.1.1.5}
+\contentsline {section}{\numberline {1.2}Core Klassen}{7}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Notify Klasse}{7}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Config Klasse}{7}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}RestApi Klasse}{8}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Models}{8}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}User}{8}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Kategorie}{9}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Video}{10}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Playlist}{12}{subsection.1.3.4}
+\contentsline {section}{\numberline {1.4}Umgesetzte Funktionalit\"aten}{12}{section.1.4}
+\contentsline {section}{\numberline {1.5}Verwendete Drittsoftware}{13}{section.1.5}
+\contentsline {chapter}{\numberline {2}Installationsanleitung}{14}{chapter.2}
+\contentsline {subsection}{\numberline {2.0.1}Systemanforderungen}{14}{subsection.2.0.1}
+\contentsline {subsection}{\numberline {2.0.2}Konfiguration}{14}{subsection.2.0.2}
+\contentsline {subsection}{\numberline {2.0.3}Installation}{14}{subsection.2.0.3}
+\contentsline {subsubsection}{Apache}{14}{subsubsection*.2}
+\contentsline {subsubsection}{Nginx}{15}{subsubsection*.3}
+\contentsline {subsection}{\numberline {2.0.4}Inbetriebnahme}{15}{subsection.2.0.4}
+\contentsline {chapter}{\numberline {3}Bedienungsanleitung}{16}{chapter.3}
+\contentsline {section}{\numberline {3.1}Kurzbeschreibung der Software}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}Hinweise zum ersten Start}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Verf\"ugbare Funktionen in Abh\"angigkeit der Benutzerrechte}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Grundstruktur}{16}{subsection.3.3.1}
+\contentsline {subsubsection}{Header}{17}{subsubsection*.4}
+\contentsline {subsubsection}{Content}{18}{subsubsection*.5}
+\contentsline {subsubsection}{Footer}{18}{subsubsection*.6}
+\contentsline {subsubsection}{Navigation auf der Seite}{18}{subsubsection*.7}
+\contentsline {paragraph}{Navigationsmittel}{18}{paragraph*.8}
+\contentsline {subsection}{\numberline {3.3.2}Funktionen}{19}{subsection.3.3.2}
+\contentsline {subsubsection}{Header Funktionen}{19}{subsubsection*.9}
+\contentsline {paragraph}{Profil erstellen}{19}{paragraph*.10}
+\contentsline {paragraph}{Anmeldung}{19}{paragraph*.11}
+\contentsline {paragraph}{Suchfunktion}{19}{paragraph*.12}
+\contentsline {subsubsection}{Profil}{20}{subsubsection*.13}
+\contentsline {subsubsection}{Videos verwalten}{21}{subsubsection*.14}
+\contentsline {paragraph}{Videos ansehen}{21}{paragraph*.15}
+\contentsline {paragraph}{Video hochladen}{22}{paragraph*.16}
+\contentsline {paragraph}{Video bearbeiten}{24}{paragraph*.17}
+\contentsline {subsubsection}{Playlists verwalten}{25}{subsubsection*.18}
+\contentsline {paragraph}{Playlist \"Ubersicht}{25}{paragraph*.19}
+\contentsline {paragraph}{Videos zu Playlist hinzuf\"ugen}{28}{paragraph*.20}
+\contentsline {paragraph}{Playlist Detailseite}{29}{paragraph*.21}
+\contentsline {subsubsection}{Admin Funktionen}{32}{subsubsection*.22}
+\contentsline {paragraph}{Nutzerverwaltung}{32}{paragraph*.23}
+\contentsline {paragraph}{Playlistverwaltung}{32}{paragraph*.24}
+\contentsline {paragraph}{Kategorienverwaltung}{33}{paragraph*.25}
+\contentsline {section}{\numberline {3.4}Probleme und L\"osungen}{33}{section.3.4}
+\contentsline {section}{\numberline {3.5}Besonderheiten von WolfGang}{34}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Die Idee WolfGang}{34}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Navigation und Overlay Techniken}{35}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Wolf-Design}{35}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Tag Cloud Kategorien}{35}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}RoboHash: automatische Benutzerbilder}{35}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}Typeahead Suchfunktion}{35}{subsection.3.5.6}

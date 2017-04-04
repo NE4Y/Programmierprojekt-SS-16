@@ -1,0 +1,19 @@
+<nav>
+    <ul>
+        <li>
+            <a href="./home"><i class="fa fa-home" aria-hidden="true"></i> Startseite</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-th-list" aria-hidden="true"></i> Playlists</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-fire" aria-hidden="true"></i> Neuste Videos</a>
+        </li>
+        <li>
+            <a href="#"><i class="fa fa-star" aria-hidden="true"></i> Favoriten</a>
+        </li>
+        <li>
+            <a href="./rightsmanagment"> <i class="fa fa-user-secret" aria-hidden="true"></i> Rechtemanagment</a>
+        </li>
+    </ul>
+</nav>

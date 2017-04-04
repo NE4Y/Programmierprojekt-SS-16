@@ -1,0 +1,32 @@
+body.dragging, body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ol#playlistVideosSort {
+    list-style-type:none;
+    padding:0;
+}
+
+ol#playlistVideosSort li.placeholder {
+    position: relative;
+    /** More li styles **/
+}
+ol#playlistVideosSort li.placeholder:before {
+    position: absolute;
+    /** Define arrowhead **/
+}
+
+ol#playlistVideosSort li {
+    cursor:pointer;
+    width:100%;
+    margin-bottom:2px;
+    background:#D2D7D3;
+    padding:1%;
+    box-sizing: border-box;
+}

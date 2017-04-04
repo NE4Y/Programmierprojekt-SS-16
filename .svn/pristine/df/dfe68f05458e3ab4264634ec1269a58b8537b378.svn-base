@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suchergebnisse</title>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/searchresult.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+    {include file="header.tpl"}
+</head>
+<body>
+<section id="wrapper">
+    {include file="topbar.tpl"}
+
+    {include file="nav.tpl"}
+
+    <!-- Content -->
+    <section id="search-results">
+        {if isset($searchvideos) && $searchvideos == TRUE}
+        {if $vidtotal === "1"}
+            <div id="numberofresults"> Es wurde {$vidtotal} Video gefunden:</div>
+        {/if}
+        {if $vidtotal !== "1"}
+            <div id="numberofresults"> Es wurden {$vidtotal} Videos gefunden:</div>
+        {/if}
+
+
+        {foreach from=$videos item=$entry}
+            <div class="results">
+                <div class="resultThumbnail">
+                <span class="play" aria-hidden="true">
+                    <a href="video?id={$entry->id}"><img src="img/play-icon_red.png"/></a>
+                </span>
+                    <img src="{$entry->previews->items[0]->uri}"></div>
+                <div class="description" id="{$entry->id}">
+                    <h2>{$entry->title}</h2>
+                    <time id="time_{$entry->id}">{$entry->uploaddate}</time>
+                    {$entry->description}
+                </div>
+                <script>
+                    datesearchresult("time_{$entry->id}");
+                </script>
+            </div>
+        {/foreach}
+    </section>
+    {/if}
+
+
+    {if isset($searchcategories) && $searchcategories == True}
+        {if $cattotal === "1" }
+            <div id="numberofresults"> Es wurde {$cattotal} Kategorie gefunden:</div>
+        {/if}
+        {if $cattotal !== "1"}
+        <div id="numberofresults"> Es wurden {$cattotal} Kategorien gefunden:</div>
+        {/if}
+        {foreach from=$categories item=$entry}
+            <div class="results">
+
+                <a href="kategories?view={$entry->id}">
+                    <h2>Kategorie: {$entry->name}</h2>
+                    <h3>Anzahl-Videos: {$entry->videos->total}</h3>
+                </a>
+            </div>
+        {/foreach}
+    {/if}
+
+    {if isset($searchplaylists) && $searchplaylists == TRUE}
+        {if $playtotal === "1"}
+            <div id="numberofresults"> Es wurde {$playtotal} Playlist gefunden:</div>
+        {/if}
+        {if $playtotal !== "1"}
+            <div id="numberofresults"> Es wurden {$playtotal} Playlists gefunden:</div>
+        {/if}
+        {foreach from=$playlist  item=$entry}
+            <div class="results">
+                <a href="playlistdetail?id={$entry->id}">
+                    <h2>Playlist : {$entry->name}</h2>
+                    <h3>Erstellt von : {$entry->ownername}</h3>
+
+                </a>
+            </div>
+        {/foreach}
+    {/if}
+
+    {if isset($searchAll) && $searchAll == TRUE}
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#home">Videos({$vidtotal})</a></li>
+            <li><a data-toggle="pill" href="#menu1">Kategorien({$cattotal})</a></li>
+            <li><a data-toggle="pill" href="#menu2">Playlists({$playtotal})</a></li>
+        </ul>
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+
+                {foreach from=$videos item=$entry}
+                    <div class="results">
+                        <div class="resultThumbnail">
+                <span class="play" aria-hidden="true">
+                    <a href="video?id={$entry->id}"><img src="img/play-icon_red.png"/></a>
+                </span>
+                            <img src="{$entry->previews->items[0]->uri}"></div>
+                        <div class="description" id="{$entry->id}">
+                            <h2>{$entry->title}</h2>
+                            <time id="time_{$entry->id}">{$entry->uploaddate}</time>
+                            {$entry->description}
+                        </div>
+                        <script>
+                            datesearchresult("time_{$entry->id}");
+                        </script>
+                    </div>
+                {/foreach}
+
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+
+                {foreach from=$categories item=$entry}
+                    <div class="results">
+
+                        <a href="kategories?view={$entry->id}">
+                            <h2>Kategorie: {$entry->name}</h2>
+                            <h3>Anzahl-Videos: {$entry->videos->total}</h3>
+                        </a>
+                    </div>
+                {/foreach}
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                {foreach from=$playlist  item=$entry}
+                    <div class="results">
+                        <a href="playlistdetail?id={$entry->id}">
+                            <h2>Playlist : {$entry->name}</h2>
+                            <h3>Erstellt von : {$entry->ownername}</h3>
+
+                        </a>
+                    </div>
+                {/foreach}
+            </div>
+        </div>
+    {/if}
+
+
+</section>
+</section>
+
+<br />
+
+{include file="footer.tpl"}
+
+<script>
+    $(document).ready(function () {
+        $('#menu_toggle').click(function () {
+            $('nav').slideToggle(function () {
+            });
+        });
+
+        $('#login').click(function () {
+            $('section#loginpage').slideToggle(function () {
+            });
+        });
+    });
+</script>
+</body>
+</html>
+

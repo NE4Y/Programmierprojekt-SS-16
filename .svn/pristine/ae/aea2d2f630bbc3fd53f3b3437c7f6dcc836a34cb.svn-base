@@ -1,0 +1,18 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: Finn
+ * Date: 17.06.16
+ * Time: 14:35
+ */
+
+header('Content-Type: application/json');
+
+
+$ret = Video::uploadVideo($_FILES['file']['tmp_name'],$_POST['name'],$_FILES['file']['type'],$_POST['description']);
+if (isset($ret->error)){
+    $resp = array(error => 'Error: '.$ret->error->message);
+}else{
+    $resp = array();
+}
+echo json_encode($resp);

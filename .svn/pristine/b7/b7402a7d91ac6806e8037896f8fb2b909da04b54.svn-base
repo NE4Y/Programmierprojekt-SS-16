@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{diagbox}
+\usepackage{listings}
+\usepackage{hyperref}
+\newcommand{\entspricht}{\mathrel{\widehat{=}}}
+\usepackage{enumitem} 
+\usepackage[a4paper, left=2cm, right=2cm, top=1cm, bottom=1cm]{geometry}
+\title{Bedienungsanleitung}
+\author{Maxi,Finn,Dominik}
+\begin{document}
+
+\section{Kurzbeschreibung der Software}
+
+\textbf{Wolfgang} ist eine Video-Plattform, die Informationen(Video,Playlists,Profile,..)vom Backendserver über die REST-API erhält und diese grafisch ansprechend darstellt. \\
+Die Benutzer können, wenn sie die benötigten Rechte besitzen(verlinkung zu Tabelle), Videos hochladen,liken,kommentieren,zu Playlists,... . \\
+\subsection{Grundstruktur}
+Die Ansicht kann grundsätzlich in 3 Bereiche unterteilt werden: Header,Content und Footer. \\
+
+(Bild mit Unterteilung)
+
+\subsubsection{Header}
+ Der Header, die Kopfzeile, ist auf jeder Unterseite vorhanden und enthält grundlegene Funktionen : \\
+ (Bild mit Unterteilung)
+\begin{enumerate}
+\item Navigation
+Die Navigation ist ein Drop-Down-Menü und enthält eine Verlinkung auf alle wichtigen Seiten(Dabei werden nur die Seiten angezeigt, die der Benutzer auch besuchen kann) (Bilder-Vergleich von verschiedenen Navigationen). \\
+Wenn man versucht, Seiten über eine Manipulation der URL zu besuchen, für die man keine Berechtigung besitzt, so findet ein Routing zur Fehlerseite statt (Link zur Fehlerseite).
+\item Schriftzug und Logo
+Link zurück zur Startseite
+\item Suche
+Im Suchfeld kann nach einem Video, einer Playlist oder einer Kategorie gesucht werden. Während der Eingabe werden darunter immer alle möglichen Resultate angezeigt (über Ajax). Suche kann mit dem Enter-Key oder per Mouseclick erfolgen. \\
+Will man zum Beispiel nur nach einem Video suchen, so kann man im Drop-Down-Menü links davon den Reiter Videos auswählen, oder man schreibt \textit{V:} vor seine Suche (analog Kategorie : \textit{c:} und Playlist : \textit{p:})
+
+
+\item Login
+Ist der User nicht angemeldet, so kann er sich mit dem LOG-IN Button anmelden 
+(Bild von Log IN). Besitzt der User noch keine Account, so kann er sich mit einem Klich auf Regisitrieren einen Account anlegen (Bild von Registrieren) \\
+Wenn er angemeldet ist, wird ihm sein Accountname angezeigt und der Log-IN Button ist nun ein LOG-Out Button.
+
+
+\subsubsection{Content}
+Der Content ist abhängig von der geraden besuchten Unterseite: \\
+\begin{enumerate}
+\item Startseite
+\item Video-Detailseit
+\item Suchergebnisse
+\item Playlist Übersicht
+\item Neueste Videos
+\item Favoriten
+\item Kategorien
+Ist der Benutzer angemeldet (Recht 2) gibt es außerdem noch : \\
+\item Profil
+(Recht 3) : \\
+\item Upload
+Admin (Recht 4) : \\
+\item Usermanagement
+\item Playlists (Admin Ansicht) 
+
+\end{enumerate}
+
+
+
+\subsubsection{Footer}
+Auch der Footer ist fest auf jeder Unterseite enthalten und bietet neben dem farblichen Kontrast zur restlichen Seite noch eine Verlinkung auf das Impressum (Uni-Tübingen), eine Verlinkung zu der Dokumentation des Projektes  und eine Verlinkung auf die Social-Networks von Wolfgang (Twitter). \\
+
+\end{enumerate}
+
+
+\section{Hinweise zum ersten Start}
+Um alle Funktionen der Website nutzen zu können (Drop-Down-Menü für die Navigation bzw. für den Login), muss \textbf{Javascript} aktiviert sein. \\
+Um alle Features unserer Seite zu erhalten, sollten sie sich bei ihrem ersten Besuch einen Account anlegen und sich mit diesem Anmelden. Dann können sie eigene Playlisten erstellen und Videos bewerten und kommentieren. \\
+Falls sie sich gut verhalten, werden sie womöglich zu einem priviligierten Benutzer befördert und sie können Videos auf die Seite hochladen und dieses verwalten. \\
+
+\section{Verfügbare Funktionen in Abhängigkeit der Benutzerrechte}
+Die Benutzer der Website werden in Gruppen in Abhängigkeit ihrere Rechte eingeteilt. \\ Gäste, die keinen Account besitzen, sind User der Gruppe 1. \\
+Ein eingeloggter Benutzer gehört zur  Gruppe 2. \\
+Von einem Admin priviligierte Benutzer gehören zur Gruppe 3, \\
+ die Admins bilden die Gruppe 4. \\
+Daraus ergeben sich für die verschiedenen Funktionen der Website folgende Berechtigungen: \\
+\par \medskip
+
+\begin{table}[h]
+\centering
+	\begin{tabular}{l|c|c|c|c|c|c|c}
+Usergruppe & 1 & 2 & 3 & 4 \\
+\hline
+Account erstellen & $\checkmark$ & & &  \\
+Video,Playlist abspielen & $\checkmark$ & $\checkmark$ & $\checkmark$ & $\checkmark$  \\
+Playlist erstellen & & $\checkmark$ & $\checkmark$ &$\checkmark$  \\
+Playlist bearbeiten & & ($\checkmark$) & ($\checkmark$) & $\checkmark$ \\ 
+Playlist löschen & & ($\checkmark$) & ($\checkmark$) & $\checkmark$ \\ 
+Video bewerten und kommentieren & & $\checkmark$ & $\checkmark$ &$\checkmark$  \\
+Profil bearbeiten & & ($\checkmark$) & ($\checkmark$ ) & ($\checkmark$) \\
+Video hochladen & & & $\checkmark$ & $\checkmark$  \\
+Video zu Kategorie hinzufügen & & & ($\checkmark$) & $\checkmark$  \\
+Video von Kategorie löschen & & & ($\checkmark$) & ($\checkmark$)  \\
+Benutzer löschen & & & & $\checkmark$  \\
+Benuter-Rechte verwalten & & & & $\checkmark$  \\
+Kategorie erstellen,bearbeiten,löschen & & & & $\checkmark$ \\
+
+\end{tabular}\\
+\caption{Verfügbare Funktionen in Abhängigkeit von den Benutzerrechten}
+\end{table}
+ \medskip
+
+Eine eingeschränkte Berechtigung ($\checkmark$) bedeutet,dass die Aktion nur für eigene "Objekte" verfügbar ist. \\
+Dies sind das eigene Profil, eigene Playlists oder eigene Videos.  
+
+
+\section{Probleme und Lösungen}
+Grundsätzlich werden alle (Fehler-) Meldungen über eine Notify-Box rechts unten unmittelbar nach dem Ereignis eingeblendet um so über Erfolg oder Misserfolg der Aktion zu informieren.
+
+
+
+
+\begin{enumerate}
+\item \textit{Buttons funktionieren nicht(Drop-Down-Menü erscheint nicht)} : \\
+Überprüfen sie, ob Javascript aktiviert ist.
+\item \textit{Videos können nicht abgespielt werden}: \\
+Überprüfen sie ob sie die aktuellen Treiber zur Wiedergabe eines .mp4 Videos über den HTMl5 Player installiert haben. \\
+\item \textit{Elemente werden nicht dargestellt(Seite ist fast leer)} : \\
+Vermutlich ist der Backendserver, der die meisten Daten liefert, gerade nicht erreichbar. Diesen Fehler können sie selbst nicht beheben, versuchen sie es später nochmal. \\
+\item \textit{Ich kann ein Video/eine Playlist/eine Kategorie nicht finden:} \\
+Die Suche erkennt leider keine ähnlichen Begriffe(oder ähnliche Schreibweisen): \\
+Wollen sie eine Kategorie "Fisch" aufrufen, suchen aber nach "Fische", so werden sie die Kategorie nicht finden. Versuchen sie in diesem Fall die Suche mit einem Teilbegriff (und wählen das richtige Ziel über die Suchvorschläge aus). Finden sie trotzdem kein Ergebnis, so gibt es kein Ziel, wo den Suchbegriff als Teil ihres Namens besitzt. \\
+
+
+
+\end{enumerate}
+
+\end{document}

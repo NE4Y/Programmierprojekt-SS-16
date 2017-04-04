@@ -1,0 +1,2454 @@
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015) (rev 5238)  (format=lualatex 2015.12.27)  24 JUL 2016 22:32
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+**wrapper.tex
+(./wrapper.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/bk10.clo
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./Latex/packages.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucs.sty
+Package: ucs 2013/05/11 v2.2 UCS: Unicode input support
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/data/uni-global.def
+File: uni-global.def 2013/05/13 UCS: Unicode global data
+)
+\uc@secondtry=\count88
+\uc@combtoks=\toks14
+\uc@combtoksb=\toks15
+\uc@temptokena=\toks16
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX detected.
+) (/usr/local/texlive/2015/texmf-dist/tex/lualatex/luainputenc/luainputenc.sty
+Package: luainputenc 2010/11/19 v0.973 inputenc package for LuaTeX
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase.sty
+Package: luatexbase 2013/05/11 v0.6 Resource management for the LuaTeX macro programmer
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/luatex.sty
+Package: luatex 2010/03/09 v0.4 LuaTeX basic definition package (HO)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/etex-pkg/etex.sty
+Package: etex 2015/03/02 v2.1 eTeX basic definition package (PEB,DPC)
+\et@xins=\count89
+)
+\LuT@AllocAttribute=\count277
+\LuT@AllocCatcodeTable=\count278
+\CatcodeTableStack=\count279
+\CatcodeTableIniTeX=\catcodetable1
+\CatcodeTableString=\catcodetable3
+\CatcodeTableOther=\catcodetable5
+\CatcodeTableLaTeX=\catcodetable7
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/luatex-loader.sty
+Package: luatex-loader 2010/03/09 v0.4 Lua module loader (HO)
+
+(/usr/local/texlive/2015/texmf-dist/scripts/oberdiek/oberdiek.luatex.lua))) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-compat.sty
+Package: luatexbase-compat 2011/05/24 v0.4 Compatibility tools for LuaTeX
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-modutils.sty
+Package: luatexbase-modutils 2013/05/11 v0.6 Module utilities for LuaTeX
+ (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-loader.sty
+Package: luatexbase-loader 2013/05/11 v0.6 Lua module loader for LuaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase.loader.lua))
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/modutils.lua)
+Lua module: luatexbase-modutils 2013/05/11 0.6 Module utilities for LuaTeX
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-regs.sty
+Package: luatexbase-regs 2011/05/24 v0.4 Registers allocation for LuaTeX
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-attr.sty
+Package: luatexbase-attr 2013/05/11 v0.6 Attributes allocation for LuaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/attr.lua)
+Lua module: luatexbase-attr 2013/05/11 0.6 Attributes allocation for LuaTeX
+\lltxb@attr@unsetvalue=\count280
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-cctb.sty
+Package: luatexbase-cctb 2013/05/11 v0.6 Catcodetable allocation for LuaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/cctb.lua)
+Lua module: luatexbase-cctb 2013/05/11 0.6 Catcodetable allocation for LuaTeX
+\lltxb@catcodetable@alloc=\count281
+\CatcodeTableStack=\count282
+\CatcodeTableIniTeX=\luatexcatcodetable1
+\CatcodeTableString=\luatexcatcodetable3
+\CatcodeTableOther=\luatexcatcodetable5
+\CatcodeTableLaTeX=\luatexcatcodetable7
+\CatcodeTableLaTeXAtLetter=\luatexcatcodetable9
+\CatcodeTableExpl=\luatexcatcodetable11
+) (/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/luatexbase-mcb.sty
+Package: luatexbase-mcb 2013/05/11 v0.6 Callback management for LuaTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/luatexbase/mcb.lua)
+Lua module: luatexbase-mcb 2013/05/11 0.6 register several functions in a callback
+))
+(/usr/local/texlive/2015/texmf-dist/tex/lualatex/luainputenc/luainputenc.lua)
+Lua module: luainputenc 2010/05/10 0.97 Lua simple inputenc package.
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+ (/usr/local/texlive/2015/texmf-dist/tex/lualatex/luainputenc/lutf8.def
+File: lutf8.def 2010/05/10 v0.97 UTF-8 support for luainputenc
+Now handling font encoding OML ...
+... no UTF-8 mapping file for font encoding OML
+Now handling font encoding T1 ...
+... processing UTF-8 mapping file for font encodingT1
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu
+File: t1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OT1 ...
+... processing UTF-8 mapping file for font encodingOT1
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu
+File: ot1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encodingOMS
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+)
+Now handling font encoding OMX ...
+... no UTF-8 mapping file for font encoding OMX
+Now handling font encoding U ...
+... no UTF-8 mapping file for font encoding U
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 2014/10/28 v3.00 enumerate extensions (DPC)
+\@enLab=\toks19
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/a4wide/a4wide.sty
+Package: a4wide 1994/08/30
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/koma-script/scrpage2.sty
+Package: scrpage2 2015/05/06 v3.17a KOMA-Script package (page head and foot)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks20
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/local/texlive/2015/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box256
+\UL@hyphenbox=\box257
+\UL@skip=\skip256
+\UL@hook=\toks21
+\UL@height=\dimen256
+\UL@pe=\count283
+\UL@pixel=\dimen257
+\ULC@box=\box258
+Package: ulem 2012/05/18
+\ULdepth=\dimen258
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count284
+))
+\Gin@req@height=\dimen259
+\Gin@req@width=\dimen260
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count285
+\U@D=\dimen261
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/babel/luababel.def
+(/usr/local/texlive/2015/texmf-dist/tex/luatex/hyph-utf8/luatex-hyphen.lua)
+luatex-hyphen: using data file: /usr/local/texlive/2015/texmf-var/tex/generic/config/language.dat.lua))
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
+luatex-hyphen: loading patterns and exceptions for: ngerman (\language31)
+luatex-hyphen: info: no hyphenation exceptions for this language))) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip257
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks23
+\ex@=\dimen262
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen263
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count286
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count287
+\leftroot@=\count288
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count289
+\DOTSCASE@=\count290
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box259
+\strutbox@=\box260
+\big@size=\dimen264
+LaTeX Font Info:    RedeclaringfontencodingOML on input line 566.
+LaTeX Font Info:    RedeclaringfontencodingOMS on input line 567.
+\macc@depth=\count291
+\c@MaxMatrixCols=\count292
+\dotsspace@=\muskip10
+\c@parentequation=\count293
+\dspbrk@lvl=\count294
+\tag@help=\toks24
+\row@=\count295
+\column@=\count296
+\maxfields@=\count297
+\andhelp@=\toks25
+\eqnshift@=\dimen265
+\alignsep@=\dimen266
+\tagshift@=\dimen267
+\tagwidth@=\dimen268
+\totwidth@=\dimen269
+\lineht@=\dimen270
+\@envbody=\toks26
+\multlinegap=\skip258
+\multlinetaggap=\skip259
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/mathrsfs.sty
+Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
+\symrsfs=\mathgroup6
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count298
+\lst@gtempboxa=\box261
+\lst@token=\toks28
+\lst@length=\count299
+\lst@currlwidth=\dimen271
+\lst@column=\count300
+\lst@pos=\count301
+\lst@lostspace=\dimen272
+\lst@width=\dimen273
+\lst@newlines=\count302
+\lst@lineno=\count303
+\lst@maxwidth=\dimen274
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count304
+\lst@skipnumbers=\count305
+\lst@framebox=\box262
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box263
+\beforetitleunit=\skip260
+\aftertitleunit=\skip261
+\ttl@plus=\dimen275
+\ttl@minus=\dimen276
+\ttl@toksa=\toks29
+\titlewidth=\dimen277
+\titlewidthlast=\dimen278
+\titlewidthfirst=\dimen279
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count306
+\mult@box=\box264
+\multicol@leftmargin=\dimen280
+\c@unbalance=\count307
+\c@collectmore=\count308
+\doublecol@number=\count309
+\multicoltolerance=\count310
+\multicolpretolerance=\count311
+\full@width=\dimen281
+\page@free=\dimen282
+\premulticols=\dimen283
+\postmulticols=\dimen284
+\multicolsep=\skip262
+\multicolbaselineskip=\skip263
+\partial@page=\box265
+\last@line=\box266
+\maxbalancingoverflow=\dimen285
+\mult@rightbox=\box267
+\mult@grightbox=\box268
+\mult@gfirstbox=\box269
+\mult@firstbox=\box270
+\@tempa=\box271
+\@tempa=\box272
+\@tempa=\box273
+\@tempa=\box274
+\@tempa=\box275
+\@tempa=\box276
+\@tempa=\box277
+\@tempa=\box278
+\@tempa=\box279
+\@tempa=\box280
+\@tempa=\box281
+\@tempa=\box282
+\@tempa=\box283
+\@tempa=\box284
+\@tempa=\box285
+\@tempa=\box286
+\@tempa=\box287
+\c@columnbadness=\count312
+\c@finalcolumnbadness=\count313
+\last@try=\dimen286
+\multicolovershoot=\dimen287
+\multicolundershoot=\dimen288
+\mult@nat@firstbox=\box288
+\colbreak@box=\box289
+\mc@col@check@num=\count314
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2015/05/11 v0.4x Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count315
+\calc@Bcount=\count316
+\calc@Adimen=\dimen289
+\calc@Bdimen=\dimen290
+\calc@Askip=\skip264
+\calc@Bskip=\skip265
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count317
+\calc@Cskip=\skip266
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/04/20 v2.0e eso-pic (RN)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)))
+\AM@pagewidth=\dimen291
+\AM@pageheight=\dimen292
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pdfpages/ppluatex.def
+File: ppluatex.def 2015/05/11 v0.4x Pdfpages driver for luaTeX (AM)
+)
+\AM@pagebox=\box290
+\AM@toc@title=\toks30
+\c@AM@survey=\count318
+\AM@templatesizebox=\box291
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/qtree/qtree.sty
+Package: 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+Package: qtree 2008/12/12 v.3.1bQtree: tree-drawing for linguistics
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2014/01/12 v0.2z Improved picture commands (HjG,RN,JT)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks31
+\@arclen=\dimen293
+\@arcrad=\dimen294
+\@tempdimd=\dimen295
+)
+\c@treecount=\count319
+\c@branchcount=\count320
+\parentbox=\box292
+\treebox=\box293
+\treeboxone=\box294
+\treeboxtwo=\box295
+\treeboxthree=\box296
+\treeboxfour=\box297
+\treeboxfive=\box298
+\treeboxsix=\box299
+\treeboxseven=\box300
+\treeboxeight=\box301
+\treeboxnine=\box302
+\treeboxten=\box303
+\treeboxeleven=\box304
+\treeboxtwelve=\box305
+\treeboxthirteen=\box306
+\treeboxfourteen=\box307
+\treeboxfifteen=\box308
+\treeboxsixteen=\box309
+\treeboxseventeen=\box310
+\treeboxeighteen=\box311
+\treeboxnineteen=\box312
+\treeboxtwenty=\box313
+\treeoffsetone=\skip267
+\treeoffsettwo=\skip268
+\treeoffsetthree=\skip269
+\treeoffsetfour=\skip270
+\treeoffsetfive=\skip271
+\treeoffsetsix=\skip272
+\treeoffsetseven=\skip273
+\treeoffseteight=\skip274
+\treeoffsetnine=\skip275
+\treeoffsetten=\skip276
+\treeoffseteleven=\skip277
+\treeoffsettwelve=\skip278
+\treeoffsetthirteen=\skip279
+\treeoffsetfourteen=\skip280
+\treeoffsetfifteen=\skip281
+\treeoffsetsixteen=\skip282
+\treeoffsetseventeen=\skip283
+\treeoffseteighteen=\skip284
+\treeoffsetnineteen=\skip285
+\treeoffsettwenty=\skip286
+\treeshiftone=\skip287
+\treeshifttwo=\skip288
+\treeshiftthree=\skip289
+\treeshiftfour=\skip290
+\treeshiftfive=\skip291
+\treeshiftsix=\skip292
+\treeshiftseven=\skip293
+\treeshifteight=\skip294
+\treeshiftnine=\skip295
+\treeshiftten=\skip296
+\treeshifteleven=\skip297
+\treeshifttwelve=\skip298
+\treeshiftthirteen=\skip299
+\treeshiftfourteen=\skip300
+\treeshiftfifteen=\skip301
+\treeshiftsixteen=\skip302
+\treeshiftseventeen=\skip303
+\treeshifteighteen=\skip304
+\treeshiftnineteen=\skip305
+\treeshifttwenty=\skip306
+\treewidthone=\skip307
+\treewidthtwo=\skip308
+\treewidththree=\skip309
+\treewidthfour=\skip310
+\treewidthfive=\skip311
+\treewidthsix=\skip312
+\treewidthseven=\skip313
+\treewidtheight=\skip314
+\treewidthnine=\skip315
+\treewidthten=\skip316
+\treewidtheleven=\skip317
+\treewidthtwelve=\skip318
+\treewidththirteen=\skip319
+\treewidthfourteen=\skip320
+\treewidthfifteen=\skip321
+\treewidthsixteen=\skip322
+\treewidthseventeen=\skip323
+\treewidtheighteen=\skip324
+\treewidthnineteen=\skip325
+\treewidthtwenty=\skip326
+\daughteroffsetone=\skip327
+\daughteroffsettwo=\skip328
+\daughteroffsetthree=\skip329
+\daughteroffsetfour=\skip330
+\branchwidthone=\skip331
+\branchwidthtwo=\skip332
+\branchwidththree=\skip333
+\branchwidthfour=\skip334
+\parentoffset=\skip335
+\treeoffset=\skip336
+\daughteroffset=\skip337
+\branchwidth=\skip338
+\parentwidth=\skip339
+\treewidth=\skip340
+\qta=\toks32
+\qtb=\toks33
+\nbranches=\count321
+\qroofx=\count322
+\qroofy=\count323
+\@qrscratchbox=\box314
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2015/05/02 v1.12.1 Data Visualization (1.12.1)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks34
+\pgfutil@tempdima=\dimen296
+\pgfutil@tempdimb=\dimen297
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box315
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks35
+\pgfkeys@temptoks=\toks36
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks37
+))
+\pgf@x=\dimen298
+\pgf@y=\dimen299
+\pgf@xa=\dimen300
+\pgf@ya=\dimen301
+\pgf@xb=\dimen302
+\pgf@yb=\dimen303
+\pgf@xc=\dimen304
+\pgf@yc=\dimen305
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count324
+\c@pgf@countb=\count325
+\c@pgf@countc=\count326
+\c@pgf@countd=\count327
+\t@pgf@toka=\toks38
+\t@pgf@tokb=\toks39
+\t@pgf@tokc=\toks40
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+))) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count328
+\pgfsyssoftpath@bigbuffer@items=\count329
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+LaTeX Info: Redefining \color on input line 702.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen306
+\pgfmath@count=\count330
+\pgfmath@box=\box316
+\pgfmath@toks=\toks41
+\pgfmath@stack@operand=\toks42
+\pgfmath@stack@operation=\toks43
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex))) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count331
+)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen307
+\pgf@picmaxx=\dimen308
+\pgf@picminy=\dimen309
+\pgf@picmaxy=\dimen310
+\pgf@pathminx=\dimen311
+\pgf@pathmaxx=\dimen312
+\pgf@pathminy=\dimen313
+\pgf@pathmaxy=\dimen314
+\pgf@xx=\dimen315
+\pgf@xy=\dimen316
+\pgf@yx=\dimen317
+\pgf@yy=\dimen318
+\pgf@zx=\dimen319
+\pgf@zy=\dimen320
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen321
+\pgf@path@lasty=\dimen322
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen323
+\pgf@shorten@start@additional=\dimen324
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box317
+\pgf@hbox=\box318
+\pgf@layerbox@main=\box319
+\pgf@picture@serial@count=\count332
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen325
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen326
+\pgf@pt@y=\dimen327
+\pgf@pt@temp=\dimen328
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen329
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen330
+\pgf@sys@shading@range@num=\count333
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box320
+)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+))) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box321
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen331
+\pgf@nodesepend=\dimen332
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen333
+\pgffor@skip=\dimen334
+\pgffor@stack=\toks44
+\pgffor@toks=\toks45
+)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count334
+\pgfplotmarksize=\dimen335
+)
+\tikz@lastx=\dimen336
+\tikz@lasty=\dimen337
+\tikz@lastxsaved=\dimen338
+\tikz@lastysaved=\dimen339
+\tikzleveldistance=\dimen340
+\tikzsiblingdistance=\dimen341
+\tikz@figbox=\box322
+\tikz@figbox@bg=\box323
+\tikz@tempbox=\box324
+\tikz@tempbox@bg=\box325
+\tikztreelevel=\count335
+\tikznumberofchildren=\count336
+\tikznumberofcurrentchild=\count337
+\tikz@fig@count=\count338
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count339
+\pgfmatrixcurrentcolumn=\count340
+\pgf@matrix@numberofcolumns=\count341
+)
+\tikz@expandcount=\count342
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+))) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+Package pgfplots info on input line 115: Initializing with LUA version Lua 5.2
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/binary.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/pgfplotsutil.lua)
+pgfplots.lua: loading complementary lua code for your pgf version...
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/luamath/functions.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplotsoldpgfsupp/luamath/parser.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/plothandler.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/meshplothandler.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/colormap.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/streamer.lua)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/lua/pgfplots/pgfplotstexio.lua)
+\pgfplots@luabackend@table=\catcodetable9
+\t@pgfplots@toka=\toks46
+\t@pgfplots@tokb=\toks47
+\t@pgfplots@tokc=\toks48
+\pgfplots@tmpa=\dimen342
+\c@pgfplots@coordindex=\count343
+\c@pgfplots@scanlineindex=\count344
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
+Package pgfplots: loading complementary arithmetics for your pgf version...
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryfpu.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count345
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_trig_format.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_pgflibraryluamath.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count346
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count347
+\t@pgfplotstable@a=\toks49
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count348
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen343
+\pgfdecoratedremainingdistance=\dimen344
+\pgfdecoratedinputsegmentcompleteddistance=\dimen345
+\pgfdecoratedinputsegmentremainingdistance=\dimen346
+\pgf@decorate@distancetomove=\dimen347
+\pgf@decorate@repeatstate=\count349
+\pgfdecorationsegmentamplitude=\dimen348
+\pgfdecorationsegmentlength=\dimen349
+)
+\tikz@lib@dec@box=\box326
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count350
+\pgfplots@xmin@reg=\dimen350
+\pgfplots@xmax@reg=\dimen351
+\pgfplots@ymin@reg=\dimen352
+\pgfplots@ymax@reg=\dimen353
+\pgfplots@zmin@reg=\dimen354
+\pgfplots@zmax@reg=\dimen355
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2008/01/09 v3.0.0 (rcs-revision 1.1)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
+))) (/usr/local/texlive/2015/texmf-dist/tex/latex/polynom/polynom.sty
+Package: polynom 2006/04/20 0.17 (CH,HA)
+\pld@currstage=\count351
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box327
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2015/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks50
+\XKV@tempa@toks=\toks51
+)
+\XKV@depth=\count352
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+)
+\c@@todonotes@numberoftodonotes=\count353
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package hobsub Info: Skipping package `luatex-loader' (already loaded).
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+
+(/usr/local/texlive/2015/texmf-dist/scripts/oberdiek/pdftexcmds.lua)
+\pdftexcmds@toks=\toks52
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen356
+\Hy@linkcounter=\count354
+\Hy@pagecounter=\count355
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+NowhandlingfontencodingPD1...
+...noUTF-8mappingfileforfontencodingPD1
+)
+\Hy@SavedSpaceFactor=\count356
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count357
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen357
+\Fld@menulength=\count358
+\Field@Width=\dimen358
+\Fld@charsize=\dimen359
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count359
+\c@Item=\count360
+\c@Hfootnote=\count361
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count362
+\c@bookmark@seq@number=\count363
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
+)
+\Hy@SectionHShift=\skip341
+)
+Package hyperref Info: Option `colorlinks' set `false' on input line 55.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/inconsolata/inconsolata.sty
+Package: inconsolata 2014/06/22 v1.05
+ `inconsolata-zi4' v1.05, 2014/06/22 Text macros for Inconsolata (msharpe) (/usr/local/texlive/2015/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+NowhandlingfontencodingTS1...
+...processingUTF-8mappingfileforfontencodingTS1
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1enc.dfu
+File: ts1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
+))
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
+)
+\zifour@ocount=\count364
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count365
+\float@exts=\toks53
+\float@box=\box328
+\@float@everytoks=\toks54
+\@floatcapt=\box329
+) (./Latex/commands.tex (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/09/06 1.5e listings language file
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count366
+\Gm@cntv=\count367
+\c@Gm@tempcnt=\count368
+\Gm@bindingoffset=\dimen360
+\Gm@wd@mp=\dimen361
+\Gm@odd@mp=\dimen362
+\Gm@even@mp=\dimen363
+\Gm@layoutwidth=\dimen364
+\Gm@layoutheight=\dimen365
+\Gm@layouthoffset=\dimen366
+\Gm@layoutvoffset=\dimen367
+\Gm@dimlist=\toks55
+)
+
+LaTeX Warning: Unused global option(s):
+    [ragged2e].
+
+(/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/.texpadtmp/wrapper.aux
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+
+LaTeX Warning: Label `fig:somthing' multiply defined.
+
+)
+\openout1 = wrapper.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 32.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/ucs/ucsencs.def
+File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
+)
+
+Package scrpage2 Warning: seems you are using a constant headheight.
+(scrpage2)                If you get overfull \vbox warnings at almost every
+(scrpage2)                page, you should increase headheight e.g. writing
+(scrpage2)                 \setlength{\headheight}{1.1\baselineskip}
+(scrpage2)                into the preamble of your document.
+(scrpage2)                A better solution would be to use typearea package.
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count369
+\scratchdimen=\dimen368
+\scratchbox=\box330
+\nofMPsegments=\count370
+\nofMParguments=\count371
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen369
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
+\everyMPtoPDFconversion=\toks57
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.tif,.jpeg,.PNG,.PDF,.JPG,.JPEG,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@lstlisting=\count375
+\AtBeginShipoutBox=\box331
+ ABD: EveryShipout initializing macros
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into your preamble.
+ on input line 32.
+
+Package hyperref Info: Link coloring OFF on input line 32.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count376
+)
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
+ (/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/.texpadtmp/wrapper.out) (/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/.texpadtmp/wrapper.out)
+\@outlinefile=\write4
+
+\openout4 = wrapper.out
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(73.97716pt, 449.55356pt, 73.97716pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=449.55356pt
+* \textheight=759.6886pt
+* \oddsidemargin=1.70717pt
+* \evensidemargin=1.70717pt
+* \topmargin=-59.65836pt
+* \headheight=12.0pt
+* \headsep=18.06749pt
+* \topskip=10.0pt
+* \footskip=25.29494pt
+* \marginparwidth=54.2025pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=14.22636pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 34.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 34.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 34.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Try loading font information for U+wasy on input line 34.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 34.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 34.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 34.
+ [1
+
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+Missing character: There is no   (U+00A0) in font cmr12!
+] (/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/.texpadtmp/wrapper.toc
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 53.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 53.
+ [2
+
+])
+\tf@toc=\write5
+
+\openout5 = wrapper.toc
+ (./Includes/Software/software.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [3]
+Kapitel 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+<./Includes/Software/architektur.png, id=334, 527.9725pt x 545.03625pt>
+File: ./Includes/Software/architektur.png Graphic file (type png)
+ <use ./Includes/Software/architektur.png>
+Package pdftex.def Info: ./Includes/Software/architektur.png used on input line 9.
+(pdftex.def)             Requested size: 314.68611pt x 324.85365pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 31.
+LaTeX Font Info:    Try loading font information for OT1+zi4 on input line 41.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/inconsolata/ot1zi4.fd
+File: ot1zi4.fd 2014/06/22 OT1/zi4 (Inconsolata)
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 54.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 54.
+[4
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.54 
+   <./Includes/Software/architektur.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2014/09/06 1.5e listings language file
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2014/09/06 1.5e listings language file
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 70.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 70.
+ <./Includes/Software/Controller.png, id=350, 533.995pt x 550.055pt>
+File: ./Includes/Software/Controller.png Graphic file (type png)
+ <use ./Includes/Software/Controller.png>
+Package pdftex.def Info: ./Includes/Software/Controller.png used on input line 85.
+(pdftex.def)             Requested size: 269.73488pt x 277.85532pt.
+LaTeX Font Info:    Try loading font information for TS1+zi4 on input line 94.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/inconsolata/ts1zi4.fd
+File: ts1zi4.fd 2014/06/22 Fontinst v1.933 font definitions for TS1/zi4.
+)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 104.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 110.
+[5LuaTeX warning (ext4): destination with the same identifier (name{figure.1.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.110 S
+     marty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.LuaTeX warning (ext4): destination with the same identifier (name{figure.1.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.110 S
+     marty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.LuaTeX warning (ext4): destination with the same identifier (name{figure.1.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.110 S
+     marty wird genutzt, um den HTML-Code von der Businesslogik zu trennen.<./Includes/Software/Controller.png>] (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 154.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 170.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 181.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 181.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 186.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 186.
+ [6LuaTeX warning (ext4): destination with the same identifier (name{figure.1.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.186 
+    LuaTeX warning (ext4): destination with the same identifier (name{figure.1.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.186 
+    LuaTeX warning (ext4): destination with the same identifier (name{figure.1.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.186 
+    ]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 208.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 208.
+ <./Includes/Software/Notify.png, id=384, 407.5225pt x 277.035pt>
+File: ./Includes/Software/Notify.png Graphic file (type png)
+ <use ./Includes/Software/Notify.png>
+Package pdftex.def Info: ./Includes/Software/Notify.png used on input line 214.
+(pdftex.def)             Requested size: 134.86743pt x 91.68391pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 220.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 220.
+ <./Includes/Software/Config.png, id=385, 465.74pt x 301.125pt>
+File: ./Includes/Software/Config.png Graphic file (type png)
+ <use ./Includes/Software/Config.png>
+Package pdftex.def Info: ./Includes/Software/Config.png used on input line 226.
+(pdftex.def)             Requested size: 224.77678pt x 145.32864pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 232.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 232.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 232.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 232.
+ [7LuaTeX warning (ext4): destination with the same identifier (name{figure.1.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 \newpage
+            LuaTeX warning (ext4): destination with the same identifier (name{figure.1.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.232 \newpage
+            <./Includes/Software/Notify.png><./Includes/Software/Config.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 234.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 234.
+ <./Includes/Software/RestApi.png, id=395, 941.5175pt x 451.6875pt>
+File: ./Includes/Software/RestApi.png Graphic file (type png)
+ <use ./Includes/Software/RestApi.png>
+Package pdftex.def Info: ./Includes/Software/RestApi.png used on input line 244.
+(pdftex.def)             Requested size: 359.64421pt x 172.539pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 285.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 285.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 287.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 287.
+ <./UML/User.png, id=397, 1447.4075pt x 1467.4825pt>
+File: ./UML/User.png Graphic file (type png)
+ <use ./UML/User.png>
+Package pdftex.def Info: ./UML/User.png used on input line 297.
+(pdftex.def)             Requested size: 404.59544pt x 410.19815pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 300.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 300.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 300.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 300.
+ [8LuaTeX warning (ext4): destination with the same identifier (name{figure.1.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.300 
+    LuaTeX warning (ext4): destination with the same identifier (name{figure.1.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.300 
+    <./Includes/Software/RestApi.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 320.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 320.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 329.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 329.
+ [9LuaTeX warning (ext4): destination with the same identifier (name{figure.1.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.329 
+    LuaTeX warning (ext4): destination with the same identifier (name{figure.1.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.329 
+    <./UML/User.png>] <./UML/Category.png, id=436, 811.03pt x 580.1675pt>
+File: ./UML/Category.png Graphic file (type png)
+ <use ./UML/Category.png>
+Package pdftex.def Info: ./UML/Category.png used on input line 334.
+(pdftex.def)             Requested size: 314.68611pt x 225.11356pt.
+ (./includes/Software/video.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ <./UML/VideoMeta.png, id=437, 929.4725pt x 758.835pt>
+File: ./UML/VideoMeta.png Graphic file (type png)
+ <use ./UML/VideoMeta.png>
+Package pdftex.def Info: ./UML/VideoMeta.png used on input line 5.
+(pdftex.def)             Requested size: 314.68611pt x 256.91208pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+ [10LuaTeX warning (ext4): destination with the same identifier (name{figure.1.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.8 \clearpage
+            LuaTeX warning (ext4): destination with the same identifier (name{figure.1.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.8 \clearpage
+            <./UML/Category.png><./UML/VideoMeta.png>] <./UML/VideoFunction.png, id=444, 1618.045pt x 1642.135pt>
+File: ./UML/VideoFunction.png Graphic file (type png)
+ <use ./UML/VideoFunction.png>
+Package pdftex.def Info: ./UML/VideoFunction.png used on input line 38.
+(pdftex.def)             Requested size: 314.68611pt x 319.35057pt.
+
+Overfull \hbox (23.56061pt too wide) in paragraph at lines 41--44
+\OT1/zi4/m/n/10 addComment,deleteComment,addRating, uploadVideo, deleteVideo, searchVideoByName \OT1/cmr/m/n/10 und \OT1/zi4/m/n/10 changeRating
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 46.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 46.
+[11
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.1.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.46         $ret 
+                = RestAPI::get("/search?type=popularvideos&limit=" . $limit)...<./UML/VideoFunction.png>]
+Overfull \hbox (14.85117pt too wide) in paragraph at lines 46--47
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 341.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 341.
+ <./UML/Playlist.png, id=476, 1166.3575pt x 758.835pt>
+File: ./UML/Playlist.png Graphic file (type png)
+ <use ./UML/Playlist.png>
+Package pdftex.def Info: ./UML/Playlist.png used on input line 351.
+(pdftex.def)             Requested size: 314.68611pt x 204.72609pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 358.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 377.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 377.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 380.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 380.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 380.
+ [12LuaTeX warning (ext4): destination with the same identifier (name{figure.1.17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.380 	\item \href
+                {https://jquery.com/}{JQuery}<./UML/Playlist.png>]) (./Includes/Installationsanleitung/anleitung.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [13]
+Kapitel 2.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 3.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 31.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 31.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+[14
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.2.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.58 
+   LuaTeX warning (ext4): destination with the same identifier (name{figure.2.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.58 
+   ]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 79.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 79.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 96.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 96.
+) (./Includes/Bedienungsanleitung/bedienungsanleitung.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [15LuaTeX warning (ext4): destination with the same identifier (name{figure.2.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+          {Bedienungsanleitung}LuaTeX warning (ext4): destination with the same identifier (name{figure.2.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+          {Bedienungsanleitung}LuaTeX warning (ext4): destination with the same identifier (name{figure.2.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+          {Bedienungsanleitung}LuaTeX warning (ext4): destination with the same identifier (name{figure.2.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.1 \chapter
+          {Bedienungsanleitung}]
+Kapitel 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 8.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 8.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--12
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 14.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 14.
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--20
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 50.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 50.
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
+
+ []
+
+<./Includes/Bedienungsanleitung/Struktur.png, id=538, 297.36093pt x 152.06813pt>
+File: ./Includes/Bedienungsanleitung/Struktur.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/Struktur.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/Struktur.png used on input line 55.
+(pdftex.def)             Requested size: 148.35349pt x 75.8668pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+ [16
+
+LuaTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.60 \subsubsection{Header}
+                         ]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+ <./Includes/Bedienungsanleitung/header.png, id=546, 1434.10782pt x 154.32657pt>
+File: ./Includes/Bedienungsanleitung/header.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/header.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/header.png used on input line 63.
+(pdftex.def)             Requested size: 449.55356pt x 48.37527pt.
+ <./Includes/Bedienungsanleitung/navigationen.png, id=547, 892.08281pt x 439.6425pt>
+File: ./Includes/Bedienungsanleitung/navigationen.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/navigationen.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/navigationen.png used on input line 74.
+(pdftex.def)             Requested size: 449.55356pt x 221.55147pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 86.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 86.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 86.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 86.
+ [17LuaTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.86 \end{enumerate}
+                  LuaTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.86 \end{enumerate}
+                  LuaTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.86 \end{enumerate}
+                  <./Includes/Bedienungsanleitung/Struktur.png><./Includes/Bedienungsanleitung/header.png><./Includes/Bedienungsanleitung/navigationen.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 89.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 89.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 92.
+ <./Includes/Bedienungsanleitung/topnotify.png, id=564, 419.31656pt x 203.25937pt>
+File: ./Includes/Bedienungsanleitung/topnotify.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/topnotify.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/topnotify.png used on input line 106.
+(pdftex.def)             Requested size: 224.77678pt x 108.95824pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 110.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 123.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 123.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 133.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 133.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 135.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 135.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 137.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 137.
+ <./Includes/Bedienungsanleitung/registrierung.png, id=565, 898.85812pt x 292.84406pt>
+File: ./Includes/Bedienungsanleitung/registrierung.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/registrierung.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/registrierung.png used on input line 141.
+(pdftex.def)             Requested size: 449.55356pt x 146.46188pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 148.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 148.
+ [18LuaTeX warning (ext4): destination with the same identifier (name{figure.3.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.148 
+    <./Includes/Bedienungsanleitung/topnotify.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 149.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 149.
+ <./Includes/Bedienungsanleitung/login.png, id=588, 819.06pt x 198.7425pt>
+File: ./Includes/Bedienungsanleitung/login.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/login.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/login.png used on input line 153.
+(pdftex.def)             Requested size: 449.55356pt x 109.08429pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 162.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 162.
+ <./Includes/Bedienungsanleitung/suchergebniss.png, id=590, 1137.4997pt x 358.33875pt>
+File: ./Includes/Bedienungsanleitung/suchergebniss.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/suchergebniss.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/suchergebniss.png used on input line 170.
+(pdftex.def)             Requested size: 449.55356pt x 141.62154pt.
+ <./Includes/Bedienungsanleitung/ajaxsuche.png, id=591, 778.40813pt x 267.24844pt>
+File: ./Includes/Bedienungsanleitung/ajaxsuche.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/ajaxsuche.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/ajaxsuche.png used on input line 177.
+(pdftex.def)             Requested size: 449.55356pt x 154.34766pt.
+ <./Includes/Bedienungsanleitung/searchreiter.png, id=592, 164.86594pt x 153.57375pt>
+File: ./Includes/Bedienungsanleitung/searchreiter.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/searchreiter.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/searchreiter.png used on input line 185.
+(pdftex.def)             Requested size: 89.90933pt x 83.75343pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 188.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 188.
+ [19LuaTeX warning (ext4): destination with the same identifier (name{figure.3.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.188 
+    LuaTeX warning (ext4): destination with the same identifier (name{figure.3.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.188 
+    <./Includes/Bedienungsanleitung/registrierung.png><./Includes/Bedienungsanleitung/login.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
+
+ []
+
+(./Includes/Bedienungsanleitung/profil.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ <Includes/Bedienungsanleitung/profil.png, id=601, 804.00375pt x 356.33125pt>
+File: Includes/Bedienungsanleitung/profil.png Graphic file (type png)
+ <use Includes/Bedienungsanleitung/profil.png>
+Package pdftex.def Info: Includes/Bedienungsanleitung/profil.png used on input line 7.
+(pdftex.def)             Requested size: 404.59544pt x 179.31242pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+ [20LuaTeX warning (ext4): destination with the same identifier (name{figure.3.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 
+   LuaTeX warning (ext4): destination with the same identifier (name{figure.3.8}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 
+   LuaTeX warning (ext4): destination with the same identifier (name{figure.3.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.10 
+   <./Includes/Bedienungsanleitung/suchergebniss.png><./Includes/Bedienungsanleitung/ajaxsuche.png><./Includes/Bedienungsanleitung/searchreiter.png>] <Includes/Bedienungsanleitung/profil_own_video.png, id=609, 814.04124pt x 544.0325pt>
+File: Includes/Bedienungsanleitung/profil_own_video.png Graphic file (type png)
+ <use Includes/Bedienungsanleitung/profil_own_video.png>
+Package pdftex.def Info: Includes/Bedienungsanleitung/profil_own_video.png used on input line 15.
+(pdftex.def)             Requested size: 404.59544pt x 270.39684pt.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 193.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 193.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 196.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 196.
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--199
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 204.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 204.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 204.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 204.
+[21LuaTeX warning (ext4): destination with the same identifier (name{figure.3.10}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{itemize}
+                 LuaTeX warning (ext4): destination with the same identifier (name{figure.3.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{itemize}
+                 <./Includes/Bedienungsanleitung/profil.png><./Includes/Bedienungsanleitung/profil_own_video.png>] <./Includes/Bedienungsanleitung/videoansicht.png, id=619, 1265.47781pt x 472.76625pt>
+File: ./Includes/Bedienungsanleitung/videoansicht.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/videoansicht.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/videoansicht.png used on input line 208.
+(pdftex.def)             Requested size: 449.55356pt x 167.945pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 212.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 212.
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
+
+ []
+
+<./Includes/Bedienungsanleitung/upload.png, id=620, 853.1875pt x 351.3125pt>
+File: ./Includes/Bedienungsanleitung/upload.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/upload.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/upload.png used on input line 219.
+(pdftex.def)             Requested size: 449.55356pt x 185.1119pt.
+ <./Includes/Bedienungsanleitung/upload_data.png, id=621, 853.1875pt x 401.5pt>
+File: ./Includes/Bedienungsanleitung/upload_data.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/upload_data.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/upload_data.png used on input line 236.
+(pdftex.def)             Requested size: 449.55356pt x 211.55644pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 249.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 249.
+[22LuaTeX warning (ext4): destination with the same identifier (name{figure.3.12}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.249 	\item N
+            ame und Beschreibung können auch in diesem Zustand noch ergänz...LuaTeX warning (ext4): destination with the same identifier (name{figure.3.13}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.249 	\item N
+            ame und Beschreibung können auch in diesem Zustand noch ergänz...<./Includes/Bedienungsanleitung/videoansicht.png><./Includes/Bedienungsanleitung/upload.png>] <./Includes/Bedienungsanleitung/profil_new-video.png, id=634, 853.1875pt x 401.5pt>
+File: ./Includes/Bedienungsanleitung/profil_new-video.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/profil_new-video.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/profil_new-video.png used on input line 258.
+(pdftex.def)             Requested size: 449.55356pt x 211.55644pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 263.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 263.
+ [23LuaTeX warning (ext4): destination with the same identifier (name{figure.3.14}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.263 \clearpage
+              LuaTeX warning (ext4): destination with the same identifier (name{figure.3.15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.263 \clearpage
+              <./Includes/Bedienungsanleitung/upload_data.png><./Includes/Bedienungsanleitung/profil_new-video.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 265.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 265.
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
+
+ []
+
+<./Includes/Bedienungsanleitung/video_overview.png, id=647, 853.1875pt x 792.9625pt>
+File: ./Includes/Bedienungsanleitung/video_overview.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/video_overview.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/video_overview.png used on input line 271.
+(pdftex.def)             Requested size: 449.55356pt x 417.82399pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 296.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 296.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+ [24
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.3.16}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.299 \paragraph{Playlist Übersicht}
+                                   <./Includes/Bedienungsanleitung/video_overview.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 299.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 299.
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--302
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 303.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 303.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 303.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 303.
+[25] <./Includes/Bedienungsanleitung/playlist_nologin.png, id=663, 853.1875pt x 1455.4375pt>
+File: ./Includes/Bedienungsanleitung/playlist_nologin.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_nologin.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_nologin.png used on input line 306.
+(pdftex.def)             Requested size: 427.0745pt x 728.56088pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 311.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 311.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 311.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 311.
+[26LuaTeX warning (ext4): destination with the same identifier (name{figure.3.17}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.311 \clearpage
+              <./Includes/Bedienungsanleitung/playlist_nologin.png>] <./Includes/Bedienungsanleitung/playlist_login.png, id=671, 853.1875pt x 893.3375pt>
+File: ./Includes/Bedienungsanleitung/playlist_login.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_login.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_login.png used on input line 326.
+(pdftex.def)             Requested size: 449.55356pt x 470.7131pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 335.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 335.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 335.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 335.
+ [27
+
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.3.18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.335 	\item P
+            laylist Ansicht: über den Play-Button oder den Link ''zur Playl...<./Includes/Bedienungsanleitung/playlist_login.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 345.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 345.
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--348
+
+ []
+
+<./Includes/Bedienungsanleitung/playlist_addvideo.png, id=686, 853.1875pt x 501.875pt>
+File: ./Includes/Bedienungsanleitung/playlist_addvideo.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_addvideo.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_addvideo.png used on input line 351.
+(pdftex.def)             Requested size: 449.55356pt x 264.44556pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 363.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 363.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 363.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 363.
+ [28LuaTeX warning (ext4): destination with the same identifier (name{figure.3.19}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.363 \clearpage
+              <./Includes/Bedienungsanleitung/playlist_addvideo.png>] <./Includes/Bedienungsanleitung/playlist_addvideo2.png, id=702, 853.1875pt x 331.2375pt>
+File: ./Includes/Bedienungsanleitung/playlist_addvideo2.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_addvideo2.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_addvideo2.png used on input line 366.
+(pdftex.def)             Requested size: 449.55356pt x 174.53407pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 372.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 372.
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--375
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 376.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 376.
+[29
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.3.20}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.376 \clearpage
+              <./Includes/Bedienungsanleitung/playlist_addvideo2.png>] <./Includes/Bedienungsanleitung/playlistdetail.png, id=709, 853.1875pt x 1244.65pt>
+File: ./Includes/Bedienungsanleitung/playlistdetail.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlistdetail.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlistdetail.png used on input line 379.
+(pdftex.def)             Requested size: 449.55356pt x 655.82501pt.
+
+Underfull \vbox (badness 2635) has occurred while \output is active []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 389.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 389.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 389.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 389.
+ [30
+
+LuaTeX warning (ext4): destination with the same identifier (name{figure.3.21}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.389 		\item '
+             'Playlist löschen'': Playlist löschen<./Includes/Bedienungsanleitung/playlistdetail.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 397.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 397.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 397.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 397.
+ [31]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 398.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 398.
+ (./includes/Bedienungsanleitung/adminfunktionen.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 2.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 2.
+ <./Includes/Bedienungsanleitung/userma.png, id=729, 853.1875pt x 720.6925pt>
+File: ./Includes/Bedienungsanleitung/userma.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/userma.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/userma.png used on input line 12.
+(pdftex.def)             Requested size: 449.55356pt x 379.74384pt.
+ <./Includes/Bedienungsanleitung/userma_search.png, id=730, 853.1875pt x 270.00874pt>
+File: ./Includes/Bedienungsanleitung/userma_search.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/userma_search.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/userma_search.png used on input line 13.
+(pdftex.def)             Requested size: 449.55356pt x 142.2717pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 15.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 17.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 17.
+ [32
+
+<./Includes/Bedienungsanleitung/userma.png><./Includes/Bedienungsanleitung/userma_search.png>] <./Includes/Bedienungsanleitung/playlist_admin.png, id=737, 853.1875pt x 501.875pt>
+File: ./Includes/Bedienungsanleitung/playlist_admin.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_admin.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_admin.png used on input line 24.
+(pdftex.def)             Requested size: 449.55356pt x 264.44556pt.
+ <./Includes/Bedienungsanleitung/playlist_admin_edited.png, id=738, 853.1875pt x 258.9675pt>
+File: ./Includes/Bedienungsanleitung/playlist_admin_edited.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/playlist_admin_edited.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/playlist_admin_edited.png used on input line 25.
+(pdftex.def)             Requested size: 449.55356pt x 136.4539pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 27.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 27.
+ <./Includes/Bedienungsanleitung/kategorien.png, id=739, 853.1875pt x 462.72874pt>
+File: ./Includes/Bedienungsanleitung/kategorien.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/kategorien.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/kategorien.png used on input line 33.
+(pdftex.def)             Requested size: 449.55356pt x 243.81882pt.
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 402.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 402.
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 416.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 416.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 416.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 416.
+[33<./Includes/Bedienungsanleitung/playlist_admin.png><./Includes/Bedienungsanleitung/playlist_admin_edited.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 416--419
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 419--422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--424
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 426--428
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 430.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 430.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 432.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 432.
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--435
+
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 435.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 435.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 435.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 435.
+[34<./Includes/Bedienungsanleitung/kategorien.png>] <./Includes/Bedienungsanleitung/logo.png, id=761, 153.57375pt x 45.92157pt>
+File: ./Includes/Bedienungsanleitung/logo.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/logo.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/logo.png used on input line 438.
+(pdftex.def)             Requested size: 148.35349pt x 44.36307pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 443.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 443.
+ <./Includes/Bedienungsanleitung/specials_navi_overlay.png, id=762, 548.80031pt x 513.41812pt>
+File: ./Includes/Bedienungsanleitung/specials_navi_overlay.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/specials_navi_overlay.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/specials_navi_overlay.png used on input line 449.
+(pdftex.def)             Requested size: 209.26884pt x 195.77464pt.
+ <./Includes/Bedienungsanleitung/specials_overlay.png, id=763, 602.25pt x 377.15906pt>
+File: ./Includes/Bedienungsanleitung/specials_overlay.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/specials_overlay.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/specials_overlay.png used on input line 452.
+(pdftex.def)             Requested size: 209.26884pt x 131.05232pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 459.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 459.
+ <./Includes/Bedienungsanleitung/wolf_v2.png, id=764, 501.875pt x 673.51625pt>
+File: ./Includes/Bedienungsanleitung/wolf_v2.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/wolf_v2.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/wolf_v2.png used on input line 464.
+(pdftex.def)             Requested size: 148.35349pt x 199.08636pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Includes/Bedienungsanleitung/wolf_red.png, id=765, 803.0pt x 501.875pt>
+File: ./Includes/Bedienungsanleitung/wolf_red.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/wolf_red.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/wolf_red.png used on input line 472.
+(pdftex.def)             Requested size: 140.93535pt x 88.08215pt.
+ <./Includes/Bedienungsanleitung/wolf_blue.png, id=766, 803.0pt x 501.875pt>
+File: ./Includes/Bedienungsanleitung/wolf_blue.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/wolf_blue.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/wolf_blue.png used on input line 475.
+(pdftex.def)             Requested size: 140.93535pt x 88.08215pt.
+ <./Includes/Bedienungsanleitung/wolf_black.png, id=767, 803.0pt x 501.875pt>
+File: ./Includes/Bedienungsanleitung/wolf_black.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/wolf_black.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/wolf_black.png used on input line 478.
+(pdftex.def)             Requested size: 140.93535pt x 88.08215pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 485.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 485.
+<./Includes/Bedienungsanleitung/catcloud.png, id=768, 444.91219pt x 274.02374pt>
+File: ./Includes/Bedienungsanleitung/catcloud.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/catcloud.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/catcloud.png used on input line 490.
+(pdftex.def)             Requested size: 449.55356pt x 276.88304pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 495.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 495.
+<./Includes/Bedienungsanleitung/robot.png, id=769, 313.17pt x 326.72063pt>
+File: ./Includes/Bedienungsanleitung/robot.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/robot.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/robot.png used on input line 500.
+(pdftex.def)             Requested size: 148.35349pt x 154.77513pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 505.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 505.
+<./Includes/Bedienungsanleitung/autocomplete.png, id=770, 807.015pt x 134.5025pt>
+File: ./Includes/Bedienungsanleitung/autocomplete.png Graphic file (type png)
+ <use ./Includes/Bedienungsanleitung/autocomplete.png>
+Package pdftex.def Info: ./Includes/Bedienungsanleitung/autocomplete.png used on input line 510.
+(pdftex.def)             Requested size: 449.55356pt x 74.92477pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+ [35LuaTeX warning (ext4): destination with the same identifier (name{figure.3.22}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 LuaTeX warning (ext4): destination with the same identifier (name{figure.3.23}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 <./Includes/Bedienungsanleitung/logo.png><./Includes/Bedienungsanleitung/specials_navi_overlay.png><./Includes/Bedienungsanleitung/specials_overlay.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+ [36LuaTeX warning (ext4): destination with the same identifier (name{figure.3.24}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 LuaTeX warning (ext4): destination with the same identifier (name{figure.3.25}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 LuaTeX warning (ext4): destination with the same identifier (name{figure.3.26}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 <./Includes/Bedienungsanleitung/wolf_v2.png><./Includes/Bedienungsanleitung/wolf_red.png><./Includes/Bedienungsanleitung/wolf_blue.png><./Includes/Bedienungsanleitung/wolf_black.png><./Includes/Bedienungsanleitung/catcloud.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 45.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 45.
+ [37LuaTeX warning (ext4): destination with the same identifier (name{figure.3.27}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 LuaTeX warning (ext4): destination with the same identifier (name{figure.3.28}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.45 \end{document}
+                 <./Includes/Bedienungsanleitung/robot.png><./Includes/Bedienungsanleitung/autocomplete.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+ (/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/.texpadtmp/wrapper.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package rerunfilecheck Info: File `wrapper.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 36196 strings out of 494693
+ 100000,1373583 words of node,token memory allocated
+ 458 words of node memory still in use:
+   5 hlist, 2 vlist, 2 rule, 2 glue, 1 kern, 47 glue_spec, 1 action, 1 write nodes
+   avail lists: 2:29,3:388,4:1715,5:369,6:2802,7:149,8:54,9:931,10:334
+ 37853 multiletter control sequences out of 65536+600000
+ 76 fonts using 2996095 bytes
+ 64i,15n,77p,751b,2765s stack positions out of 5000i,500n,10000p,200000b,100000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/inconsolata/i4-ts1.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/inconsolata/i4-ot1-0.enc}<</usr/local/texlive/2015/texmf-dist/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on wrapper.pdf (37 pages, 7987347 bytes).
+
+PDF statistics: 855 PDF objects out of 1000 (max. 8388607)
+ 720 compressed objects within 8 object streams
+ 298 named destinations out of 1000 (max. 131072)
+ 504 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <!-- Bootstrap & Co. -->
+    <!-- Latest compiled and minified CSS -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <link rel="icon" type="image/png" href="img/wolf_v2.png">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/hot_videos.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/video_of_the_week.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/tweets.css"/>
+
+    <!-- Google Font Logo -->
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+{include file="topbar.tpl"}
+
+{include file="nav.tpl"}
+
+<!-- Content -->
+<section id="hot_videos">
+   <article>
+       <span class="play" aria-hidden="true">
+           <img src="img/play-icon_red.png" />
+       </span>
+
+
+       <img src="img/thumbnails/1.png" />
+
+       <div class="image_text">
+           <p>Batman: The Dark Knight (2008)</p>
+
+           <span>Action</span>
+       </div>
+   </article>
+    <article>
+        <span class="play" aria-hidden="true">
+           <img src="img/play-icon_red.png" />
+       </span>
+        <img src="img/thumbnails/2.png" />
+        <div class="image_text">
+            <p>Pulpfiction (1994)</p>
+
+            <span>Action / Komödie</span>
+        </div>
+    </article>
+    <article>
+        <span class="play" aria-hidden="true">
+           <img src="img/play-icon_red.png" />
+       </span>
+        <img src="img/thumbnails/3.png" />
+        <div class="image_text">
+            <p>Schindlers Liste (1993)</p>
+
+            <span>Drama</span>
+        </div>
+    </article>
+    <article>
+        <span class="play" aria-hidden="true">
+           <img src="img/play-icon_red.png" />
+       </span>
+        <img src="img/thumbnails/4.png" />
+        <div class="image_text">
+            <p>Die Verurteilten (1994)</p>
+
+            <span>Drama</span>
+        </div>
+    </article>
+    <div class="clear"></div>
+</section>
+
+<section id="tweets">
+    <article>
+        <h2>Wolfang rockt!</h2>
+        <p>Lorem ispum dolor sit amet consecetur bla lla bla</p>
+    </article>
+
+    <article>
+        <h2>Wolfang rockt!</h2>
+        <p>Lorem ispum dolor sit amet consecetur bla lla bla</p>
+    </article>
+
+    <article>
+        <h2>Wolfang rockt!</h2>
+        <p>Lorem ispum dolor sit amet consecetur bla lla bla</p>
+    </article>
+</section>
+
+<section id="video_of_the_week">
+    <h2><i class="fa fa-video-camera orange" aria-hidden="true"></i> Video of the week</h2>
+    <hr />
+    <iframe width="100%" height="500" src="https://www.youtube.com/embed/lQe326uf4Yw" frameborder="0" allowfullscreen></iframe>
+
+</section>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"
+        integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $('#menu_toggle').click(function () {
+            $('nav').slideToggle(function () {
+            });
+        });
+    });
+    $('.play').click(function () {
+        window.location.href = 'video?id=abcdef';
+    })
+</script>
+</body>
+</html>
+

@@ -1,0 +1,504 @@
+body, html {
+    background: #FFF;
+    height: 100%;
+    width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+hr {
+    border: 1px dotted #E54D34;
+    margin-top: 0px;
+}
+
+.content {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    box-sizing: border-box;
+}
+
+.content-colored {
+    background: #EEE;
+}
+
+/* Search-Stuff  */
+header li {
+    width: 100%;
+    display: inline-block;
+}
+
+header li[data-value ='video'] a {
+    width: 80%;
+    display: inline-block;
+}
+
+header li[data-value ='video']::after {
+    font-family: FontAwesome;
+    content: "\f03d";
+    color: #cccccc;
+    display: inline-block;
+    float: right;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+header li[data-value ='playlist'] a {
+    width: 80%;
+    display: inline-block;
+}
+
+header li[data-value ='playlist']::after {
+    font-family: FontAwesome;
+    content: "\f03a";
+    color: #cccccc;
+    display: inline-block;
+    float: right;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+header li[data-value ='category'] a {
+    width: 80%;
+    display: inline-block;
+}
+
+header li[data-value ='category']::after {
+    font-family: FontAwesome;
+    content: "\f07b";
+    color: #cccccc;
+    display: inline-block;
+    float: right;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#kategorien h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2em;
+    margin: 3% 0 2% 0;
+}
+
+header li {
+    display: inline;
+}
+
+header ul {
+    width: 80%;
+}
+
+#select {
+    width: 12%;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+header {
+    width: 100%;
+    background: #FFF;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border-bottom: 1px solid #ccc;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+header button {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+header #c-button-slide-left {
+    font-size: 1.9em;
+    opacity: 0.8;
+}
+
+header #c-button-slide-left:hover {
+    color: #22A7F0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 5%;
+    padding-left: 20%;
+}
+
+nav ul li {
+    color: #FFF;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+nav ul li a {
+    color: #777777;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #22A7F0;
+    text-decoration: none;
+}
+
+nav ul li i {
+    margin-right: 8%;
+}
+
+.c-menu {
+    position: fixed;
+    z-index: 200;
+    background-color: #FFFFFF;
+    transition: transform 0.3s;
+}
+
+.c-menu_items {
+    list-style: none;
+}
+
+.c-menu_close:focus {
+    outline: none;
+}
+
+body.has-active-menu {
+    overflow: hidden;
+}
+
+.c-mask {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: opacity 0.3s, width 0s 0.3s, height 0s 0.3s;
+}
+
+.c-mask.is-active {
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.c-menu-slide-left {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@media all and (min-width: 320px) {
+    .c-menu-slide-left {
+        width: 300px;
+    }
+}
+
+.c-menu-slide-left .c-menu_item {
+    display: block;
+    text-align: center;
+    border-top: solid 1px #b5dbe9;
+    border-bottom: solid 1px #3184a1;
+}
+
+.c-menu-slide-left .c-menu_item:first-child {
+    border-top: none;
+}
+
+.c-menu--slide-left .c-menu_item:last-child {
+    border-bottom: none;
+}
+
+.c-menu-slide-left .c-menu_close {
+    float: right;
+    cursor: pointer;
+    padding-bottom: 10%;
+}
+
+.c-menu-slide-left #button_close {
+    display: inline-block;
+    padding: 5%;
+    width: 100%;
+    color: #22A7F0;
+    font-size: 1.9em;
+}
+
+.c-menu-slide-left {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+@media all and (min-width: 320px) {
+    .c-menu-slide-left {
+        transform: translateX(-300px);
+    }
+}
+
+.c-menu-slide-left.is-active {
+    transform: translateX(0);
+}
+
+#nav_img span {
+    width: 100%;
+    display: inline-block;
+    padding: 50%;
+    margin: 10% 0 0 20%;
+    background: url("../img/wolf_v2.png") no-repeat;
+    background-size: 50%;
+    transition: 0.3s;
+}
+
+#nav_img span:hover {
+    background: url("../img/wolf_v2_2.png") no-repeat;
+    background-size: 52%;
+}
+
+#logo img {
+    width: 20%;
+}
+
+#logo span {
+    font-family: 'Lobster', cursive;
+    font-size: 1.8em;
+    margin-left: 5%;
+    background: url("../img/wolf_v2.png") left center no-repeat;
+    background-size: contain;
+    padding-left: 25%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#logo span:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+#logo a:hover {
+    text-decoration:none;
+}
+
+#search span {
+    transition: 0.75s;
+    cursor: pointer;
+}
+
+#search span#basic-addon2:hover {
+    background: #22A7F0;
+    color: #FFFFFF;
+    transition: 0.75s;
+}
+
+#login {
+    padding-top: 0.5%;
+}
+
+#login-wrapper span {
+    line-height: 2.2em;
+}
+
+#login-wrapper img {
+    width: 10%;
+}
+
+section#loginpage,
+#addPlayForm,
+#deletePlayForm,
+#changePlayForm,
+#addVideoToPlaylistForm,
+#addVideoToCategorieForm {
+    position: fixed;
+    z-index: 1000;
+    top: 33%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1%;
+    box-sizing: border-box;
+    width: 30%;
+    max-width: 300px;
+    background: #FFF;
+    display: none;
+    text-align: center;
+    box-shadow: 4px -2px 50px -1px rgba(191, 175, 175, 0.75);
+    border-radius: 0.5em;
+    outline: none;
+}
+
+section#registry {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 1%;
+    box-sizing: border-box;
+    width: 30%;
+    max-width: 300px;
+    background: #FFF;
+    margin-top: -1px;
+    display: none;
+    text-align: center;
+    box-shadow: 4px -2px 50px -1px rgba(191, 175, 175, 0.75);
+    border-radius: 0.5em;
+    outline: none;
+}
+
+section#registry button {
+    width: 100%;
+}
+
+section #registry p {
+    margin: 4%;
+    color: grey;
+}
+
+#registry .input-group, #loginform .input-group {
+    margin: 3% 0;
+}
+
+#registry .input-group-addon {
+    min-width: 50px;
+
+}
+
+section#loginpage a, section#loginpage i.fa-circle {
+    font-size: 1em;
+    color: #22A7F0;
+}
+
+#login_button_close,
+#plchanges_button_close {
+    z-index: 1000;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 3em;
+    position: fixed;
+    right: 2%;
+    top: 2%;
+    color: #FFF;
+    display: none;
+}
+
+#back_to_login, #register_text {
+    margin-top: 2%;
+    cursor: pointer;
+    color: #22A7F0;
+    float: right;
+}
+
+#back_to_login:hover, #register_text:hover {
+    text-decoration: underline;
+    color: #e54d43;
+}
+
+section#loginpage button,
+#wrapper section#addPlayForm button,
+#wrapper section#deletePlayForm button,
+#wrapper section#changePlayForm button,
+#wrapper section#addVideoToPlaylistForm button {
+    margin-top: 2%;
+    outline: none;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.playlistbutton {
+    white-space: nowrap;
+}
+
+section#wrapper {
+    min-height: 90%;
+}
+
+h2 i {
+    margin-right: 1%;
+}
+
+#cat_cloud {
+    width: 33%;
+    display: block;
+    margin: 5% auto;
+    text-align: center;
+}
+
+#cat_cloud h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: left;
+    text-shadow: 1px 1px #e54d34;
+    margin-bottom: 5%;
+}
+
+#cat_cloud a.small_cat {
+    padding: 1%;
+}
+
+#cat_cloud a.middle_cat {
+    padding: 1.5%;
+    font-size: 1.5em;
+}
+
+#cat_cloud a.big_cat {
+    font-size: 2.2em;
+    padding: 2.2%;
+}
+
+#cat_cloud a {
+    font-family: 'Josefin Sans', sans-serif;
+    background: #E54D34;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin: 1%;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+#cat_cloud a:hover {
+    background: none;
+    color: #E54D34;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#top-link {
+    display: none;
+    position: fixed;
+    right: 3%;
+    bottom: 3%;
+    padding: 0.75%;
+    z-index: 10;
+}
+
+#top-link:hover {
+    filter: brightness(1) grayscale(100%);
+    -webkit-filter: brightness(1) grayscale(100%);
+    transition: 0.5s;
+}
+
+/* ---- Akzentfarben --- */
+.blue {
+    color: #22A7F0;
+}
+
+.orange {
+    color: #E54D34;
+}
+
+.grey {
+    color: #444444;
+}

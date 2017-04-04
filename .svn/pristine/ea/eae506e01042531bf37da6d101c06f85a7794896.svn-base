@@ -1,0 +1,222 @@
+#content-wrapper {
+    padding: 0 10%;
+}
+
+section#video_screen,
+section#video-info,
+section#rating,
+section#comments,
+section#pl_videolist{
+    padding: 0;
+}
+
+section#video_screen {
+    margin-top: 2%;
+}
+
+#video-playlist{
+    width: 100%;
+    height: 450px;
+}
+
+section#video-info {
+    margin-top: 5%;
+}
+
+#video-info #action-buttons {
+    margin: 2% 0;
+}
+
+#video-info .row {
+    margin: 2% 0;
+}
+
+section#pl_videolist h2 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.5em;
+    color: #000;
+}
+
+section#pl_videolist i {
+    text-shadow: 2px 2px #444444;
+}
+
+#pl_videolist ul {
+    list-style: none;
+    margin:0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+#video-playlist-vjs-playlist {
+    width: 100%;
+    overflow: auto;
+}
+
+#pl_videolist li {
+    display: inline-block;
+    padding-right: 0.4em;
+    padding-bottom: 0.4em;
+}
+
+#pl_videolist article img.thumbnail_img {
+    z-index: 0;
+    overflow: hidden;
+}
+
+#pl_videolist article {
+    width:100%;
+    margin:0;
+    overflow: hidden;
+    float:left;
+    position:relative;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+#pl_videolist article .image_text {
+    position: absolute;
+    color: #FFF;
+    font-size: 2.5em;
+    text-shadow: 2px 2px #000;
+    top: 5%;
+    left:5%;
+    width:80%;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:400;
+}
+
+#pl_videolist article .image_text p.description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5em;
+    text-shadow: none;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-width: 10em;
+    text-shadow: 2px 2px #000;
+}
+
+#pl_videolist article span.play {
+    position:absolute;
+    bottom: 5%;
+    right: 5%;
+    margin:0;
+    width:30%;
+    opacity:0.8;
+    transition: 0.5s all;
+    z-index: 10;
+}
+
+#pl_videolist article span.play img {
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+}
+
+.currentTrack img {
+    -webkit-filter:none !important;
+}
+
+#pl_videolist article span.play:hover img {
+    -webkit-filter:none;
+}
+
+#pl_videolist article img {
+    width:100%;
+    transition:0.5s all;
+    position:relative;
+    z-index: -1;
+}
+
+#pl_videolist article:hover img {
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+
+section#video_screen button.playlistbutton {
+    background: #E54D34;
+    color: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.3em;
+    border:none;
+    transition: 0.5s;
+    display: inline-block;
+}
+
+section#video_screen #quality button:not(.disabled):hover {
+    background: #FFFFFF;
+    padding: 1.5%;
+    border-radius: 0.4em;
+    color:#E54D34;
+    transition: 0.5s;
+}
+
+section#video_screen span {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#pl_videolist #delete-from-myPl {
+    position: absolute;
+    bottom: 4%;
+    left:3%;
+    background: #E54D34;
+    padding: 2%;
+    border-radius: 0.6em;
+    border:none;
+    color:#FFFFFF;
+    transition: 0.5s;
+}
+
+#wrapper button#change,
+#wrapper button#remove
+{
+    background: #E54D34;
+    padding: 2%;
+    border-radius: 0.6em;
+    border:none;
+    color:#FFFFFF;
+    margin: 2% 1% 2% 0;
+    transition: 0.5s;
+}
+
+#wrapper button#change:hover,
+#wrapper button#remove:hover ,
+#pl_videolist #delete-from-myPl:hover{
+    background: #FFFFFF;
+    color:#E54D34;
+    transition: 0.5s;
+}
+
+#change span, #remove span{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/* -----Scrollbar -----*/
+
+div#video-playlist-vjs-playlist::-webkit-scrollbar {
+    height: 0.6em;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #22A7F0;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: dodgerblue;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #3b5998;
+}

@@ -1,0 +1,13 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.12.27)  24 JUL 2016 17:02
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/Includes/Bedienungsanleitung/profil.tex
+(/Users/Steffen/ownCloud/Projects/www/ProgrammierProjektSS16/Dokumentation/Includes/Bedienungsanleitung/profil.tex)
+! Emergency stop.
+<*> ...ion/Includes/Bedienungsanleitung/profil.tex
+                                                  
+*** (job aborted, no legal \end found)
+
+!  ==> Fatal error occurred, no output PDF file produced!

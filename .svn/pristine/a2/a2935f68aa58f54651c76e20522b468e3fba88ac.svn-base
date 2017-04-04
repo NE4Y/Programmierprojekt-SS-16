@@ -1,0 +1,122 @@
+\chapter{Installationsanleitung}
+
+\subsection{Systemanforderungen}
+
+Unsere Software benötigt folgende Komponenten:
+
+\begin{itemize}
+	\item Apache Version 2.0 (mit aktiviertem mod\_rewrite) oder höher bzw. nginx 0.8.42 oder höher oder einen anderen Webserver der Url rewriting unterstützt
+	\item PHP 5.2 oder höher (für Smarty)
+	\item PHP-Erweiterung cURL	
+\end{itemize}
+
+\subsection{Konfiguration}
+
+Jegliche (vom Nutzer vornehmbare) Konfiguration wird in der \textit{mainConfig.php} innerhalb des \textit{config} Verzeichnisses vorgenommen.
+
+\pm
+
+Dabei ist besonders der bereits angesprochende \textit{basepath} für den Nutzer interessant. Jenachdem, ob unsere Software in einem Unterverzeichnis aufgerufen wird (beispielsweise www.meineDomain.de/unterverzeichnis/) oder nicht, muss der \textit{basepath} entsprechend angepasst werden.
+
+\begin{figure}[h!]
+	\begin{lstlisting}[language=R]
+	Config::set('basepath','unterverzeichnis');
+	\end{lstlisting}
+	\caption{Beispiel Basepath zur Konfiguration unserer Software}
+\end{figure}
+
+Innerhalb der \textit{mainConfig.php} lassen sich noch weitere Parameter einstellen, wie beispielsweise das Verzeichnis, in dem die Routen liegen (für das URL - Template-Matching), oder auch wie viele Kategorien / User pro Seite angezeigt werden sollen.
+
+\subsection{Installation}
+
+Die Installation gestaltet sich sehr einfach. Nachdem die Dateien in das gewünschte Verzeichnis kopiert wurden muss lediglich noch die Konfiguration des \textit{basepaths} durchgeführt werden (siehe Abschnitt Konfiguration).
+
+\pm
+
+Damit alle Anfragen auch an die \textit{index.php} weitergeleitet werden bedarf es allerdings noch einer Anpassung, die nun exemplarisch für Apache und nginx (unter unixoiden Systemen) beschrieben werden soll.
+
+\subsubsection{Apache}
+
+Zunächst muss geprüft werden, ob \textit{mod\_rewrite} geladen wurde. Dazu kann das folgende bash Kommando genutzt werden: 
+
+\begin{figure}[H]
+	\begin{lstlisting}
+		apachectl -M | grep 'rewrite_module'
+	\end{lstlisting}
+	\caption{Überprüfung ob \textit{mod\_rewrite} geladen wurde}
+\end{figure}
+
+Da es sich bei \textit{mod\_rewrite} um ein ASF\footnote{ASF: Apache software foundation: Standardmodul} Modul handelt, ist es in der Regel automatisch installiert. Wird es nicht gefunden, so muss es für gewöhnlich lediglich aktiviert werden:
+
+\begin{figure}[H]
+	\begin{lstlisting}
+		a2enmod rewrite
+	\end{lstlisting}
+	\caption{Aktivierung von \textit{mod\_rewrite}}
+\end{figure}
+
+Nun muss in der httpd.conf (bzw. einer geladenen Konfiguration von Apache) für das Verzeichnis, in dem unsere Software liegt, das Umschreiben der URL erlaubt werden. Dazu genügt ein Eintrag wie folgt:
+
+\begin{figure}[H]
+	\begin{lstlisting}
+<Directory "/var/www/unterverzeichnis/">
+	AllowOverride All
+</Directory>	
+	\end{lstlisting}
+	\caption{Erlaube das Umschreiben der URL für ein gewünschtes Verzeichnis}
+\end{figure}
+
+Anschließend muss in der \textit{.htaccess}-Datei im Wunschverzeichnis die \textit{RewriteBase} angepasst werden. Für das gegebene Beispiel würde folgen:
+
+\begin{figure}[H]
+	\begin{lstlisting}
+	RewriteBase /unververzeichnis	
+	\end{lstlisting}
+	\caption{Anpassung der RewriteBase in der \textit{.htaccess}}
+\end{figure}
+
+\subsubsection{Nginx}
+
+Wird nginx verwendet, so muss das '\textit{ngx\_http\_rewrite\_module}\footnote{NGINX Rewrite: http://nginx.org/en/docs/http/ngx\_http\_rewrite\_module.html}' installiert sein. Anschließend muss in der nginx.conf folgender Eintrag ergänzt werden:
+
+\begin{figure}[H]
+	\begin{lstlisting}
+location /unterverzeichnis {
+  alias /srv/ss16-web/htdocs;
+  index index.php;
+  try_files $uri $uri/ /ss16-web/trunk/index.php?$query_string;
+}	
+	\end{lstlisting}
+	\caption{Beispielhafte nginx.conf zur URL Umleitung}
+\end{figure}
+
+wobei die Pfade nach der tatsächlichen Struktur anzupassen sind.
+
+\subsection{Inbetriebnahme}
+
+Ab diesem Moment ist unsere Software einsatzbereit.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+\relax 
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Beschreibung der Software}{3}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Grundstruktur}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Software Grundstruktur}}{3}}
+\newlabel{fig:somthing}{{1.1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}Router}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}Main Controller}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Main-Controller}}{4}}
+\newlabel{fig:somthing}{{1.2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.3}View}{4}}

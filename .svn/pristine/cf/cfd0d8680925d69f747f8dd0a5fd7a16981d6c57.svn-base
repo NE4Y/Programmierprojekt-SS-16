@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video</title>
+
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/video.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+    <link href="css/video-js.css" rel="stylesheet">
+
+    {include file="header.tpl"}
+</head>
+<body>
+<section id="wrapper">
+{include file="topbar.tpl"}
+
+{include file="nav.tpl"}
+
+<!-- Content -->
+    <div>
+        <button class="fa fa-close" id="plchanges_button_close"></button>
+    </div>
+    <section id="addVideoToPlaylistForm" class="content">
+        <form method="post" action="" id="playdform" name="playdform">
+            <div class="input-group">
+                    <select class="selectpicker selectplaylists" id="options" name="pid">
+                        {foreach from=$playlists item=entry}
+                            <option value="{$entry->id}">{$entry->name}</option>
+                        {/foreach}
+                        </select>
+            </div>
+            <button type="submit" name="plset" class="btn btn-info">
+                <i class="fa fa-minus-square white" aria-hidden="true"></i> Zu Playlist hinzufügen
+            </button>
+            <button type="submit" class="btn-btn-info" name="deletefrompl">
+                <i class="icon-remove-sign"></i> Von Playlist löschen
+            </button>
+            <input hidden="true" name="vid" value="{$video_id}">
+            <input hidden="true" name="add" value="1">
+        </form>
+    </section>
+    <div id="c-mask-playlist" class="c-mask"></div><!-- /c-mask for Playlist-Changes -->
+
+    <!-- Add Video to Category -->
+    <section id="addVideoToCategorieForm" class="content">
+        <form method="post" action="" id="catform" name="catform">
+            <div class="input-group">
+                <select class="selectpicker selectcategory" id="options" name="cid">
+                    {foreach from=$categories item=entry}
+                        <option value="{$entry->id}">{$entry->name}</option>
+                    {/foreach}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-info" name="catset">
+                <i class="fa fa-minus-square white" aria-hidden="true"></i> Zu Kategorie hinzufügen
+            </button>
+            <button type="submit" class="btn-btn-info" name="deletefromcat">
+                <i class="icon-remove-sign"></i> Von Kategorie Löschen
+            </button>
+            </button>
+
+
+            <input hidden="true" name="vid" value="{$video_id}">
+            <input hidden="true" name="add" value="1">
+        </form>
+    </section>
+    <div id="c-mask-categorie" class="c-mask"></div><!-- /c-mask for Playlist-Changes -->
+
+
+
+
+
+    <section id="video_screen" class="content content-colored">
+    <div class="fluid-container">
+        <div class="row">
+            <div class="col-xs-12">
+                <video id="my-video" class="video-js" controls preload="auto"
+                       poster="{$thumbnail}" data-setup="{ }">
+                    <source src={$videourl} type="video/mp4">
+                </video>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="video-info">
+    <div class="row">
+        <div class="" id="title">{$title}</div>
+        <div id="quality" >
+            {for $qua=1 to $maxVideoQuality}
+                {if $qua eq $currentQuality}
+                    <button class="playlistbutton disabled btn">
+                    <span >Qualität: {$qua}</span>
+                    </button>
+                {else}
+                    <form method="post" target="_self">
+                        <button name="quality" value="{$qua}" class="playlistbutton">
+                            <span >Qualität: {$qua}</span>
+                        </button>
+                    </form>
+                {/if}
+            {/for}
+        </div>
+    </div>
+    <div id="user"><span><img src="https://robohash.org/{$uploaderid}" /></span><a href="./profile?id={$uploaderid}">{$uploadername}</a></div>
+    <div id="action-buttons">Share!
+        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        <i class="fa fa-reddit-alien" aria-hidden="true"></i>
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+    </div>
+</section>
+<section id="rating">
+    {if isset($userid)}
+
+    Eigenes Rating:
+    <div class="rating-wrapper">
+        <input type="radio" class="rating-input" {if $ownRating == 5}checked{/if} id="rating-input-1-5" name="rating-input-5"/>
+        <label for="rating-input-1-5" class="rating-star"></label>
+        <input type="radio" class="rating-input" {if $ownRating == 4}checked{/if} id="rating-input-1-4" name="rating-input-4"/>
+        <label for="rating-input-1-4" class="rating-star"></label>
+        <input type="radio" class="rating-input" {if $ownRating == 3}checked{/if} id="rating-input-1-3" name="rating-input-3"/>
+        <label for="rating-input-1-3" class="rating-star"></label>
+        <input type="radio" class="rating-input" {if $ownRating == 2}checked{/if} id="rating-input-1-2" name="rating-input-2"/>
+        <label for="rating-input-1-2" class="rating-star"></label>
+        <input type="radio" class="rating-input" {if $ownRating == 1}checked{/if} id="rating-input-1-1" name="rating-input-1"/>
+        <label for="rating-input-1-1" class="rating-star"></label>
+    </div>
+
+        <br />
+
+    {/if}
+
+
+    Rating: {$rating} / 5
+
+    <br />
+
+    Views: {$views}
+</section>
+    <section id="pl_add">
+        <button id="pladd" class="fa fa-plus-square playlistbutton">
+            <span>Playlist verwalten</span>
+        </button>
+    </section>
+    <section id="cat_add">
+        <button id="catadd" class="fa fa-plus-square categoriebutton">
+            <span>Kategorie verwalten</span>
+        </button>
+    </section>
+
+
+    <section id="comments">
+    <input type="hidden" id="video_id" value="{$video_id}" />
+    <input type="hidden" id="user_id" value="{$userid}" />
+    <hr />
+    {if isset($loggedIn)}
+        <textarea placeholder="Das ist mein Kommentar." class="input-text" name="comment" id="comment_field"></textarea>
+        <div class="clear"></div>
+        <br />
+        <button type="submit" id="save_comment" class="btn btn-info">Speichern</button>
+     <br />
+    {/if}
+    <br />
+    <section id="comment_sec"></section>
+        {foreach from=$comments item=$c}
+            <article>
+                <img src="https://robohash.org/{$c->userid}" alt="usericon" />
+                <h6><a href="./profile?id={$c->userid}">{$c->username}</a>
+                    <span>{$c->timestamp}</span>
+                    {if (isset($userid) && $userid == $c->userid) || (isset($rights) && $rights >= 4)}
+                        <i class="fa fa-trash deleteComment" data-commentID="{$c->id}"></i>
+                    {/if}
+                </h6>
+                <p>{$c->comment}</p>
+                <div class="clear"></div>
+            </article>
+        {/foreach}
+    </section>
+
+</section>
+    <div class="clear"></div>
+</section>
+<script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
+{include file="footer.tpl"}
+
+</body>
+</html>
+

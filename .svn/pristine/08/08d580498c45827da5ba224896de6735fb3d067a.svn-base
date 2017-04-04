@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404</title>
+    <!-- customn css -->
+    <link rel="stylesheet" type="text/css" href="css/core.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/hot_videos.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/video_of_the_week.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/tweets.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css"/>
+
+    {include file="header.tpl"}
+
+</head>
+<body>
+<section id="wrapper">
+    {include file="topbar.tpl"}
+    {include file="nav.tpl"}
+    <section id="404" class="content">
+        <h1 style="font-family: 'Josefin Sans', sans-serif; font-size: 5em;">401</h1>
+        <p style="line-height:1.8em;">
+            Bitte loggen Sie sich ein.
+        </p>
+        <aside id="404_aside">
+            <img src="img/wolf_move2.gif" style="margin-top: 5%;"/>
+        </aside>
+    </section>
+</section>
+
+{include file="footer.tpl"}
+
+</body>
+</html>

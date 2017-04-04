@@ -1,0 +1,187 @@
+\chapter{Beschreibung der Software}
+
+\section{Grundstruktur}
+
+Die folgende Grafik illustriert das Grundsystem der Software.
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.7\textwidth]{./Includes/Software/architektur.png}
+    \caption{Software Grundstruktur}
+    \label{fig:somthing}
+\end{figure}
+
+Das Grundsystem ist nach dem MVC-Prinzip\footnote{MVC-Prinzip: Model View-Controller Abspaltung zur Strukturierung von Software} gestaltet.
+
+\pm
+
+Dabei ist das System aufgespalten in verschiedene Templates (Views),
+die von ihrem zugehörigen Controller (View Controller) manipuliert 
+werden. Der View Controller nutzt das Model um die nötigen Daten vom
+Server zu erhalten.
+
+\pm
+
+Das Model ist (nach dem MVC-Prinzip) für die Datenhaltung zuständig.
+
+\subsection{Router} 
+
+Der Router wird genutzt, um ein URL-Template matching durchzuführen. 
+
+Es lassen sich dadurch sehr leicht 'Pfade' entsprechenden Templates 
+zuordnen. 
+
+\begin{lstlisting}[language=php]
+Route::add("/home", function() {Controller::dispatch("home");});	
+\end{lstlisting}
+
+Dadurch sehen die URL's nicht nur schöner aus, es hat auch SEO\footnote{SEO: Suchmaschinennoptimierung} Vorteile.
+
+\pm
+
+Sobald die Route '/home' aufgerufen wird (beispielsweise: wolfgang.ne4y.de/home), wird die hinterlegte Funktion ausgeführt (in diesem Fall Controller::dispatch('home');)
+
+\pm
+
+Dabei wird über ein Patternmatching die aktuelle \tb{Requested-URI}
+\footnote{Requested-URI: Angefragte URL Zeile, die vom Webserver an 
+den PHP-Interpreter weitergegeben wird} mit den 'angekündigten' Pfaden verglichen. Stimmt ein Pfad überein, wird die hinterlegte Funktion ausgeführt.
+
+\subsection{Main Controller}
+
+Der Main-Controller implementiert die grundlegenden Steuerfunktionen 
+unserer Software. Dazu zählt das Rendern der Templates, das Aufrufen der 
+entsprechenden Template-Controller sowie das Umleiten des Users.
+
+\pm
+
+Er gibt außerdem die Möglichkeit HTTP-Statuscodes an den Nutzer zurückzugeben.
+
+\pm
+
+Der Main Controller wird in den meisten Fällen direkt vom Router aufgerufen. Er implementiert folgende Methoden / Attribute:
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.6\textwidth]{./Includes/Software/Controller.png}
+    \caption{Main-Controller}
+\end{figure}
+
+Dabei sind die wichtigsten Funktionen das Initialisieren eines Smarty Objects (initSmarty()), sowie das Dispatchen eines Templates (dispatch(String tpl), wird vom Router aufgerufen). 
+
+\pm
+
+Während des Dispatchprozesses wird der zugehörige Templatecontroller geladen.
+
+\subsection{View} 
+
+Der View wird durch ein Templatingsystem umgesetzt. Dafür verwendet 
+unsere Software die Templateengine Smarty\footnote{Smarty: Templatingengine, mehr 
+Informationen auf: http://smarty.net}.
+
+Smarty wird genutzt, um den HTML-Code von der Businesslogik zu trennen. 
+
+\pm
+
+Dabei wird eine spezielle Templatesprache genutzt, die einem stark 
+vereinfachtem PHP nahe kommt. Damit soll gewährleistet werden, dass im Template keine Businesslogik implementiert wird, um die klare Abtrennung der View vom Controller zu gewährleisten.
+
+\newpage 
+
+Ein kleines Beispiel soll die Interaktion von Controller und View verdeutlichen:
+
+\begin{figure}[h!]
+	\begin{lstlisting}[language=php]
+	Controller::$smarty->assign("Author", "Steffen Lindner");	
+	\end{lstlisting}
+
+    \caption{Beispielcontroller}
+ \end{figure}
+ 
+\begin{figure}[h!]
+	\begin{lstlisting}[language=html]
+		<p>Name des Autors: {$Author}</p>
+	\end{lstlisting}
+
+    \caption{Beispielview}
+ \end{figure}
+ 
+Dadurch wird die gesamte Logik in den Controller verlagert und im Template lediglich durch einen 'Platzhalter' ersetzt.
+
+\pm
+
+Smarty erlaubt auch einfache logische Konstrukte wie 
+
+\bi	
+	\item If / Else / Elseif
+	\item For / While / Foreach
+	\item Isset / Empty
+\ei
+
+und viele Weitere. 
+
+\subsection{Model}
+
+Die Models werden zur Datenhaltung genutzt. Da wir keinen direkten Datenbankzugriff haben, sondern lediglich über eine Rest-API mit dem Server kommunizieren führen die Model die meisten Rest-Calls aus. Das gewährleistet eine klarere Trennung des Codes nach dem MVC-Prinzip.
+
+\pm
+
+Dazu wurde eine seperate Rest-Klasse geschrieben, die die Kommunikation mit dem Server verwaltet (dazu mehr im speziellen Abschnitt).
+
+\pm
+
+Die Models implementieren nun lediglich die speziellen Rest-Aufrufe, sowie einfache Verwaltungsaufgaben.
+
+\pm
+
+Eine genauere Beschreibung der Models folgt in den späteren Abschnitten.
+
+\section{Core Klassen}
+
+Unsere Software ist eingeteilt in 'normale' Klassen und Core Klassen. Die Core Klassen implementieren allgemeinere Funktionen, die von der gesamten Software genutzt werden.
+
+\pm
+
+Zu den Core Klassen gehören:
+
+\bi
+	\item Notify Klasse
+	\item Controller Klasse (Main Controller, bereits beschrieben)
+	\item Config Klasse
+	\item RestApi Klasse
+	\item Route Klasse
+\ei
+
+\newpage
+
+\subsection{Notify Klasse}
+
+Die Notify Klasse wird genutzt, um Meldungen an den Nutzer auszugeben.
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.5\textwidth]{./Includes/Software/Notify.png}
+    \caption{Notify Klasse}
+\end{figure}
+
+Der Main-Controller liest nach dem Abarbeiten der View-Controller die erstellten Nachrichten aus und speichert sie in einer Smarty-Variable, die anschließend vom Template ausgegeben wird. Dadurch können die View-Controller unabhängig voneinander Nachrichten an den Nutzer zurückgeben, ohne sich selbst um die Darstellung kümmern zu müssen.
+
+\subsection{Config Klasse}
+
+Die Config Klasse wird genutzt, um Konstanten anzulegen, wie beispielsweise der Basepath des Systems, wie viele Kategorieren pro Seite angezeigt werden sollen o.ä.
+
+\begin{figure}[h!]
+		\centering
+        \includegraphics[width=0.5\textwidth]{./Includes/Software/Config.png}
+    \caption{Config Klasse}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
